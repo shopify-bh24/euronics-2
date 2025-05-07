@@ -1,0 +1,148 @@
+<script>
+ 
+  (function($) {
+      $.fn.scriptLoader = function(options) {
+          var settings = $.extend({
+              lib: [],
+              count: 0,
+              scriptSrcLen: 0,
+              scriptLoaded: false,
+              cssLoaded: false,
+              scriptLoading: false,
+              isScriptLoaded : false
+          }, options);
+          var $this = this;
+  
+          function loadScriptCallback(count) {
+              if (settings.scriptSrcLen == count) {
+                   settings.isScriptLoaded = true;
+                  scriptLoaded();
+              }
+          }
+  
+          function scriptLoaded(count) {
+              settings.scriptLoaded = true;
+              $(document).find('script[type="text/customInlineScript"]').each(function() {
+                  new Function($(this).text())();
+              });
+              window.dispatchEvent(new Event('resize'));
+              window.dispatchEvent(new Event('load'));
+              window.dispatchEvent(new Event('DOMContentLoaded'));
+          }
+  
+          function loadCss(href) {
+            if(href !== undefined){
+              if (settings.cssLoaded) return;
+              var s = document.createElement('link');
+              s.href = href;
+              s.type = 'text/css';
+              s.rel = 'stylesheet';
+              document.head.appendChild(s);
+          }
+          }
+          function loadScript(src) {
+              if (settings.scriptLoaded) return;
+              s = document.createElement("script");
+              s.src = src
+              document.head.appendChild(s);
+              ((s.readyState) && (s.readyState == "loaded" || s.readyState == "complete")) ? s.onreadystatechange = function() {
+                  settings.count++;
+                  loadScriptCallback(settings.count);
+              }: s.onload = function() {
+                  settings.count++;
+                  loadScriptCallback(settings.count);
+              };
+          }
+  
+          function init() {
+              if (settings.scriptLoading) return;
+              settings.scriptLoading = true;
+              $(document).ready(function() {
+                  $('body').removeClass('after-load')
+              })
+              $(document).find('script[type="text/customscript"]').each(function() {
+                  loadScript($(this).attr('src'));
+              });
+              $(document).find('link[type="text/customcss"]').each(function() {
+                 // loadCss($(this).attr('lazy-href'));
+                  loadCss($(this).attr('href'));
+              });
+              $(document).find('iframe').each(function() {
+                  if (typeof($(this).attr('data-src')) !== 'undefined') {
+                      $(this).attr('src', $(this).attr('data-src'))
+                  }
+              });
+  
+            if(!settings.isScriptLoaded){
+                  settings.isScriptLoaded = true;
+                  scriptLoaded();
+              }
+
+              setTimeout(function() {
+                  initdelay();
+              }, 1000);
+              settings.cssLoaded = true;
+          //  loadScript('https://cdn.shopify.com/s/files/1/0933/6732/files/mlveda-currencies-switcher.js');
+
+            
+              mlvedaLoadScript("https:\/\/analytics.getshogun.com\/collector.js?shop=euronics-ie.myshopify.com");
+              mlvedaLoadScript("https:\/\/media.kubric.io\/api\/modemagic\/loader10ca7483d384ac2f6b156b0964974056.js?shop=euronics-ie.myshopify.com");
+              mlvedaLoadScript("https:\/\/upsell-app.logbase.io\/lb-upsell.js?shop=euronics-ie.myshopify.com");
+              mlvedaLoadScript("https:\/\/ecommplugins-scripts.trustpilot.com\/v2.1\/js\/header.min.js?settings=eyJrZXkiOiJaemszejRTQXFPbm81aHdIIiwicyI6InNrdSJ9\u0026shop=euronics-ie.myshopify.com");
+              // mlvedaLoadScript("https:\/\/ecommplugins-trustboxsettings.trustpilot.com\/euronics-ie.myshopify.com.js?settings=1695916307519\u0026shop=euronics-ie.myshopify.com");
+              // mlvedaLoadScript("https:\/\/d22oyu4gpiqc9t.cloudfront.net\/storefront\/6d7f2a655f9fc7743735877040c9f5d6.storefront.js?update_at=1707306288\u0026shop=euronics-ie.myshopify.com");
+              // mlvedaLoadScript("https:\/\/storage.googleapis.com\/gsf-scripts\/global-remarketing\/euronics-ie.js?1688568432\u0026shop=euronics-ie.myshopify.com");
+              // mlvedaLoadScript("https:\/\/cdn-app.cart-bot.net\/public\/js\/append.js?shop=euronics-ie.myshopify.com");
+              // mlvedaLoadScript("\/\/cdn.app.metorik.com\/js\/shopify\/mtk.js?shop=euronics-ie.myshopify.com");
+              // mlvedaLoadScript("https:\/\/assets1.adroll.com\/shopify\/latest\/j\/shopify_rolling_bootstrap_v2.js?adroll_adv_id=G32LPQYAZ5FUTLZLWCDOFE\u0026adroll_pix_id=LMODSHXCPNEVLLYRCOJWTP\u0026shop=euronics-ie.myshopify.com");
+              // mlvedaLoadScript("https:\/\/cdn.shopify.com\/s\/files\/1\/0550\/5807\/1748\/t\/18\/assets\/zendesk-embeddable.js?v=1685370817\u0026shop=euronics-ie.myshopify.com");
+ 
+          }
+  
+          function initdelay() {
+              function inlineloadelay() {
+                  $(document).find('script[type="text/customInlinedelay"]').each(function() {
+                      try {
+                          new Function($(this).text());
+                      } catch (err) {
+                          console.warn($(this).text());
+                      }
+                  });
+                  window.dispatchEvent(new Event('resize'));
+                  window.dispatchEvent(new Event('load'));
+                  window.dispatchEvent(new Event('DOMContentLoaded'));
+              }
+              inlineloadelay();
+          }
+          settings.scriptSrcLen = $(document).find('script[type="text/customscript"]').length;
+          document.addEventListener('DOMContentLoaded', function() {
+              setTimeout(function() {
+                  init()
+              }, 8e3);
+          })
+          window.addEventListener("mousemove", function() {
+              init();
+          })
+          window.addEventListener("touchstart", function() {
+              init();
+          })
+          if (window.attachEvent) {
+              window.attachEvent('onscroll', function() {
+                  init();
+              });
+          } else {
+              window.addEventListener('scroll', function() {
+                  init();
+              }, false);
+          }
+      };
+  }(jQuery));
+
+jQuery('body').scriptLoader();
+
+function mlvedaLoadScript(src){
+ var script = document.createElement('script');
+ script.src = src;
+ document.head.appendChild(script);
+}
+</script>

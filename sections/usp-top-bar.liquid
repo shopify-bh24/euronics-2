@@ -1,0 +1,136 @@
+{% comment %} ADDED By MLVeda {% endcomment %}
+{% style %}
+.usp-bar-top{
+    display:none;
+}  
+.usp-bar-top .display-flex{
+  display:flex;
+  flex-wrap:wrap;
+}
+.usp-bar-top .flex-start{
+  justify-content:flex-start;
+}
+/* .usp-bar-top .usp-bar-top-block{
+  padding:20px;
+  width: 50%;
+}   */
+/* .usp-bar-top .usp-bar-top-block:nth-child(1){
+  padding-left:0px;
+}   */
+.usp-bar-top .usp-bar-content img{
+  max-width:30px;
+}
+.usp-bar-top .usp-bar-desc{
+  max-width:calc(100% - 30px);
+  padding-left:20px;
+}
+@media screen and (max-width: 640px) {
+  .usp-bar-top{
+    display:block;
+  }
+  .usp-bar-top .usp-bar-top-block:nth-child(1){
+    padding-bottom: 6px;
+  } 
+  .usp-bar-top .usp-bar-top-block:nth-child(2){
+    padding-top: 6px;
+  }
+  .usp-bar-top .usp-bar-top-block{
+    padding:15px 0px;
+    width:100%;
+  } 
+  .usp-bar-top .usp-bar-content img{
+    max-width: 22px;
+    margin-top: 5px;
+  }
+  .usp-bar-top .usp-bar-desc{
+    max-width:calc(100% - 22px);
+    padding-left:15px;
+  }
+}  
+{% endstyle %}
+<div class="usp-bar-top" style="background-color:{{ section.settings.bg-color }};">
+  <div class="container">
+    <div class="display-flex flex-start">
+     {%- for block in section.blocks -%}
+       {% if block.settings.link != blank %} 
+      <a class="usp-bar-top-block" href="{{block.settings.link}}">
+        {% else %}
+        <div class="usp-bar-top-block">
+        {% endif %}
+        <div class="usp-bar-content display-flex flex-start">
+          {%- if block.settings.image != blank -%}
+            <div><img src="{{ block.settings.image | img_url: 'master' }}" alt="" /></div>
+          {%- endif -%}
+          <div class="usp-bar-desc">
+            {%- if block.settings.title != blank -%}<h3 style="font-weight:600;margin:0px;color:{{ block.settings.title-font-color }};">{{ block.settings.title }}</h3>{%- endif -%}
+            {%- if block.settings.desc != blank -%}<div style="font-size: 14px;line-height: 1.4;color:{{ block.settings.desc-font-color }};">{{ block.settings.desc }}</div>{%- endif -%}
+          </div>
+        </div>
+      {% if block.settings.link != blank %} 
+      </a>
+        {% else %}
+        </div>
+        {% endif %}
+       {%- endfor -%}
+    </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "USP Bar Top",
+   "settings": [
+      {
+        "type":"color",
+        "id":"bg-color",
+        "label":"Background Color",
+		"default":"#f1c400"
+      }
+	],
+    "blocks": [
+      {
+        "name":"Selling Points",
+        "type":"selling-points",
+        "settings":[
+          {
+            "type":"url",
+            "id":"link",
+            "label":"Link"
+          },
+          {
+            "type":"image_picker",
+            "id":"image",
+            "label":"Image"
+          },
+          {
+            "type":"text",
+            "id":"title",
+            "label":"Heading"
+          },
+          {
+            "type":"color",
+            "id":"title-font-color",
+            "label":"Heading Font Color",
+			"default":"#fff"
+          },
+          {
+            "type":"richtext",
+            "id":"desc",
+            "label":"Description"
+          },
+          {
+            "type":"color",
+            "id":"desc-font-color",
+            "label":"Description Font Color",
+			"default":"#000"
+          }
+        ]
+      }
+	],
+    "presets": [
+      {
+      	"name":"USP Bar Top"
+      }
+	]
+  }
+{% endschema %}
+{% comment %} ADDED By MLVeda {% endcomment %}

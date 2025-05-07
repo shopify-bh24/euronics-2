@@ -1,0 +1,739 @@
+{
+  "article": [],
+  "blog": [],
+  "collection": [
+    {
+      "key": "collection_banner_url",
+      "namespace": "custom",
+      "name": "Collection banner url",
+      "description": "",
+      "type": {
+        "name": "url",
+        "category": "URL"
+      }
+    },
+    {
+      "key": "vendor_logo",
+      "namespace": "custom",
+      "name": "Vendor Logo",
+      "description": "",
+      "type": {
+        "name": "file_reference",
+        "category": "REFERENCE"
+      }
+    }
+  ],
+  "company": [],
+  "company_location": [],
+  "location": [],
+  "market": [],
+  "order": [],
+  "page": [
+    {
+      "key": "storeid",
+      "namespace": "stockinstoreapp",
+      "name": "stockinstore Store ID",
+      "description": "",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    }
+  ],
+  "product": [
+    {
+      "key": "warranty_product",
+      "namespace": "my_fields",
+      "name": "Warranty Product",
+      "description": "",
+      "type": {
+        "name": "product_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "queries",
+      "namespace": "shopify--discovery--product_search_boost",
+      "name": "Search product boosts",
+      "description": "List of search queries for which a product gets higher rank in search results",
+      "type": {
+        "name": "list.single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "related_products",
+      "namespace": "shopify--discovery--product_recommendation",
+      "name": "Related products",
+      "description": "List of related products",
+      "type": {
+        "name": "list.product_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "related_products_display",
+      "namespace": "shopify--discovery--product_recommendation",
+      "name": "Related products settings",
+      "description": "Determines how related products are displayed along with algorithmic product recommendations",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "complementary_products",
+      "namespace": "shopify--discovery--product_recommendation",
+      "name": "Complementary products",
+      "description": "List of complementary products",
+      "type": {
+        "name": "list.product_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "product_info_image_url_2",
+      "namespace": "custom",
+      "name": "Product info image url 2",
+      "description": "",
+      "type": {
+        "name": "url",
+        "category": "URL"
+      }
+    },
+    {
+      "key": "product_info_image_2",
+      "namespace": "custom",
+      "name": "Product info image 2",
+      "description": "",
+      "type": {
+        "name": "file_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "product_info_image_url_1",
+      "namespace": "custom",
+      "name": "Product info image url 1",
+      "description": "",
+      "type": {
+        "name": "url",
+        "category": "URL"
+      }
+    },
+    {
+      "key": "product_info_image_1",
+      "namespace": "custom",
+      "name": "Product info image 1",
+      "description": "",
+      "type": {
+        "name": "file_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "product_description_image_url",
+      "namespace": "custom",
+      "name": "Product description image url",
+      "description": "",
+      "type": {
+        "name": "url",
+        "category": "URL"
+      }
+    },
+    {
+      "key": "product_description_image",
+      "namespace": "custom",
+      "name": "Product description image",
+      "description": "",
+      "type": {
+        "name": "file_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "custom_product",
+      "namespace": "mm-google-shopping",
+      "name": "Google: Custom Product",
+      "description": "Use to indicate whether or not the unique product identifiers (UPIs) GTIN, MPN, and brand are available for your product.",
+      "type": {
+        "name": "boolean",
+        "category": "TRUE_FALSE"
+      }
+    },
+    {
+      "key": "previous_price_and_dates",
+      "namespace": "custom",
+      "name": "Previous price and dates",
+      "description": "",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "mounting-type",
+      "namespace": "shopify",
+      "name": "Mounting type",
+      "description": "Specifies how a product is installed or attached, such as clip-on or suction cup",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "color-pattern",
+      "namespace": "shopify",
+      "name": "Color",
+      "description": "Defines the primary color or pattern, such as blue or striped",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "star-rating",
+      "namespace": "shopify",
+      "name": "Star rating",
+      "description": "Indicates the product's star rating, e.g. 1, 5",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "energy-efficiency-class",
+      "namespace": "shopify",
+      "name": "Energy efficiency class",
+      "description": "Defines the energy efficiency rating of a product, e.g. A+++",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "display-technology",
+      "namespace": "shopify",
+      "name": "Display technology",
+      "description": "Defines the type of screen technology used in a product, e.g. LED, e-ink",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "display-resolution",
+      "namespace": "shopify",
+      "name": "Display resolution",
+      "description": "Defines resolution of a digital display, e.g. 1280 x 1024, full HD",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "energy-efficiency-class-hdr",
+      "namespace": "shopify",
+      "name": "Energy efficiency class (HDR)",
+      "description": "Specifies the energy efficiency of HDR-enabled devices, typically televisions; e.g. A+++",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "energy-efficiency-class-sdr",
+      "namespace": "shopify",
+      "name": "Energy efficiency class (SDR)",
+      "description": "Specifies the energy efficiency of SDR-enabled devices, typically televisions; e.g. A+++",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "native-aspect-ratio",
+      "namespace": "shopify",
+      "name": "Native aspect ratio",
+      "description": "Specifies the original aspect ratio of a display, typically for projectors; e.g. 16:8",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "hdr-format",
+      "namespace": "shopify",
+      "name": "HDR format",
+      "description": "Specifies the High Dynamic Range (HDR) for televisions, e.g. HDR10, Dolby Vision",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "smart-tv-platform",
+      "namespace": "shopify",
+      "name": "Smart TV platform",
+      "description": "Defines the software platform used by a smart television, such as Android or Roku TV",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "television-specialized-features",
+      "namespace": "shopify",
+      "name": "Television specialized features",
+      "description": "Identifies unique capabilities of a TV, like voice control or built-in soundbar",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "connectivity-technology",
+      "namespace": "shopify",
+      "name": "Connectivity technology",
+      "description": "Defines the method of data transfer in a product, e.g. Bluetooth, USB",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "audio-connectivity",
+      "namespace": "shopify",
+      "name": "Audio connectivity",
+      "description": "Defines the types of audio connection a product supports, such as HDMI or USB",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "headphone-style",
+      "namespace": "shopify",
+      "name": "Headphone style",
+      "description": "Defines the design headphones, e.g. behind-the-neck, earbuds",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "microphone-type",
+      "namespace": "shopify",
+      "name": "Microphone type",
+      "description": "Defines the microphone technology used, such as condenser or dynamic",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "earphone-features",
+      "namespace": "shopify",
+      "name": "Earphone features",
+      "description": "Highlights unique features in earphones, such as built-in microphone or volume control",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "cosmetic-condition",
+      "namespace": "shopify",
+      "name": "Cosmetic condition",
+      "description": "Defines the wear and condition of electronics, e.g. new, opened-never used",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "data-network",
+      "namespace": "shopify",
+      "name": "Data network",
+      "description": "Specifies the data network compatibility of mobile devices, like LTE or 3G",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "operating-system",
+      "namespace": "shopify",
+      "name": "Operating system",
+      "description": "Defines the system software a device uses, such as iOS or ChromeOS",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "sim-card-capability",
+      "namespace": "shopify",
+      "name": "SIM card capability",
+      "description": "Indicates the type of SIM card configuration in mobile devices, e.g. dual, embedded",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "subscription-type",
+      "namespace": "shopify",
+      "name": "Subscription type",
+      "description": "Specifies the type of subscription, typically for mobile devices; e.g. pay as you go, pre-paid",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "eprel-registration-number",
+      "namespace": "Staylime",
+      "name": "EPREL Registration Number",
+      "description": "The registration number of the product in the EPREL database.",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "air-fryer-functions",
+      "namespace": "shopify",
+      "name": "Air fryer functions",
+      "description": "Lists the various cooking modes available in an air fryer or similar appliance, e.g. air fry, bake",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "cooking-compartments",
+      "namespace": "shopify",
+      "name": "Cooking compartments",
+      "description": "Specifies the number of cooking areas in kitchen appliances such as air fryers, e.g. single or double",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "vendor_logo",
+      "namespace": "custom",
+      "name": "Vendor Logo",
+      "description": "",
+      "type": {
+        "name": "file_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "connection-type",
+      "namespace": "shopify",
+      "name": "Connection type",
+      "description": "Specifies the type of connection used by electronics, such as wired or Bluetooth",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "print-technology",
+      "namespace": "shopify",
+      "name": "Print technology",
+      "description": "Specifies the process used by a printer, such as inkjet or laser",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "printer-functions",
+      "namespace": "shopify",
+      "name": "Printer functions",
+      "description": "Defines the capabilities of printers, copiers, and fax machines; e.g. scan, photo print",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "printer-copier-specialized-features",
+      "namespace": "shopify",
+      "name": "Printer/Copier specialized features",
+      "description": "Highlights specific features of printers/copiers, such as mobile printing support or voice control",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "memory-technology",
+      "namespace": "shopify",
+      "name": "Memory technology",
+      "description": "Specifies the type of memory used in electronic devices, such as DDR or SDRAM",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "processor-family",
+      "namespace": "shopify",
+      "name": "Processor family",
+      "description": "Identifies the series or brand of the electronic device's CPU, e.g. Intel Core i7",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "computer-form",
+      "namespace": "shopify",
+      "name": "Computer form",
+      "description": "Defines the physical design or layout of a computer, such as all-in-one or notebook",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "graphics-card-type",
+      "namespace": "shopify",
+      "name": "Graphics card type",
+      "description": "Specifies the type of graphics card in a computer, e.g. professional, dedicated",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "storage-types-supported",
+      "namespace": "shopify",
+      "name": "Storage types supported",
+      "description": "Defines compatible storage systems for electronics, e.g. Hard disk drive (HDD)",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "power-source",
+      "namespace": "shopify",
+      "name": "Power source",
+      "description": "Specifies the power source a product uses to operate, such as solar or batteries",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "scanner-sensor-type",
+      "namespace": "shopify",
+      "name": "Scanner sensor type",
+      "description": "Specifies the type of sensor in scanners, such as 2D imager or laser",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "scanner-features",
+      "namespace": "shopify",
+      "name": "Scanner features",
+      "description": "Highlights special functions of a scanner, such as AI-powered or scan to cloud",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "cooling-technology",
+      "namespace": "shopify",
+      "name": "Cooling technology",
+      "description": "Specifies the method used to cool electronics, such as air or heat sink",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "computer-specialized-features",
+      "namespace": "shopify",
+      "name": "Computer specialized features",
+      "description": "Highlights specific computer features, like liquid cooling system or RGB lighting",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "keyboard-type",
+      "namespace": "shopify",
+      "name": "Keyboard type",
+      "description": "Specifies the design and functionality of a keyboard, e.g. standard, backlit",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "memory-form-factor",
+      "namespace": "shopify",
+      "name": "Memory form factor",
+      "description": "Specifies the physical layout of memory modules, such as DIMM or micro-DIMM",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "product_gallary_metafield",
+      "namespace": "custom",
+      "name": "product gallary metafield",
+      "description": "",
+      "type": {
+        "name": "multi_line_text_field",
+        "category": "TEXT"
+      }
+    }
+  ],
+  "variant": [
+    {
+      "key": "custom_label_4",
+      "namespace": "mm-google-shopping",
+      "name": "Google: Custom Label 4",
+      "description": "Label that you assign to a product to help organize bidding and reporting in Shopping campaigns",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "custom_label_3",
+      "namespace": "mm-google-shopping",
+      "name": "Google: Custom Label 3",
+      "description": "Label that you assign to a product to help organize bidding and reporting in Shopping campaigns",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "custom_label_2",
+      "namespace": "mm-google-shopping",
+      "name": "Google: Custom Label 2",
+      "description": "Label that you assign to a product to help organize bidding and reporting in Shopping campaigns",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "custom_label_1",
+      "namespace": "mm-google-shopping",
+      "name": "Google: Custom Label 1",
+      "description": "Label that you assign to a product to help organize bidding and reporting in Shopping campaigns",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "custom_label_0",
+      "namespace": "mm-google-shopping",
+      "name": "Google: Custom Label 0",
+      "description": "Label that you assign to a product to help organize bidding and reporting in Shopping campaigns",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "size_system",
+      "namespace": "mm-google-shopping",
+      "name": "Google: Size System",
+      "description": "The country of the size system used by your product.",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "size_type",
+      "namespace": "mm-google-shopping",
+      "name": "Google: Size Type",
+      "description": "Your apparel product’s cut.",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "mpn",
+      "namespace": "mm-google-shopping",
+      "name": "Google: MPN",
+      "description": "Your product’s Manufacturer Part Number (MPN).",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "gender",
+      "namespace": "mm-google-shopping",
+      "name": "Google: Gender",
+      "description": "The gender for which your product is intended.",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "condition",
+      "namespace": "mm-google-shopping",
+      "name": "Google: Condition",
+      "description": "The condition of your product at time of sale.",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "age_group",
+      "namespace": "mm-google-shopping",
+      "name": "Google: Age Group",
+      "description": "The demographic for which your product is intended.",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    }
+  ],
+  "shop": [
+    {
+      "key": "blocks_list_checkout_static_content",
+      "namespace": "checkoutblocks",
+      "name": "Checkout Blocks: Blocks List for: checkout_static_content",
+      "description": null,
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "fastbundleconf",
+      "namespace": "rbrfb",
+      "name": "Fast Bundle Conf",
+      "description": "App's config for the widgets",
+      "type": {
+        "name": "json",
+        "category": "JSON"
+      }
+    }
+  ]
+}

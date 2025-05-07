@@ -1,0 +1,23 @@
+<div class="collection_banner">
+  <div class="container container--flush">
+    <div class="collection_image">
+      <img src="{{ section.settings.collection_banner | img_url:'master' }}" alt="{{ section.settings.collection_banner | handle }}" title="{{ section.settings.collection_banner | handle }}" {% if section.settings.height_image != blank and section.settings.height_image != 'auto' and section.settings.height_image != 'Auto' %} style="min-height: {{ section.settings.height_image }}px;"{% endif %} />
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Collection Banner",
+    "settings": [{
+		"type": "image_picker",
+		"id": "collection_banner",
+		"label": "Collection Banner"
+	},
+	{
+		"type": "text",
+		"id": "height_image",
+		"label": "Image Height"
+	}]
+  }
+{% endschema %}

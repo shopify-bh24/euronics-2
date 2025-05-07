@@ -1,0 +1,66 @@
+{% render 'shogun-products', content: product %}
+{{product.metafields.shogun.above}}
+{%- comment -%}
+If the product contains the special __gift tag, we prevent it to be completely accessible by redirecting to the home page
+{%- endcomment -%}
+
+{%- if product.tags contains '__gift' -%}
+  <script>
+    window.location.href = '/';
+  </script>
+{%- else -%}
+  <!-- Zenbundle Product Primary Placement -->
+  <div class="container">
+    <div data-zenbundle="widget" data-placement-id="f0b677c5-766e-4131-b38e-fe006325be72"></div>
+  </div>
+
+  {% section 'product-template' %}
+  {% section 'product-recommendations' %}
+
+  <!-- Zenbundle Product Secondary Placement -->
+  <div class="container">
+    <div data-zenbundle="widget" data-placement-id="b68492a2-f86c-4681-8827-a5848779b7bf"></div>
+  </div>
+
+  {% section 'static-promotion-list' %}
+  {% section 'static-recently-viewed-products' %}
+
+  <script>
+    window.ShopifyXR=window.ShopifyXR||function(){(ShopifyXR.q=ShopifyXR.q||[]).push(arguments)};
+    ShopifyXR('addModels', {{ product.media | where: 'media_type', 'model' | json }});
+  </script>
+
+
+<script type="text/javascript">
+  var _learnq = _learnq || [];
+
+  var item = {
+    Name: {{ product.title|json }},
+    ProductID: {{ product.id|json }},
+    Categories: {{ product.collections|map:'title'|json }},
+    ImageURL: "https:{{ product.featured_image.src|img_url:'grande' }}",
+    URL: "{{ shop.secure_url }}{{ product.url }}",
+    Brand: {{ product.vendor|json }},
+    Price: {{ product.price|money|json }},
+    CompareAtPrice: {{ product.compare_at_price_max|money|json }}
+  };
+
+  _learnq.push(['track', 'Viewed Product', item]);
+  _learnq.push(['trackViewedItem', {
+    Title: item.Name,
+    ItemId: item.ProductID,
+    Categories: item.Categories,
+    ImageUrl: item.ImageURL,
+    Url: item.URL,
+    Metadata: {
+      Brand: item.Brand,
+      Price: item.Price,
+      CompareAtPrice: item.CompareAtPrice
+    }
+  }]);
+</script>
+{%- endif -%}
+{{product.metafields.shogun.below}}
+
+<div class="aiod-bundle-discount-wrap" ></div>
+{{ product.metafields.shogun.optimizer }}

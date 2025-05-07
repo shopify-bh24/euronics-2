@@ -1,0 +1,89 @@
+<div class="usp_bar" style="background-color:{{ section.settings.bg-color }};">
+  <div class="container">
+    <div class="swiper mySwiper usp_bar_block">
+      <div class="swiper-wrapper">
+        {%- for block in section.blocks -%}
+        <div class="swiper-slide usp_bar_wrap">
+          <a href="{{ block.settings.link }}">
+            <div class="usp_bar_content">
+              {%- if block.settings.image != blank -%}
+              <figure><img src="{{ block.settings.image | img_url: 'master' }}" alt="" /></figure>
+              {%- endif -%}
+              <div class="usp_bar_desc">
+                {%- if block.settings.title != blank -%}<h3 style="color:{{ block.settings.title-font-color }};">{{ block.settings.title }}</h3>{%- endif -%}
+                {%- if block.settings.desc != blank -%}<div style="color:{{ block.settings.desc-font-color }};">{{ block.settings.desc }}</div>{%- endif -%}
+              </div>
+            </div>
+          </a>
+        </div>
+        {%- endfor -%}
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "USP Bar",
+    "settings": [
+      {
+        "type":"color",
+        "id":"bg-color",
+        "label":"Background Color",
+		"default":"#f1c400"
+      }
+	],
+	"blocks": [
+      {
+        "name":"Selling Points",
+        "type":"selling-points",
+        "settings":[
+          {
+            "type":"url",
+            "id":"link",
+            "label":"Link"
+          },
+          {
+            "type":"image_picker",
+            "id":"image",
+            "label":"Image"
+          },
+          {
+            "type":"text",
+            "id":"title",
+            "label":"Heading"
+          },
+          {
+            "type":"color",
+            "id":"title-font-color",
+            "label":"Heading Font Color",
+			"default":"#fff"
+          },
+          {
+            "type":"richtext",
+            "id":"desc",
+            "label":"Description"
+          },
+          {
+            "type":"color",
+            "id":"desc-font-color",
+            "label":"Description Font Color",
+			"default":"#000"
+          }
+        ]
+      }
+	],
+	"presets": [
+      {
+      	"name":"USP Bar"
+      }
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,8 @@
+{% if product.metafields["custom"]["previous_price_and_dates"] != blank %}
+  <div class="custom-field custom-field__previous-price-and-dates custom-field__type--single-line-text-field">
+    <h2 class="custom-field--title">Previous price and dates</h2>
+    <div class="custom-field--value" style="color: blue; font-size: 2.2em;;">
+      {{ product.metafields["custom"]["previous_price_and_dates"] }}
+    </div>
+  </div>
+{% endif %}

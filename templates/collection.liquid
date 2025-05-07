@@ -1,0 +1,18 @@
+{% render 'shogun-products', content: collection %}
+<!-- Zenbundle Collection Primary Placement -->
+<div class="container">
+  <div data-zenbundle="widget" data-placement-id="9610b06c-3c35-4cb3-be51-724e1c4df579"></div>
+</div>
+
+{{collection.metafields.shogun.above}}
+{% section 'collection-template' %}
+{% section 'static-promotion-list' %}
+{% section 'static-recently-viewed-products' %}
+
+<!-- Zenbundle Collection Secondary Placement -->
+<div class="container">
+  <div data-zenbundle="widget" data-placement-id="fb2d29f2-886a-4be2-abdb-f2cd01ae2b77"></div>
+</div>
+
+{{collection.metafields.shogun.below}}
+{{ collection.metafields.shogun.optimizer }}

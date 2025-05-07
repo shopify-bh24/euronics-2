@@ -1,0 +1,87 @@
+{%- assign grid = section.settings.grid -%}
+{%- case grid -%}
+{%- when 2 -%}
+{%- assign grid_div = "half_div" -%}
+{%- when 3 -%}
+{%- assign grid_div = "three_div" -%}
+{%- when 4 -%}
+{%- assign grid_div = "four_div" -%}
+{%- endcase -%}
+<style>
+  {%- for block in section.blocks -%}
+  .block_{{ block.id }} .headeing_ttl{color: {{ block.settings.title_color }}; background: {{ block.settings.title_bg }}}
+  {%- endfor -%}
+</style>
+<div class="three_grid_block">
+  <div class="container container--flush">
+    <ul class="grid_block">
+      {%- for block in section.blocks -%}
+      <li class="grid_slider block_{{ block.id }} {{ grid_div }}">
+        <div class="image_thumbnail_div">
+          {%- if block.settings.image -%}<div class="img_thumbnail"><img src="{{ block.settings.image | img_url:'master' }}" alt="image" title="image"></div>{%- endif -%}
+          <div class="block_desc">
+            {%- if block.settings.title != blank -%}<h3 class="headeing_ttl">{{ block.settings.title }}</h3>{%- endif -%}
+            <div class="block_desc_content">
+              {%- if block.settings.content != blank -%}{{ block.settings.content }}{%- endif -%}
+              {%- if block.settings.btn_ttl != blank -%}<a href="{{ block.settings.btn_url }}" class="btn block_btn">{{ block.settings.btn_ttl }}</a>{%- endif -%}
+            </div>
+          </div>
+        </div>
+      </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Three Column Block",
+    "settings": [{
+		"type": "range",
+		"id": "grid",
+		"label": "Grid",
+		"min": 2,
+		"max": 4,
+		"step": 1,
+		"default": 3
+	}],
+	"blocks": [{
+		"type": "three_gird_block",
+		"name": "Three Grid Block",
+		"settings": [{
+			"type": "image_picker",
+			"id": "image",
+			"label": "Image"
+		},
+		{
+			"type": "text",
+			"id": "title",
+			"label": "Title"
+		},
+		{
+			"type": "color",
+			"id": "title_color",
+			"label": "Title Color"
+		},
+		{
+			"type": "color",
+			"id": "title_bg",
+			"label": "Title Background Color"
+		},
+		{
+			"type": "richtext",
+			"id": "content",
+			"label": "Content"
+		},
+		{
+			"type": "text",
+			"id": "btn_ttl",
+			"label": "Button Title"
+		},
+		{
+			"type": "url",
+			"id": "btn_url",
+			"label": "Button URL"
+		}]
+	}]
+  }
+{% endschema %}

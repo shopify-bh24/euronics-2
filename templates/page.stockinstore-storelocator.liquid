@@ -1,0 +1,14 @@
+{% render 'shogun-products', content: page %}
+<div class="container">
+  <header class="page__header page__header--centered">
+    <h1 class="page__title heading h1">{{ page.title }}</h1>
+  </header>
+  <div class="page__content rte">
+    {{ page.content }}
+  </div>
+  <div id="sis-storelocator-wrapper"></div>
+
+<script type="text/javascript">var _stockinstore = _stockinstore || [];_stockinstore.push({ "site":"10270","applicationurl":  ("https:" == document.location.protocol ? "https://" : "http://") + "stockinstore.net","assetsurl": ("https:" == document.location.protocol ? "https://" : "http://") + "assets." + "stockinstore.net"});(function() {var ma = document.createElement("script");ma.type = "text/javascript";ma.async = 1;ma.src = _stockinstore[0].assetsurl + "/widgets/stockinstore-global.js";var mas = document.getElementsByTagName("script")[0];mas.parentNode.insertBefore(ma, mas);})();</script>
+<div data-sis-widget-lang="en" data-sis-widget-description="stockinstore" data-widget-type="store locator" data-sis-widget-id="274"></div>
+</div>
+{{ page.metafields.shogun.optimizer }}

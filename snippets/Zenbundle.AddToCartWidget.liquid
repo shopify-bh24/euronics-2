@@ -1,0 +1,72 @@
+{% # Included in `product-info.liquid` %}
+
+{% assign include_keywords = "laptop,tablet,smartphone,smart-tv,smart-television,smart-google-tv,chromecast,apple-tv,apple-imac,ipad,iphone,wpt-series-hd" | split: ',' %}
+{% assign exclude_keywords = "bag,cover,case,charger,bookcase" | split: ',' %}
+
+{% capture normalized_product_handle %}-{{ product.handle }}-{% endcapture %}
+
+{% assign zenbundle_widget_active = false %}
+
+{% # Looks for keywords to include %}
+{% for keyword in include_keywords %}
+  {% capture normalized_keyword %}-{{ keyword }}-{% endcapture %}
+  {% if normalized_product_handle contains normalized_keyword %}
+    {% assign zenbundle_widget_active = true %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+
+{% # Looks for keywords to exclude %}
+{% if zenbundle_widget_active %}
+  {% for keyword in exclude_keywords %}
+    {% capture normalized_keyword %}-{{ keyword }}-{% endcapture %}
+    {% if normalized_product_handle contains normalized_keyword %}
+      {% assign zenbundle_widget_active = false %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+{% if zenbundle_widget_active %}
+  {% if normalized_product_handle contains 'smart-tv' %}
+    {% assign product_type = "TV" %}
+  {% elsif normalized_product_handle contains "smart-google-tv" %}
+    {% assign product_type = "TV" %}
+  {% elsif normalized_product_handle contains "chromecast" %}
+    {% assign product_type = "Chromecast" %}
+  {% elsif normalized_product_handle contains "apple-tv" %}
+    {% assign product_type = "Apple TV" %}
+  {% elsif normalized_product_handle contains "macbook" %}
+    {% assign product_type = "MacBook" %}
+  {% elsif normalized_product_handle contains "apple-imac" %}
+    {% assign product_type = "iMac" %}
+  {% elsif normalized_product_handle contains "ipad" %}
+    {% assign product_type = "iPad" %}
+  {% elsif normalized_product_handle contains "iphone" %}
+    {% assign product_type = "iPhone" %}
+  {% elsif normalized_product_handle contains "laptop" %}
+    {% assign product_type = "Laptop" %}
+
+  {% elsif normalized_product_handle contains "smartphone" %}
+    {% assign product_type = "Smartphone" %}
+  {% elsif normalized_product_handle contains "tablet" %}
+    {% assign product_type = "Tablet" %}
+  {% else %}
+    {% assign product_type = "product" %}
+  {% endif %}
+
+ 
+  <div
+    id="zenbundle-widget-001"
+    data-zone-id="41d5031d-bb70-49d2-a9bd-0eb76149b618"
+    data-product-type="{{ product_type }}"
+  ></div>
+
+  {% if request.path == '/collections/tvs-under-300/products/walker-24-inch-wpt-series-hd-ready-satellite-saorview-tv-wpt24231sat' %}
+    <div style="padding: 6px 0; overflow: hidden">
+      <iframe border="0" src="https://api.zenbundle.com/v1/embedded-components/e4cc571e-8589-4872-9228-1445eaa01ab2" style="width: 100%; box-sizing: border-box; height: 36px; border: none;"></iframe>
+    </div>
+  {% else %}
+     <script type="application/javascript" src="https://api.zenbundle.com/v1/embedded-components/8f8c43c0-2f36-4ef7-a0be-6864d47784ff" async></script>
+  {% endif %}
+{% endif %}

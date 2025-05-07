@@ -1,0 +1,32 @@
+{%- assign product = all_products[product.metafields.my_fields.warranty_product] -%}
+<div class="warranty_popup" style="background-image: url({{ settings.warranty_bg_img | img_url: 'master' }});">
+  <a href="#" class="warranty_popup_close"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><g id="x"><path d="M52.83,50,96.41,6.41a2,2,0,0,0-2.82-2.82L50,47.17,6.41,3.59A2,2,0,0,0,3.59,6.41L47.17,50,3.59,93.59a2,2,0,1,0,2.82,2.82L50,52.83,93.59,96.41a2,2,0,0,0,2.82-2.82Z"></path></g></svg></a>
+  <div class="warranty_popup_block">
+    <div class="warranty_popup_wrap">
+      {%- if settings.warranty_logo_img != blank -%}
+      <a href="/"><img src="{{ settings.warranty_logo_img | img_url: '200x40' }}" alt="" /></a>
+      {%- endif -%}
+      <div class="warranty_title">
+        {%- if settings.warranty_title_img != blank -%}
+        <figure><img src="{{ settings.warranty_title_img | img_url:'108x100' }}" alt="" /></figure>
+        {%- endif -%}
+        {%- if settings.warranty_title != blank -%}<h2>{{ settings.warranty_title }}</h2>{%- endif -%}
+      </div>
+      {%- if settings.warranty_desc != blank -%}<div class="warranty_desc">{{ settings.warranty_desc }}</div>{%- endif -%}
+      {%- if settings.warranty_terms != blank -%}<div class="warranty_terms">{{ settings.warranty_terms }}</div>{%- endif -%}
+    </div>
+    <div class="warranty_popup_con">
+      <div class="warranty_plan">
+        <ul>
+          {%- if settings.warranty_plan1 != blank -%}<li><a href="#" class="standard_included">{{ settings.warranty_plan1 }}</a></li>{%- endif -%}
+          {%- if settings.warranty_plan2 != blank -%}<li><a href="#" class="active"><p>{{ settings.warranty_plan2 }}<strong>{{ product.selected_or_first_available_variant.price | money }}</strong></p></a></li>{%- endif -%}
+        </ul>
+        <div class="warranty_btns">
+          {%- if settings.add_to_warranty != blank -%}<a href="#" class="warranty_add_cart" data-id="{{ product.selected_or_first_available_variant.id }}">{{ settings.add_to_warranty }}</a>{%- endif -%}
+          {%- if settings.skip_warranty != blank -%}<a href="#" class="warranty_skip">{{ settings.skip_warranty }}</a>{%- endif -%}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="warranty_popup_overly"></div>

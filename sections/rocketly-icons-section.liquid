@@ -1,0 +1,23 @@
+        {% case section.settings.rocketly_icon_section_id %}
+          
+        {% endcase %}
+        {% schema %}
+          {
+            "name": "Rocketly Icons Section",
+            "settings": [
+              {
+                "type": "select",
+                "id": "rocketly_icon_section_id",
+                "label": "Rocketly Icons Section",
+                "options": [{ "value": "", "label": "Do not display" }],
+                "info": "If you don't see your section here, make sure it's published and placement is selected to 'Homepage'"
+              }
+            ],
+            "presets": [
+              {
+                "name": "Rocketly Icons Sections",
+                "category": "Image"
+              }
+            ]
+          }
+        {% endschema %}      
