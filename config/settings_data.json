@@ -1154,6 +1154,7 @@
       },
       "featured_product_DAKLy4": {
         "type": "featured-product",
+        "disabled": true,
         "settings": {
           "product": "sage-the-barista-touch-impress-2l-bean-to-cup-coffee-machine-black-truffle-ses881btr4guk1",
           "title": "Our Product Of The Week",
