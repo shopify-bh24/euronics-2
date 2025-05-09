@@ -473,8 +473,8 @@
       "featured_collection_xJ8td6": {
         "type": "featured-collection",
         "settings": {
-          "collection": "backup-power-stations",
-          "title": "Portable Power",
+          "collection": "10-off-lg-tvs",
+          "title": "LG TVs PRICE DROP!",
           "products_count": 24,
           "layout": "vertical",
           "stack_products": false,
@@ -933,20 +933,6 @@
           "show_collection_title": true,
           "show_collection_overlay": true,
           "collection_overlay_opacity": 20
-        }
-      },
-      "featured_collection_36qnLB": {
-        "type": "featured-collection",
-        "disabled": true,
-        "settings": {
-          "collection": "save-10-on-selected-lg-tvs",
-          "title": "HURRY! LG TV SALE: 10% OFF ? Ends March 31, Last Chance to Save!",
-          "products_count": 26,
-          "layout": "vertical",
-          "stack_products": false,
-          "show_quick_buy": false,
-          "link_title": "View all",
-          "link_url": ""
         }
       },
       "search-template": {
@@ -1480,11 +1466,10 @@
       "slideshow",
       "shogun_custom_67d189261ae2a69c44a00334_pJGKpt",
       "cd10fa02-bd8e-4cf2-8d71-725033d3fe3b",
-      "featured_collection_36qnLB",
       "shogun_custom_681c7be4b37ad2f06e923a11_xb9dX6",
-      "shogun_custom_6672f94bad4fce565dc38a6e_RVVUGC",
       "featured_collection_xJ8td6",
       "shogun_custom_67110c0c3c66529b9dce4396_FNfe4L",
+      "shogun_custom_6672f94bad4fce565dc38a6e_RVVUGC",
       "featured_product_DAKLy4",
       "collection_with_image_g7qm7C",
       "feefo_review_carousel_kpAc8M",
