@@ -1351,6 +1351,23 @@
               "link": "shopify://collections/blomberg"
             }
           },
+          "image_iJQhfF": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/Outdoors_Living.png",
+              "mobile_image": "shopify://shop_images/Outdoors_Living_750_x_880_px.png",
+              "show_overlay": false,
+              "overlay_opacity": 30,
+              "text_color": "#ffffff",
+              "title": "",
+              "content": "",
+              "content_position": "middle_center",
+              "button_background": "#ffffff",
+              "button_text_color": "#000000",
+              "button_text": "",
+              "link": "https://euronics.ie/collections/outdoor-living"
+            }
+          },
           "image_nh6PK3": {
             "type": "image",
             "settings": {
@@ -1385,23 +1402,6 @@
               "link": "https://euronics.ie/collections/dreame"
             }
           },
-          "image_iJQhfF": {
-            "type": "image",
-            "settings": {
-              "image": "shopify://shop_images/Outdoors_Living.png",
-              "mobile_image": "shopify://shop_images/Outdoors_Living_750_x_880_px.png",
-              "show_overlay": false,
-              "overlay_opacity": 30,
-              "text_color": "#ffffff",
-              "title": "",
-              "content": "",
-              "content_position": "middle_center",
-              "button_background": "#ffffff",
-              "button_text_color": "#000000",
-              "button_text": "",
-              "link": "https://euronics.ie/collections/outdoor-living"
-            }
-          },
           "7d2b6ae6-0eb2-4010-928b-ba81517821a6": {
             "type": "image",
             "settings": {
@@ -1423,13 +1423,13 @@
         "block_order": [
           "image_PLE6VK",
           "image_NDnLtE",
+          "image_iJQhfF",
           "image_nh6PK3",
           "image_U3kMim",
-          "image_iJQhfF",
           "7d2b6ae6-0eb2-4010-928b-ba81517821a6"
         ],
         "settings": {
-          "edge_to_edge": true,
+          "edge_to_edge": false,
           "section_size": "preserve_ratio",
           "carousel_effect": "fade",
           "autoplay": true,
