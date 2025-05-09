@@ -1429,7 +1429,7 @@
           "7d2b6ae6-0eb2-4010-928b-ba81517821a6"
         ],
         "settings": {
-          "edge_to_edge": false,
+          "edge_to_edge": true,
           "section_size": "preserve_ratio",
           "carousel_effect": "fade",
           "autoplay": true,
