@@ -1367,10 +1367,9 @@
           },
           "image_nh6PK3": {
             "type": "image",
-            "disabled": true,
             "settings": {
-              "image": "shopify://shop_images/Easter_Social_2_1.jpg",
-              "mobile_image": "shopify://shop_images/Easter_Social2_2.jpg",
+              "image": "shopify://shop_images/Beat_the_heat_1.jpg",
+              "mobile_image": "shopify://shop_images/Beat_the_heat2_1.jpg",
               "show_overlay": false,
               "overlay_opacity": 30,
               "text_color": "#ffffff",
@@ -1380,7 +1379,7 @@
               "button_background": "#ffffff",
               "button_text_color": "#000000",
               "button_text": "",
-              "link": "shopify://collections/great-deals"
+              "link": "https://euronics.ie/collections/cooling"
             }
           },
           "image_U3kMim": {
