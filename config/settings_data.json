@@ -1388,8 +1388,8 @@
           "image_U3kMim": {
             "type": "image",
             "settings": {
-              "image": "shopify://shop_images/Dreame_web_banners.jpg",
-              "mobile_image": "shopify://shop_images/Dreame_web_banners2.jpg",
+              "image": "shopify://shop_images/NEFF_Multibuy_Cashback_IRE_Euronics_2160x500_b539d4f2-5e9c-46a1-b519-5cfb0467f62c.jpg",
+              "mobile_image": "shopify://shop_images/NEFF_Multibuy_Cashback_IRE_Euronics_750x880_701de555-caf1-4fe3-8c73-f17a83c643d0.jpg",
               "show_overlay": false,
               "overlay_opacity": 30,
               "text_color": "#ffffff",
@@ -1399,7 +1399,7 @@
               "button_background": "#ffffff",
               "button_text_color": "#000000",
               "button_text": "",
-              "link": "https://euronics.ie/collections/dreame"
+              "link": "https://euronics.ie/collections/neff"
             }
           },
           "7d2b6ae6-0eb2-4010-928b-ba81517821a6": {
