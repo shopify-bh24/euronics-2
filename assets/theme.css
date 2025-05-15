@@ -3559,7 +3559,7 @@ sold out label to create some consistence */
 }
 
 .collection__description {
-  margin-top: 20px;
+  padding: 20px;
 }
 
 .collection__brand-logo-wrapper {
@@ -3739,10 +3739,6 @@ sold out label to create some consistence */
 @media screen and (min-width: 1280px) {
   .collection__title {
     margin-bottom: 12px;
-  }
-
-  .collection__description {
-    margin-top: 10px;
   }
 
   .collection__showing-count,
