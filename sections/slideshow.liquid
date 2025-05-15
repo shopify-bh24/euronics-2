@@ -39,7 +39,7 @@
                   {{- placeholder | placeholder_svg_tag: 'slideshow__image-placeholder' -}}
                 </div>
               {%- endif -%}
-            {%- endunless -%}
+            {%- endunless -%} 
 
             {%- if block.settings.image and section.settings.section_size == 'preserve_ratio' -%}
               {%- capture supported_sizes -%}{%- render 'image-size', sizes: '800,900,1000,1100,1200,1400,1600,2100', image: block.settings.image -%}{%- endcapture -%}
