@@ -42,7 +42,7 @@
             {%- endunless -%}
 
             {%- if block.settings.image and section.settings.section_size == 'preserve_ratio' -%}
-              {%- capture supported_sizes -%}{%- render 'image-size', sizes: '800,900,1000,1100,1200', image: block.settings.image -%}{%- endcapture -%}
+              {%- capture supported_sizes -%}{%- render 'image-size', sizes: '800,900,1000,1100,1200,1400,1600,2100', image: block.settings.image -%}{%- endcapture -%}
               {%- assign image_url = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
 
               <div class="aspect-ratio {% if block.settings.mobile_image %}hidden-phone{% endif %}" style="padding-bottom: {{ 100.0 | divided_by: block.settings.image.aspect_ratio }}%">

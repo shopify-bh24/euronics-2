@@ -592,12 +592,132 @@
       }
     },
     {
-      "key": "product_gallary_metafield",
+      "key": "product_gallery_metafield_description_1",
       "namespace": "custom",
-      "name": "product gallary metafield",
+      "name": "Product gallery metafield 1",
       "description": "",
       "type": {
-        "name": "multi_line_text_field",
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "product_gallery_metafield_description_2",
+      "namespace": "custom",
+      "name": "Product gallery metafield 2",
+      "description": "",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "product_gallery_metafield_description_3",
+      "namespace": "custom",
+      "name": "Product gallery metafield 3",
+      "description": "",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "product_gallery_metafield_description_4",
+      "namespace": "custom",
+      "name": "Product gallery metafield 4",
+      "description": "",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "product_gallery_metafield_description_5",
+      "namespace": "custom",
+      "name": "Product gallery metafield 5",
+      "description": "",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "product_gallery_metafield_description_6",
+      "namespace": "custom",
+      "name": "Product gallery metafield 6",
+      "description": "",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "cleaning-surfaces",
+      "namespace": "shopify",
+      "name": "Cleaning surfaces",
+      "description": "Identifies the suitable surfaces for a cleaning product, such as glass surfaces or stovetops",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "dirt-separating-method",
+      "namespace": "shopify",
+      "name": "Dirt separating method",
+      "description": "Describes the technique a vacuum uses for dirt separation, e.g. cyclonic, filtering",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "dry-wet-cleaning",
+      "namespace": "shopify",
+      "name": "Dry/Wet cleaning",
+      "description": "Specifies if products are suitable for dry or wet cleaning",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "dust-container-type",
+      "namespace": "shopify",
+      "name": "Dust container type",
+      "description": "Specifies the type of dust collection system in vacuums and appliances, e.g. bagless, dust bag",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "vacuum-air-filtering-technology",
+      "namespace": "shopify",
+      "name": "Vacuum air filtering technology",
+      "description": "Specifies the type of air filtration used in vacuum cleaners, such as HEPA or pet",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "washing-programs",
+      "namespace": "shopify",
+      "name": "Washing programs",
+      "description": "Defines the different wash cycles a washing machine offers, like cold wash or delicate",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "load_capacity",
+      "namespace": "custom",
+      "name": "Load Capacity",
+      "description": "Load Capacity ",
+      "type": {
+        "name": "single_line_text_field",
         "category": "TEXT"
       }
     }

@@ -313,7 +313,8 @@ th {
 
 /* page dots */
 .flickity-page-dots {
-  position: absolute;
+  margin-top: 10px;
+  /* position: absolute; */
   width: 100%;
   padding: 0;
   bottom: 0;
@@ -10997,11 +10998,11 @@ are specific JUST for this element and break the generic abstractions... thanks 
 }
 
 .slideshow .flickity-page-dots .dot {
-  width: 12px;
-  height: 12px;
+  width: 14px;
+  height: 14px;
   margin: 0 8px;
-  background: #ffffff;
-  border: 3px solid #ffffff;
+  background: #163d8d;
+  border: 4px solid #163d8d;
   transform: none !important;
   transition: background 0.25s ease-in-out;
 }
@@ -11014,7 +11015,7 @@ are specific JUST for this element and break the generic abstractions... thanks 
 }
 
 .slideshow .flickity-page-dots .dot.is-selected {
-  background: transparent;
+  background: white;
 }
 
 /** Overlay variation **/
