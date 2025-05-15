@@ -3558,8 +3558,18 @@ sold out label to create some consistence */
   margin-bottom: 12px;
 }
 
+.collection_description-container{
+  margin-top: 20px;
+}
+
 .collection__description {
   padding: 20px;
+  border: 1px solid #1d428a;
+  border-radius: 10px;
+}
+
+.collection__description-header{
+  text-align: center;
 }
 
 .collection__brand-logo-wrapper {

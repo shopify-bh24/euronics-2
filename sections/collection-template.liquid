@@ -72,10 +72,10 @@
     </div>
 
     <div class="layout">
-      {%- comment -%}
+      {%- comment -%} 
         --------------------------------------------------------------------------------------
         FILTER BAR (DESKTOP)
-        --------------------------------------------------------------------------------------
+        -------------------------------------------------------------------------------------- 
       {%- endcomment -%}
 
       <div class="layout__section layout__section--secondary hidden-pocket">
@@ -83,6 +83,7 @@
           <div class="card__section card__section--tight">
             <p class="card__title--small heading">{{ 'collection.filter.all' | t }}</p>
             <div class="boost-pfs-filter-tree boost-pfs-filter-tree-v">{% include 'boost-pfs-filter-skeleton'
+ 
 , type: 'filter-tree' %}</div>
           </div>
         </div>
@@ -128,10 +129,10 @@
               {%- endif -%}
             {%- endunless -%}
 
-            {%- comment -%}
+            {%- comment -%} 
               --------------------------------------------------------------------------------------
               TOP PART (COLLECTION INFO + TOOLBAR)
-              --------------------------------------------------------------------------------------
+              -------------------------------------------------------------------------------------- 
             {%- endcomment -%}
 
             <div class="card">
@@ -180,7 +181,7 @@
                           , '43-to-54-televisions'
                           , '55-to-65-televisions'
                           , '65-televisions'
-                          ,  'sony-tvs'
+                          , 'sony-tvs'
                           , 'toshiba-tvs'
                           , 'walker-tvs'
                           , %}
@@ -207,8 +208,8 @@
 
                   <div class="collection__toolbar-item collection__toolbar-item--count hidden-pocket">
                     <span class="boost-pfs-filter-total-product collection__showing-count hidden-pocket hidden-lap"></span>
-                  {% comment %}
-                    <div class="boost-pfs-filter-top-show-limit value-picker-wrapper"></div>
+                  {% comment %} 
+                    <div class="boost-pfs-filter-top-show-limit value-picker-wrapper"></div> 
                   {% endcomment %}
                   </div>
 
@@ -249,10 +250,10 @@
                   </div>
                 </div>
 
-                {%- comment -%}
+                {%- comment -%} 
                   --------------------------------------------------------------------------------------
                   COLLECTION PRODUCTS
-                  --------------------------------------------------------------------------------------
+                  -------------------------------------------------------------------------------------- 
                 {%- endcomment -%}
 
                 {%- if view_mode == 'grid' -%}
@@ -268,45 +269,58 @@
                       , grid_classes: grid_classes -%}
                   {%- endfor -%}
                 </div>
-
-                {%- if collection.description != blank -%}
-                  {%- assign allow_collapse_description = false -%}
-
-                  {%- if section.settings.collapse_collection_description -%}
-                    {%- assign allow_collapse_description = true -%}
-                  {%- endif -%}
-
-                  <div class="collection__description {% if allow_collapse_description %}expandable-content{% endif %}" aria-expanded="false">
-                    <div class="rte boost-pfs-filter-collection-description">
-                      {{ collection.description }}
-                    </div>
-
-                    {%- if allow_collapse_description -%}
-                      <button class="expandable-content__toggle">
-                        <span class="expandable-content__toggle-icon"></span>
-                        <span
-                          class="expandable-content__toggle-text"
-                          data-view-more="{{ 'collection.general.view_more' | t | escape }}"
-                          data-view-less="{{ 'collection.general.view_less' | t | escape }}">{{- 'collection.general.view_more' | t -}}</span>
-                      </button>
-                    {%- endif -%}
-                  </div>
-                {%- endif -%}
-
                 <div class="boost-pfs-filter-bottom-pagination pagination"></div>
                 <div class="boost-pfs-filter-load-more"></div>
               </div>
             </div>
           </div>
+
+          <div class="collection_description-container">
+
+            <h1 class="boost-pfs-filter-collection-header collection__title heading h1 collection__description-header">
+              {%- if collection.handle == 'all' -%}
+                {{- 'collection.general.all_products' | t -}}
+              {%- else -%}
+                {{- collection.title -}}
+              {%- endif -%}
+            </h1>
+            {%- if collection.description != blank -%}
+              {%- assign allow_collapse_description = false -%}
+
+              {%- if section.settings.collapse_collection_description -%}
+                {%- assign allow_collapse_description = true -%}
+              {%- endif -%}
+
+              <div class="collection__description {% if allow_collapse_description %}expandable-content{% endif %}" aria-expanded="false">
+                <div class="rte boost-pfs-filter-collection-description">
+                  {{ collection.description }}
+                </div>
+
+                {%- if allow_collapse_description -%}
+                  <button class="expandable-content__toggle">
+                    <span class="expandable-content__toggle-icon"></span>
+                    <span
+                      class="expandable-content__toggle-text"
+                      data-view-more="{{ 'collection.general.view_more' | t | escape }}"
+                      data-view-less="{{ 'collection.general.view_less' | t | escape }}">{{- 'collection.general.view_more' | t -}}</span>
+                  </button>
+                {%- endif -%}
+              </div>
+            {%- endif -%}
+          </div>
+
         </div>
+
       {%- endpaginate -%}
+
+
     </div>
   </div>
 
-  {%- comment -%}
+  {%- comment -%} 
     --------------------------------------------------------------------------------------
     MOBILE FILTER SIDEBAR
-    --------------------------------------------------------------------------------------
+    -------------------------------------------------------------------------------------- 
   {%- endcomment -%}
 
   <div id="mobile-collection-filters" class="drawer">
@@ -331,10 +345,10 @@
   </div>
 
 
-  {%- comment -%}
+  {%- comment -%} 
     --------------------------------------------------------------------------------------
     YOUREKO
-    --------------------------------------------------------------------------------------
+    -------------------------------------------------------------------------------------- 
   {%- endcomment -%}
 
   <script
@@ -343,12 +357,11 @@
     src="https://static.youreko.com/js/partners/ie/euronics/youreko.energy-review.euronics.all.min.js"></script>
 
 
+  {%- comment -%} 
  
-  {%- comment -%}
-  
     --------------------------------------------------------------------------------------
     QUICK VIEW CONTAINER
-    --------------------------------------------------------------------------------------
+    -------------------------------------------------------------------------------------- 
   {%- endcomment -%}
 
   <div id="modal-quick-view-{{ section.id }}" class="modal">
@@ -435,7 +448,7 @@
   			template: {{ request.page_type | json }}
   		}
   	};
-
+  
   	// Declare Templates
   	var boostPFSTemplate = {
   		// Grid Template
@@ -450,7 +463,7 @@
   		'quickBuyHtml': {% render 'boost-pfs-filter-html', layout: 'quickBuyHtml' %},
   		'quickBuyChooseOptionsHtml': {% render 'boost-pfs-filter-html', layout: 'quickBuyChooseOptionsHtml' %},
   		'quickBuySoldOutHtml': {% render 'boost-pfs-filter-html', layout: 'quickBuySoldOutHtml' %},
-
+  
   		// Pagination Template
   		'pageItemPreviousHtml': {% render 'boost-pfs-filter-html', layout: 'pageItemPreviousHtml' %},
   		'pageItemNextHtml': {% render 'boost-pfs-filter-html', layout: 'pageItemNextHtml' %},
