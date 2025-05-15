@@ -1353,6 +1353,7 @@
           },
           "image_iJQhfF": {
             "type": "image",
+            "disabled": true,
             "settings": {
               "image": "shopify://shop_images/Outdoors_Living.png",
               "mobile_image": "shopify://shop_images/Outdoors_Living_750_x_880_px.png",
