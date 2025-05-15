@@ -3565,7 +3565,7 @@ sold out label to create some consistence */
 .collection__description {
   padding: 20px;
   border: 1px solid #1d428a;
-  border-radius: 10px;
+  border-radius: 10px; 
 }
 
 .collection__description-header{
