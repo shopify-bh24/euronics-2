@@ -1289,7 +1289,7 @@
         ],
         "settings": {
           "enable_sticky_header": true,
-          "logo": "shopify://shop_images/euronics-logo_1aa6307f-a413-429f-a3d3-3dac7cf9a581.png",
+          "logo": "shopify://shop_images/euronicsv2.png",
           "logo_max_width": 270,
           "mobile_logo_max_width": 160,
           "show_locale_selector": false,
