@@ -11785,7 +11785,7 @@ there is another, more optimized way to position when it is possible
   border-radius: 6px;
   /* background-image: linear-gradient(133deg, #ff0909, #b4e1ff, #163d8d); */
   background: #173e8e;
-  padding: 4px;
+  padding: 2px; 
 }
 
 .featured_collection_text {
