@@ -117,7 +117,7 @@
         "type": "featured-collection",
         "settings": {
           "collection": "blomberg",
-          "title": "Free Delivery on All Blomberg Appliances",
+          "title": "Free Delivery on all Blomberg",
           "products_count": 29,
           "layout": "vertical",
           "stack_products": false,
@@ -445,23 +445,6 @@
           "button_link": "shopify://collections/all"
         }
       },
-      "collection_with_image_g7qm7C": {
-        "type": "collection-with-image",
-        "disabled": true,
-        "settings": {
-          "collection": "ninja-crispi",
-          "products_count": 12,
-          "image": "shopify://shop_images/1080x900_1.png",
-          "background": "#ffffff",
-          "text_color": "#1d428a",
-          "title": "Brand New!",
-          "content": "",
-          "button_background": "#ffffff",
-          "button_text_color": "#1d428a",
-          "button_text": "",
-          "button_link": ""
-        }
-      },
       "featured_collection_xJ8td6": {
         "type": "featured-collection",
         "settings": {
@@ -492,155 +475,6 @@
         "settings": {
           "logo_max_width": 140,
           "mobile_logo_max_width": 100
-        }
-      },
-      "1636037764fe79b904": {
-        "type": "logo-list",
-        "blocks": {
-          "1636037764fe79b904-5": {
-            "type": "logo",
-            "settings": {
-              "image": "shopify://shop_images/blomberg.png",
-              "link": "https://euronics.ie/collections/blomberg"
-            }
-          },
-          "1636037764fe79b904-0": {
-            "type": "logo",
-            "settings": {
-              "image": "shopify://shop_images/samsung.png",
-              "link": "shopify://collections/samsung-home-appliances"
-            }
-          },
-          "1636037764fe79b904-1": {
-            "type": "logo",
-            "settings": {
-              "image": "shopify://shop_images/lg.png",
-              "link": "shopify://collections/lg"
-            }
-          },
-          "1636037764fe79b904-2": {
-            "type": "logo",
-            "settings": {
-              "image": "shopify://shop_images/bosch.png",
-              "link": "https://euronics.ie/collections/bosch"
-            }
-          },
-          "1636037764fe79b904-3": {
-            "type": "logo",
-            "settings": {
-              "image": "shopify://shop_images/beko.png",
-              "link": "https://euronics.ie/collections/beko"
-            }
-          },
-          "1dfaa9c9-2f5f-468b-b07d-2ff6c773c95e": {
-            "type": "logo",
-            "settings": {
-              "image": "shopify://shop_images/neff.png",
-              "link": "shopify://collections/neff"
-            }
-          },
-          "e582d4af-4100-4642-8376-e868892c3a6d": {
-            "type": "logo",
-            "settings": {
-              "image": "shopify://shop_images/siemenslogo.png",
-              "link": "shopify://collections/siemens"
-            }
-          },
-          "2cef6c99-894f-4799-b0f6-53cb0b362440": {
-            "type": "logo",
-            "settings": {
-              "image": "shopify://shop_images/miele-logo.png",
-              "link": "shopify://collections/miele"
-            }
-          },
-          "b89e0437-1f95-4db0-a45a-51ca40c2ac03": {
-            "type": "logo",
-            "settings": {
-              "image": "shopify://shop_images/Hoover_Logo_280_x_280.png",
-              "link": "shopify://collections/hoover"
-            }
-          },
-          "cbf7b5a5-1d8c-4e1f-b7f1-120e2d1dff79": {
-            "type": "logo",
-            "settings": {
-              "image": "shopify://shop_images/sage-logo.webp",
-              "link": "shopify://collections/sage"
-            }
-          },
-          "1636037764fe79b904-4": {
-            "type": "logo",
-            "settings": {
-              "image": "shopify://shop_images/fitbit.png",
-              "link": "shopify://collections/fitbit"
-            }
-          },
-          "a0bf8865-235d-4145-a4b3-9102c127ac0f": {
-            "type": "logo",
-            "settings": {
-              "image": "shopify://shop_images/asus_dbb35c3b-97d2-491d-b4c8-c9ce3eaac03b.jpg",
-              "link": "shopify://collections/asus"
-            }
-          },
-          "9ca7dd27-cdd5-4d08-8033-6a6caab2da16": {
-            "type": "logo",
-            "settings": {
-              "image": "shopify://shop_images/ring_Logo.png",
-              "link": "shopify://collections/ring"
-            }
-          },
-          "34c1c635-7dfc-4279-8d8f-78401f709aad": {
-            "type": "logo",
-            "settings": {
-              "image": "shopify://shop_images/ninja_logo.png",
-              "link": "shopify://collections/ninja"
-            }
-          },
-          "9d0f7b20-4a9c-4b5d-98de-4cfa53006370": {
-            "type": "logo",
-            "settings": {
-              "image": "shopify://shop_images/Logo-CANDY-Simple-2_5a27cabd-4c48-456f-b98f-98909498a3be.png",
-              "link": "shopify://collections/candy"
-            }
-          },
-          "da34f5d6-f7f5-44b1-8c4b-2a55eea0c931": {
-            "type": "logo",
-            "settings": {
-              "image": "shopify://shop_images/shark_logo.jpg",
-              "link": "shopify://collections/shark-1"
-            }
-          },
-          "ebfc3774-36d3-4426-8c1f-3db11b1901c7": {
-            "type": "logo",
-            "settings": {
-              "image": "shopify://shop_images/Electrolux-logo.jpg",
-              "link": "https://euronics.ie/collections/electrolux"
-            }
-          }
-        },
-        "block_order": [
-          "1636037764fe79b904-5",
-          "1636037764fe79b904-0",
-          "1636037764fe79b904-1",
-          "1636037764fe79b904-2",
-          "1636037764fe79b904-3",
-          "1dfaa9c9-2f5f-468b-b07d-2ff6c773c95e",
-          "e582d4af-4100-4642-8376-e868892c3a6d",
-          "2cef6c99-894f-4799-b0f6-53cb0b362440",
-          "b89e0437-1f95-4db0-a45a-51ca40c2ac03",
-          "cbf7b5a5-1d8c-4e1f-b7f1-120e2d1dff79",
-          "1636037764fe79b904-4",
-          "a0bf8865-235d-4145-a4b3-9102c127ac0f",
-          "9ca7dd27-cdd5-4d08-8033-6a6caab2da16",
-          "34c1c635-7dfc-4279-8d8f-78401f709aad",
-          "9d0f7b20-4a9c-4b5d-98de-4cfa53006370",
-          "da34f5d6-f7f5-44b1-8c4b-2a55eea0c931",
-          "ebfc3774-36d3-4426-8c1f-3db11b1901c7"
-        ],
-        "disabled": true,
-        "settings": {
-          "title": "Our Brands",
-          "link_title": "",
-          "link": ""
         }
       },
       "cart-template": {
@@ -1024,34 +858,6 @@
           "show_refunds_policy": true
         }
       },
-      "featured_product_DAKLy4": {
-        "type": "featured-product",
-        "disabled": true,
-        "settings": {
-          "product": "sage-the-barista-touch-impress-2l-bean-to-cup-coffee-machine-black-truffle-ses881btr4guk1",
-          "title": "Our Product Of The Week",
-          "link_title": "",
-          "link_url": "",
-          "show_vendor": false,
-          "show_sku": false,
-          "show_share_buttons": false,
-          "show_description": false,
-          "description_below_add_to_cart": false,
-          "selector_mode": "block",
-          "color_mode": "color",
-          "show_quantity_selector": false,
-          "show_reviews_badge": false,
-          "show_payment_button": false,
-          "show_pickup_availability": false,
-          "image_size": "small",
-          "enable_image_zoom": true,
-          "enable_video_looping": false,
-          "zoom_effect": "outside",
-          "carousel_effect": "fade",
-          "show_inventory_quantity": false,
-          "low_inventory_threshold": 0
-        }
-      },
       "feefo_review_carousel_kpAc8M": {
         "type": "feefo-review-carousel",
         "settings": {}
@@ -1358,11 +1164,8 @@
       "shogun_custom_6672f94bad4fce565dc38a6e_RVVUGC",
       "shogun_custom_681c7be4b37ad2f06e923a11_xb9dX6",
       "featured_collection_xJ8td6",
-      "featured_product_DAKLy4",
-      "collection_with_image_g7qm7C",
       "shogun_custom_682b279a5ba7c048f4377e46_RKkndG",
       "feefo_review_carousel_kpAc8M",
-      "1636037764fe79b904",
       "rich_text_PfKf9q"
     ],
     "blocks": {
