@@ -448,7 +448,7 @@
         "settings": {
           "text_width": "wide",
           "title": "",
-          "content": "<p>Euronics.ie is Ireland?s leading retailer for top-brand TVs, kitchen appliances, and home electronics. With <strong>over 60 stores nationwide</strong>, each independently run by local business owners, we proudly <strong>support Shop Local</strong>. As <strong>kitchen appliance specialists</strong>, we stock <strong>Ireland?s largest range of integrated home appliances</strong>?from energy-efficient washing machines and dishwashers to advanced refrigeration and cooking solutions. Beyond the kitchen, we also carry the latest consumer electronics, such as laptops for work or school, plus high-tech gadgets like drones, backup power supplies, and innovative robot vacuums. Enjoy <strong>competitive prices</strong>, <strong>fast nationwide delivery</strong>, and <strong>expert advice</strong> on everything from home entertainment to personal tech. <strong>Euronics ? a human touch in a digital world.</strong></p>",
+          "content": "<p>Euronics.ie is Ireland's leading retailer for top-brand TVs, kitchen appliances, and home electronics. With <strong>over 60 stores nationwide</strong>, each independently run by local business owners, we proudly <strong>support Shop Local</strong>. As <strong>kitchen appliance specialists</strong>, we stock <strong>Ireland's largest range of integrated home appliances </strong>from energy-efficient washing machines and dishwashers to advanced refrigeration and cooking solutions. Beyond the kitchen, we also carry the latest consumer electronics, such as laptops for work or school, plus high-tech gadgets like drones, backup power supplies, and innovative robot vacuums. Enjoy <strong>competitive prices</strong>, <strong>fast nationwide delivery</strong>, and <strong>expert advice</strong> on everything from home entertainment to personal tech. <strong>Euronics, a human touch in a digital world.</strong></p>",
           "button_text": "",
           "button_link": "shopify://collections/all"
         }
@@ -652,6 +652,7 @@
       },
       "blog_posts_38RndL": {
         "type": "blog-posts",
+        "disabled": true,
         "settings": {
           "blog": "tips-how-to-guides",
           "blog_posts_count": 3,
@@ -1014,6 +1015,7 @@
       },
       "blog_posts_aNMryj": {
         "type": "blog-posts",
+        "disabled": true,
         "settings": {
           "blog": "our-blog",
           "blog_posts_count": 3,
