@@ -1353,10 +1353,9 @@
           },
           "image_iJQhfF": {
             "type": "image",
-            "disabled": true,
             "settings": {
-              "image": "shopify://shop_images/Outdoors_Living.png",
-              "mobile_image": "shopify://shop_images/Outdoors_Living_750_x_880_px.png",
+              "image": "shopify://shop_images/BSH_I__90-day-money-back-banner_13_2160x500_e2306f22-62f6-4722-ade7-2fc10f4cf902.jpg",
+              "mobile_image": "shopify://shop_images/BSH_IE_90-day-money-back-banner_14_750x880_95e11650-1b67-41b4-8a89-300b8e4a77b6.jpg",
               "show_overlay": false,
               "overlay_opacity": 30,
               "text_color": "#ffffff",
@@ -1366,7 +1365,7 @@
               "button_background": "#ffffff",
               "button_text_color": "#000000",
               "button_text": "",
-              "link": "https://euronics.ie/collections/outdoor-living"
+              "link": "https://euronics.ie/collections/bosch-90-days"
             }
           },
           "image_nh6PK3": {
