@@ -483,10 +483,6 @@
           "link_url": ""
         }
       },
-      "shogun_custom_67110c0c3c66529b9dce4396_FNfe4L": {
-        "type": "shogun-custom-67110c0c3c66529b9dce4396",
-        "settings": {}
-      },
       "blog-template": {
         "type": "blog-template",
         "settings": {
@@ -808,77 +804,6 @@
           "title": "Recently viewed"
         }
       },
-      "16570233156de580fa": {
-        "type": "usp-bar",
-        "blocks": {
-          "c6be71f3-2a69-4a18-9b37-40c2ae3e4453": {
-            "type": "selling-points",
-            "settings": {
-              "link": "https://euronics.ie/pages/store-locator",
-              "image": "shopify://shop_images/map_1_60345a26-c352-41e8-b517-50fee8ce3451.png",
-              "title": "60 Locations Nationwide",
-              "title-font-color": "#ffffff",
-              "desc": "",
-              "desc-font-color": "#fafcfd"
-            }
-          },
-          "59e6d62d-3def-457d-843b-6afeaf4c492b": {
-            "type": "selling-points",
-            "settings": {
-              "link": "https://euronics.ie/pages/humm-finance",
-              "image": "shopify://shop_images/credit-card_72d7ede8-3fc6-4c2b-8673-8ae51c1e69f4.png",
-              "title": "Secure Online Shopping",
-              "title-font-color": "#fafcfd",
-              "desc": "",
-              "desc-font-color": "#fafcfd"
-            }
-          },
-          "1f06b786-42c9-4d5f-bbbf-7bf24d48d302": {
-            "type": "selling-points",
-            "settings": {
-              "link": "https://euronics.ie/pages/delivery",
-              "image": "shopify://shop_images/package-box_80415db7-5367-44db-a98b-cfaf433fc2e9.png",
-              "title": "Nationwide Delivery",
-              "title-font-color": "#fafcfd",
-              "desc": "",
-              "desc-font-color": "#fafcfd"
-            }
-          },
-          "e4df3df6-e29f-4298-91b9-ea76210f4d70": {
-            "type": "selling-points",
-            "settings": {
-              "link": "shopify://pages/humm-finance",
-              "image": "shopify://shop_images/humm_finance.png",
-              "title": "humm Finance",
-              "title-font-color": "#fafcfd",
-              "desc": "",
-              "desc-font-color": "#fafcfd"
-            }
-          },
-          "298688bd-6e94-465f-861b-b6604d1067c7": {
-            "type": "selling-points",
-            "disabled": true,
-            "settings": {
-              "link": "",
-              "title": "",
-              "title-font-color": "#ffffff",
-              "desc": "<p></p>",
-              "desc-font-color": "#000000"
-            }
-          }
-        },
-        "block_order": [
-          "c6be71f3-2a69-4a18-9b37-40c2ae3e4453",
-          "59e6d62d-3def-457d-843b-6afeaf4c492b",
-          "1f06b786-42c9-4d5f-bbbf-7bf24d48d302",
-          "e4df3df6-e29f-4298-91b9-ea76210f4d70",
-          "298688bd-6e94-465f-861b-b6604d1067c7"
-        ],
-        "disabled": true,
-        "settings": {
-          "bg-color": "#1d428a"
-        }
-      },
       "text-with-icons": {
         "type": "text-with-icons",
         "blocks": {
@@ -1100,11 +1025,6 @@
           "show_excerpt": false,
           "stack_mobile": false
         }
-      },
-      "shogun_custom_66700ba1cc86fd62f88d0c15_6bQLhQ": {
-        "type": "shogun-custom-66700ba1cc86fd62f88d0c15",
-        "disabled": true,
-        "settings": {}
       },
       "product-no-cart": {
         "type": "product-no-cart",
@@ -1465,15 +1385,12 @@
       "slideshow",
       "shogun_custom_67d189261ae2a69c44a00334_pJGKpt",
       "cd10fa02-bd8e-4cf2-8d71-725033d3fe3b",
+      "shogun_custom_6672f94bad4fce565dc38a6e_RVVUGC",
       "shogun_custom_681c7be4b37ad2f06e923a11_xb9dX6",
       "featured_collection_xJ8td6",
-      "shogun_custom_67110c0c3c66529b9dce4396_FNfe4L",
-      "shogun_custom_6672f94bad4fce565dc38a6e_RVVUGC",
       "featured_product_DAKLy4",
       "collection_with_image_g7qm7C",
       "feefo_review_carousel_kpAc8M",
-      "16570233156de580fa",
-      "shogun_custom_66700ba1cc86fd62f88d0c15_6bQLhQ",
       "1636037764fe79b904",
       "blog_posts_aNMryj",
       "blog_posts_38RndL",
