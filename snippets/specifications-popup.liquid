@@ -1,0 +1,130 @@
+<!-- specifications-popup.liquid -->
+
+<button type="button" class="card__header_popup" id="open-specs">
+  Specifications
+</button>
+
+<div id="specs-modal" class="specs-modal">
+  <div class="specs-modal-content">
+    <span class="specs-close">&times;</span>
+    <h3>Specifications</h3>
+
+    {% assign specs_json = product.metafields.custom.specs.value | parse_json %}
+    
+    {% if specs_json %}
+      <div class="specs-table">
+        {% for item in specs_json %}
+          <div class="specs-row {% cycle 'even', 'odd' %}">
+            <div class="specs-key">{{ item.name }}</div>
+            <div class="specs-value">{{ item.value }}</div>
+          </div>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p>No specifications found.</p>
+    {% endif %}
+  </div>
+</div>
+
+<style>
+  .specs-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .specs-modal.show {
+    display: flex;
+  }
+
+  .specs-modal-content {
+    background: #fff;
+    padding: 24px;
+    border-radius: 8px;
+    max-width: 800px;
+    width: 90%;
+    position: relative;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+
+  .specs-modal-content h3{
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .specs-close {
+    position: absolute;
+    top: 0px;
+    right: 15px;
+    font-size: 34px;
+    cursor: pointer;
+  }
+
+  .specs-table {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+
+  .specs-row {
+    display: flex;
+    padding: 10px;
+  }
+
+  .specs-row.even {
+    background-color: #f9f9f9;
+  }
+
+  .specs-row.odd {
+    background-color: #ffffff;
+  }
+
+  .specs-key {
+    font-weight: 600;
+    width: 50%;
+    padding-right: 10px;
+  }
+
+  .specs-value {
+    width: 50%;
+  }
+
+  .card__header_popup {
+    color: #1d428a;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var openBtn = document.getElementById("open-specs");
+    var modal = document.getElementById("specs-modal");
+    var closeBtn = modal.querySelector(".specs-close");
+
+    if (openBtn && modal && closeBtn) {
+      openBtn.addEventListener("click", function () {
+        modal.classList.add("show");
+      });
+
+      closeBtn.addEventListener("click", function () {
+        modal.classList.remove("show");
+      });
+
+      window.addEventListener("click", function (event) {
+        if (event.target === modal) {
+          modal.classList.remove("show");
+        }
+      });
+    }
+  });
+</script>

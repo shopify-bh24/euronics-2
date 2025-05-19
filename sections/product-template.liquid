@@ -114,8 +114,11 @@
                     </div>
                   </div>
                 {%- else -%}
-                  <div class="card__header">
+                  <div class="card__header card__header--flex">
                     <h2 class="card__title heading h3">{{ 'product.general.description' | t }}</h2>
+
+                    {% render 'specifications-popup' %}
+
                   </div>
 
                   {%- if product.metafields.custom.product_description_image != blank -%}
