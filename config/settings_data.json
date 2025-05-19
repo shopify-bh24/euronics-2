@@ -1379,6 +1379,11 @@
         "type": "shogun-custom-681c7be4b37ad2f06e923a11",
         "name": "Huumm",
         "settings": {}
+      },
+      "shogun_custom_682b279a5ba7c048f4377e46_GQHQmB": {
+        "type": "shogun-custom-682b279a5ba7c048f4377e46",
+        "name": "Brand Logo Slideshow",
+        "settings": {}
       }
     },
     "content_for_index": [
@@ -1394,6 +1399,7 @@
       "1636037764fe79b904",
       "blog_posts_aNMryj",
       "blog_posts_38RndL",
+      "shogun_custom_682b279a5ba7c048f4377e46_GQHQmB",
       "rich_text_PfKf9q",
       "custom_html_midFDY"
     ],
