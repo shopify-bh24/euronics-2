@@ -113,14 +113,6 @@
     "checkout_sidebar_background_color": "#fafcfd",
     "checkout_error_color": "#e72662",
     "sections": {
-      "custom_html_midFDY": {
-        "type": "custom-html",
-        "disabled": true,
-        "settings": {
-          "title": "",
-          "html": "<div class=\"logo-showcase-content banner-1\"></div>"
-        }
-      },
       "cd10fa02-bd8e-4cf2-8d71-725033d3fe3b": {
         "type": "featured-collection",
         "settings": {
@@ -644,25 +636,11 @@
           "da34f5d6-f7f5-44b1-8c4b-2a55eea0c931",
           "ebfc3774-36d3-4426-8c1f-3db11b1901c7"
         ],
+        "disabled": true,
         "settings": {
           "title": "Our Brands",
           "link_title": "",
           "link": ""
-        }
-      },
-      "blog_posts_38RndL": {
-        "type": "blog-posts",
-        "disabled": true,
-        "settings": {
-          "blog": "tips-how-to-guides",
-          "blog_posts_count": 3,
-          "title": "Tips & Guides",
-          "link_title": "View all",
-          "show_category": false,
-          "show_author": false,
-          "show_date": false,
-          "show_excerpt": false,
-          "stack_mobile": false
         }
       },
       "cart-template": {
@@ -1011,21 +989,6 @@
           "show_store_info": false,
           "store_heading": "Write to Us",
           "store_info": "<p>Euronics Customer Care,<br/>C/O Electrocity<br/>Ormonde Business Park<br/>Dublin Road<br/>Purcellsinch<br/>Kilkenny<br/>Ireland<br/>VAT No. IE 6427391C</p>"
-        }
-      },
-      "blog_posts_aNMryj": {
-        "type": "blog-posts",
-        "disabled": true,
-        "settings": {
-          "blog": "our-blog",
-          "blog_posts_count": 3,
-          "title": "Read our Blog",
-          "link_title": "View all",
-          "show_category": true,
-          "show_author": false,
-          "show_date": false,
-          "show_excerpt": false,
-          "stack_mobile": false
         }
       },
       "product-no-cart": {
@@ -1381,6 +1344,11 @@
         "type": "shogun-custom-681c7be4b37ad2f06e923a11",
         "name": "Huumm",
         "settings": {}
+      },
+      "shogun_custom_682b279a5ba7c048f4377e46_RKkndG": {
+        "type": "shogun-custom-682b279a5ba7c048f4377e46",
+        "name": "Brand Logo Slideshow",
+        "settings": {}
       }
     },
     "content_for_index": [
@@ -1392,12 +1360,10 @@
       "featured_collection_xJ8td6",
       "featured_product_DAKLy4",
       "collection_with_image_g7qm7C",
+      "shogun_custom_682b279a5ba7c048f4377e46_RKkndG",
       "feefo_review_carousel_kpAc8M",
       "1636037764fe79b904",
-      "blog_posts_aNMryj",
-      "blog_posts_38RndL",
-      "rich_text_PfKf9q",
-      "custom_html_midFDY"
+      "rich_text_PfKf9q"
     ],
     "blocks": {
       "7079518687644006178": {
