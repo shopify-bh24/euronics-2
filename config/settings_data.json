@@ -1028,8 +1028,8 @@
           "image_NDnLtE": {
             "type": "image",
             "settings": {
-              "image": "shopify://shop_images/Free_Delivery.jpg",
-              "mobile_image": "shopify://shop_images/Free_Delivery2.jpg",
+              "image": "shopify://shop_images/Electrolux_Desktop_199210bc-a631-449b-a472-d48644e443a0.jpg",
+              "mobile_image": "shopify://shop_images/Electrolux_Mobile_1_3d9734cc-b127-446e-bf0b-163b2a3ca591.jpg",
               "show_overlay": false,
               "overlay_opacity": 30,
               "text_color": "#ffffff",
@@ -1039,7 +1039,7 @@
               "button_background": "#ffffff",
               "button_text_color": "#000000",
               "button_text": "",
-              "link": "shopify://collections/blomberg"
+              "link": "https://euronics.ie/collections/electrolux"
             }
           },
           "image_iJQhfF": {
@@ -1062,8 +1062,6 @@
           "image_nh6PK3": {
             "type": "image",
             "settings": {
-              "image": "shopify://shop_images/Beat_the_heat_1.jpg",
-              "mobile_image": "shopify://shop_images/Beat_the_heat2_1.jpg",
               "show_overlay": false,
               "overlay_opacity": 30,
               "text_color": "#ffffff",
