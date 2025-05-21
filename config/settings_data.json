@@ -1028,8 +1028,8 @@
           "image_PLE6VK": {
             "type": "image",
             "settings": {
-              "image": "shopify://shop_images/1_e55bbe41-0a54-4426-9e69-e7c219a800f8.jpg",
-              "mobile_image": "shopify://shop_images/Mobile_19176434-ae66-4f5a-ac74-f1d917685dd4.jpg",
+              "image": "shopify://shop_images/LG_Desktop.jpg",
+              "mobile_image": "shopify://shop_images/LG_Mobile.jpg",
               "show_overlay": false,
               "overlay_opacity": 30,
               "text_color": "#ffffff",
@@ -1039,7 +1039,7 @@
               "button_background": "#ffffff",
               "button_text_color": "#000000",
               "button_text": "",
-              "link": "https://euronics.ie/collections/lg-tv-audio"
+              "link": "https://euronics.ie/collections/lg-summer-sale"
             }
           },
           "image_NDnLtE": {
