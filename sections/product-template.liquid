@@ -1,3 +1,82 @@
+<style>
+  .card__tabs{
+    font-family: 'Euronics';
+  }
+
+  .card__tabs-nav {
+    display: flex;
+    gap: 1rem;
+    border-bottom: 2px solid #e0ebfc;
+    margin-bottom: 1rem;
+    background: #1d428a;
+    padding: 0px 10px;
+    padding-top: 10px;
+    border-radius: 4px;
+
+  }
+
+  .card__tab {
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    color: white;
+    font-size: 14px;
+  }
+
+  .card__tab.active {
+    background: white;
+    margin-bottom: -2px;
+    color: #1d428a;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+  }
+
+  .card__tab-panel {
+    display: block;
+    padding: 10px;
+  }
+
+  .card__tab-panel h2{
+    font-size: 20px;
+  }
+
+  .card__tab-panel.hidden {
+    display: none;
+  }
+
+  .specs-table {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+
+  .specs-row {
+    display: flex;
+    padding: 10px;
+  }
+
+  .specs-row.even {
+    background-color: #f9f9f9;
+  }
+
+  .specs-row.odd {
+    background-color: #ffffff;
+  }
+
+  .specs-key {
+    font-weight: 600;
+    width: 50%;
+    padding-right: 10px;
+  }
+
+  .specs-value {
+    width: 50%;
+  }
+
+</style>
+
+
+
 {% comment %} BSS Label get data main product has metafields seo hidden {% endcomment %}
 {%- assign bss_product_metafields = product -%}
 {%- if bss_product_metafields.metafields.seo.hidden %}
@@ -114,11 +193,31 @@
                     </div>
                   </div>
                 {%- else -%}
-                  <div class="card__header card__header--flex">
-                    <h2 class="card__title heading h3">{{ 'product.general.description' | t }}</h2>
+                  <div class="card__tabs">
+                    <div class="card__tabs-nav">
+                      <div class="card__tab active" data-tab="description">{{ 'product.general.description' | t }}</div>
+                      <div class="card__tab" data-tab="specs">Specifications</div>
+                      <div class="card__tab" data-tab="reviews">Reviews</div>
+                    </div>
 
-                    {% render 'specifications-popup' %}
+                    <div class="card__tabs-content">
+                      <div class="card__tab-panel" id="tab-description">
+                        {{ product.description | remove: 'data-section-type="product"' }}
+                      </div>
+                      <div class="card__tab-panel hidden" id="tab-specs">
+                        {% assign specs_json = product.metafields.custom.specs.value | parse_json %}
 
+                          {% for item in specs_json %}
+                            <div class="specs-row {% cycle 'even', 'odd' %}">
+                              <div class="specs-key">{{ item.name }}</div>
+                              <div class="specs-value">{{ item.value }}</div>
+                            </div>
+                          {% endfor %}
+                      </div>
+                      <div class="card__tab-panel hidden" id="tab-reviews">
+                        <p>No reviews yet</p>
+                      </div>
+                    </div>
                   </div>
 
                   {%- if product.metafields.custom.product_description_image != blank -%}
@@ -171,7 +270,12 @@
                     {%- if section.settings.content_display_mode == 'show_all_and_expand_description' -%}
                       <div class="card__section">
                         <div class="rte text--pull">
-                          {{ product.description | remove: 'data-section-type="product"' }}
+                          <div >
+                            <div>
+                              {% comment %} {{ product.description | remove: 'data-section-type="product"' }} {% endcomment %}
+                            </div>
+                            <div></div>
+                          </div>
                           <div id="flix-inpage"></div>
                           <script
                             type="text/javascript"
@@ -689,6 +793,29 @@ var m=document.getElementsByTagName('head')[0];m.parentNode.insertBefore(s, m);}
     }, 1500);
   };
 </script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const tabs = document.querySelectorAll('.card__tab');
+    const panels = document.querySelectorAll('.card__tab-panel');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', function () {
+        // Remove active from all tabs
+        tabs.forEach(t => t.classList.remove('active'));
+
+        // Hide all panels
+        panels.forEach(panel => panel.classList.add('hidden'));
+
+        // Activate clicked tab
+        this.classList.add('active');
+        const selectedTab = this.getAttribute('data-tab');
+        document.getElementById('tab-' + selectedTab).classList.remove('hidden');
+      });
+    });
+  });
+</script>
+
 
 {% schema %}
 {

@@ -2768,6 +2768,12 @@ sold out label to create some consistence */
   justify-content: space-between;
 }
 
+.card__header--flex-start{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
 .card__title {
   margin-bottom: 0;
 }
