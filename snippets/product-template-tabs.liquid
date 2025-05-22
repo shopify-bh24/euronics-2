@@ -76,6 +76,39 @@
 
 </style>
 
+{% comment %} BSS Label get data main product has metafields seo hidden {% endcomment %}
+{%- assign bss_product_metafields = product -%}
+{%- if bss_product_metafields.metafields.seo.hidden %}
+  <script id="main-label-product-metafields-info" type="application/ld+json">
+    {"id":{{ bss_product_metafields.id | json }},"tags": {{ bss_product_metafields.tags | json }},"handle":{{ bss_product_metafields.handle | json }},"available":{{ bss_product_metafields.available | json }},"inventory":{{ bss_product_metafields.first_available_variant.inventory_quantity | json }},"compare_at_price_max":{{ bss_product_metafields.compare_at_price_max | json }},"compare_at_price_min":{{ bss_product_metafields.compare_at_price_min | json }},"price":{{ bss_product_metafields.price | json }},"price_max":{{ bss_product_metafields.price_max | json }},"price_min":{{ bss_product_metafields.price_min | json }},"publish_at":"{{ bss_product_metafields.published_at }}","inventory_management":{{ bss_product_metafields.first_available_variant.inventory_management | json }},"inventory_policy":{{ bss_product_metafields.first_available_variant.inventory_policy | json }},"inventory_quantity": [{% for varian in bss_product_metafields.variants %}{{ varian.inventory_quantity }}{% unless forloop.last %},{% endunless %}{% endfor %}],"variants": [{% for variant in bss_product_metafields.variants %}{  "id":{{ variant.id | json }},"feature_media_id":{{ variant.featured_media.id | json }},"feature_image_id":{{ variant.featured_image.id | json }},"available":{{ variant.available | json }},"image":{{ variant.image | json }},"price":{{ variant.price | json }},"inventory_management":{{ variant.inventory_management | json }},"inventory_policy":{{ variant.inventory_policy | json }},"compare_at_price":{{ variant.compare_at_price | json }},"quantity":{{ variant.inventory_quantity | json }}}{% unless forloop.last %},{% endunless %}{% endfor %}],"collections": [{% for collection in bss_product_metafields.collections %}{{ collection.id }}{% unless forloop.last %},{% endunless %}{% endfor %}],"format_money": {{shop.money_format | json}}}
+  </script>
+{% endif -%}
+{% comment %} BSS Label end {% endcomment %}
+{%- capture section_settings -%}
+{
+  "showShippingEstimator": {% if template == 'product.quick-view' or product.available == false %}false{% else %}{{ section.settings.show_shipping_estimator | json }}{% endif %},
+  "showQuantitySelector": {{ section.settings.show_quantity_selector | json }},
+  "showPaymentButton": {% if product.template_suffix == 'pre-order' %}false{% else %}{{ section.settings.show_payment_button | json }}{% endif %},
+  "showInventoryQuantity": {% if product.template_suffix != 'pre-order' %}{{ section.settings.show_inventory_quantity | json }}{% else %}false{% endif %},
+  "lowInventoryThreshold": {{ section.settings.low_inventory_threshold | json }},
+  "galleryTransitionEffect": {{ section.settings.carousel_effect | json }},
+  "enableImageZoom": {% if template == 'product.quick-view' %}false{% else %}{{ section.settings.enable_image_zoom | json }}{% endif %},
+  "zoomEffect": {{ section.settings.zoom_effect | json }},
+  "enableVideoLooping": {{ section.settings.enable_video_looping | json }},
+  "productOptions": {{ product.options | json | escape }},
+  "enableHistoryState": {% if template == 'product.quick-view' %}false{% else %}true{% endif %},
+  "infoOverflowScroll": {% if template == 'product.quick-view' %}false{% else %}true{% endif %},
+  "isQuickView": {% if template == 'product.quick-view' %}true{% else %}false{% endif %}
+}
+{%- endcapture -%}
+{% assign selected_variant = product.selected_or_first_available_variant %}
+
+
+
+
+
+
+
 {%- if section.settings.show_payment_icons and shop.enabled_payment_types.size > 0 -%}
  {%- assign show_payment_icons = true -%}
 {%- else -%}
@@ -254,3 +287,10 @@
         });
     });
 </script>
+
+
+<script
+    type="text/customscript"
+    async
+    src="https://static.youreko.com/js/partners/ie/euronics/youreko.energy-review.euronics.all.min.js"
+></script>
