@@ -5,7 +5,7 @@
 
   .card__tabs-nav {
     display: flex;
-    gap: 1rem;
+    /* gap: 1rem; */
     border-bottom: 2px solid #e0ebfc;
     margin-bottom: 1rem;
     background: #1d428a;
@@ -196,6 +196,7 @@
                   <div class="card__tabs">
                     <div class="card__tabs-nav">
                       <div class="card__tab active" data-tab="description">{{ 'product.general.description' | t }}</div>
+                      <div class="card__tab" data-tab="media">About Brand</div>
                       <div class="card__tab" data-tab="specs">Specifications</div>
                       <div class="card__tab" data-tab="reviews">Reviews</div>
                     </div>
@@ -215,7 +216,16 @@
                           {% endfor %}
                       </div>
                       <div class="card__tab-panel hidden" id="tab-reviews">
-                        <p>No reviews yet</p>
+                        <reevoo-embeddable
+                          type="product"
+                          product-id="{{ selected_variant.sku }}"
+                          variant="{{ selected_variant.sku }}"
+                          per-page="5"
+                          locale="en-IE"
+                        ></reevoo-embeddable>
+                      </div>
+                      <div class="card__tab-panel hidden" id="tab-media">
+                        <div id="flix-inpage"></div>
                       </div>
                     </div>
                   </div>
@@ -487,13 +497,13 @@
                   --------------------------------------------------------------------------------------
                 {%- endcomment -%}
 
-                <reevoo-embeddable
+                {% comment %} <reevoo-embeddable
                   type="product"
                   product-id="{{ selected_variant.sku }}"
                   variant="{{ selected_variant.sku }}"
                   per-page="5"
                   locale="en-IE"
-                ></reevoo-embeddable>
+                ></reevoo-embeddable> {% endcomment %}
 
                 <div data-flix-embed-meta="product_info"></div>
                 <div data-flix-embed-meta="main_video"></div>
