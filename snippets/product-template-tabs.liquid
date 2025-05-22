@@ -6,15 +6,26 @@
   .card__tabs-nav {
     display: flex;
     /* gap: 1rem; */
-    border-bottom: 2px solid #e0ebfc;
+    /* border-bottom: 2px solid #e0ebfc; */
     margin-bottom: 1rem;
     background: #1d428a;
     padding: 0px 10px;
     padding-top: 10px;
     border-top-right-radius: 4px;
     border-top-left-radius: 4px;
-
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* Smooth scroll on iOS */
+    scrollbar-width: thin; 
   }
+
+  .card__tabs-nav::-webkit-scrollbar {
+    height: 6px;
+   }
+
+   .card__tabs-nav::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 3px;
+    }
 
   .card__tab {
     border: none;
@@ -22,6 +33,8 @@
     cursor: pointer;
     color: white;
     font-size: 14px;
+    flex: 0 0 auto;
+    white-space: nowrap;
   }
 
   .card__tab.active {
@@ -105,10 +118,6 @@
 
 
 
-
-
-
-
 {%- if section.settings.show_payment_icons and shop.enabled_payment_types.size > 0 -%}
  {%- assign show_payment_icons = true -%}
 {%- else -%}
@@ -121,7 +130,6 @@
       <div class="card__tab" data-tab="media">About Brand</div>
       <div class="card__tab" data-tab="specs">Specifications</div>
       <div class="card__tab" data-tab="reviews">Reviews</div>
-      <div class="card__tab" data-tab="contribution">Contribution</div>
       {%- if section.settings.custom_security_badge or show_payment_icons -%}
         <div class="card__tab" data-tab="payment">Payment Options</div>
       {% endif %}
@@ -130,6 +138,59 @@
     <div class="card__tabs-content">
       <div class="card__tab-panel" id="tab-description">
         {{ product.description | remove: 'data-section-type="product"' }}
+        {%- for i in (1..3) -%}
+            {%- assign global_tab_option = 'tab_page_' | append: i | append: '_handle' -%}
+            {%- assign global_tab_page = pages[section.settings[global_tab_option]] -%}
+  
+            {%- unless global_tab_page.empty? -%}
+              <div class="product-block-list__item product-block-list__item--content 567">
+                <div class="card">
+                  {%- if section.settings.content_display_mode == 'collapse_all_except_description'
+                    or section.settings.content_display_mode == 'collapse_all'
+                  -%}
+                    <button
+                      class="card__collapsible-button"
+                      data-action="toggle-collapsible"
+                      aria-expanded="false"
+                      aria-controls="global-tab-{{ i }}"
+                    >
+                      <span class="card__title heading h3">{{ global_tab_page.title }}</span>
+                      <span class="plus-button plus-button--large"></span>
+                    </button>
+  
+                    <div id="global-tab-{{ i }}" class="card__collapsible">
+                      <div class="card__collapsible-content">
+                        <div class="rte text--pull">
+                          {{ global_tab_page.content }}
+                        </div>
+                      </div>
+                    </div>
+                  {%- else -%}
+                    <div class="card__header">
+                      <h2 class="card__title heading h3">{{ global_tab_page.title }}</h2>
+                    </div>
+  
+                    <div class="card__section" aria-expanded="true">
+                      <div class="rte text--pull">
+                        {{ global_tab_page.content }}
+                      </div>
+  
+                      {% comment %} <button class="expandable-content__toggle">
+                        <span class="expandable-content__toggle-icon"></span>
+                        <span
+                          class="expandable-content__toggle-text"
+                          data-view-more="{{ 'product.general.view_more' | t | escape }}"
+                          data-view-less="{{ 'product.general.view_less' | t | escape }}"
+                        >
+                          {{- 'product.general.view_more' | t -}}
+                        </span>
+                      </button> {% endcomment %}
+                    </div>
+                  {%- endif -%}
+                </div>
+              </div>
+            {%- endunless -%}
+          {%- endfor -%}
       </div>
       <div class="card__tab-panel hidden" id="tab-specs">
         {% assign specs_json = product.metafields.custom.specs.value | parse_json %}
@@ -152,61 +213,6 @@
       </div>
       <div class="card__tab-panel hidden" id="tab-media">
         <div id="flix-inpage"></div>
-      </div>
-      <div class="card__tab-panel hidden" id="tab-contribution">
-        {%- for i in (1..3) -%}
-          {%- assign global_tab_option = 'tab_page_' | append: i | append: '_handle' -%}
-          {%- assign global_tab_page = pages[section.settings[global_tab_option]] -%}
-
-          {%- unless global_tab_page.empty? -%}
-            <div class="product-block-list__item product-block-list__item--content 567">
-              <div class="card">
-                {%- if section.settings.content_display_mode == 'collapse_all_except_description'
-                  or section.settings.content_display_mode == 'collapse_all'
-                -%}
-                  <button
-                    class="card__collapsible-button"
-                    data-action="toggle-collapsible"
-                    aria-expanded="false"
-                    aria-controls="global-tab-{{ i }}"
-                  >
-                    <span class="card__title heading h3">{{ global_tab_page.title }}</span>
-                    <span class="plus-button plus-button--large"></span>
-                  </button>
-
-                  <div id="global-tab-{{ i }}" class="card__collapsible">
-                    <div class="card__collapsible-content">
-                      <div class="rte text--pull">
-                        {{ global_tab_page.content }}
-                      </div>
-                    </div>
-                  </div>
-                {%- else -%}
-                  <div class="card__header">
-                    <h2 class="card__title heading h3">{{ global_tab_page.title }}</h2>
-                  </div>
-
-                  <div class="card__section" aria-expanded="true">
-                    <div class="rte text--pull">
-                      {{ global_tab_page.content }}
-                    </div>
-
-                    <button class="expandable-content__toggle">
-                      <span class="expandable-content__toggle-icon"></span>
-                      <span
-                        class="expandable-content__toggle-text"
-                        data-view-more="{{ 'product.general.view_more' | t | escape }}"
-                        data-view-less="{{ 'product.general.view_less' | t | escape }}"
-                      >
-                        {{- 'product.general.view_more' | t -}}
-                      </span>
-                    </button>
-                  </div>
-                {%- endif -%}
-              </div>
-            </div>
-          {%- endunless -%}
-        {%- endfor -%}
       </div>
       {%- if section.settings.custom_security_badge or show_payment_icons -%}
         <div class="card__tab-panel hidden" id="tab-payment">
