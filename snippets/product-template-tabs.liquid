@@ -1,0 +1,256 @@
+<style>
+  .card__tabs{
+    font-family: 'Euronics';
+  }
+
+  .card__tabs-nav {
+    display: flex;
+    /* gap: 1rem; */
+    border-bottom: 2px solid #e0ebfc;
+    margin-bottom: 1rem;
+    background: #1d428a;
+    padding: 0px 10px;
+    padding-top: 10px;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+
+  }
+
+  .card__tab {
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    color: white;
+    font-size: 14px;
+  }
+
+  .card__tab.active {
+    background: white;
+    margin-bottom: -2px;
+    color: #1d428a;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+  }
+
+  .card__tab-panel {
+    display: block;
+    padding: 10px;
+  }
+
+  .card__tab-panel h2{
+    font-size: 20px;
+  }
+
+  .card__tab-panel.hidden {
+    display: none;
+  }
+
+  .specs-table {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+
+  .specs-row {
+    display: flex;
+    padding: 10px;
+  }
+
+  .specs-row.even {
+    background-color: #f9f9f9;
+  }
+
+  .specs-row.odd {
+    background-color: #ffffff;
+  }
+
+  .specs-key {
+    font-weight: 600;
+    width: 50%;
+    padding-right: 10px;
+  }
+
+  .specs-value {
+    width: 50%;
+  }
+
+</style>
+
+{%- if section.settings.show_payment_icons and shop.enabled_payment_types.size > 0 -%}
+ {%- assign show_payment_icons = true -%}
+{%- else -%}
+ {%- assign show_payment_icons = false -%}
+{%- endif -%}
+
+<div class="card__tabs">
+    <div class="card__tabs-nav">
+      <div class="card__tab active" data-tab="description">{{ 'product.general.description' | t }}</div>
+      <div class="card__tab" data-tab="media">About Brand</div>
+      <div class="card__tab" data-tab="specs">Specifications</div>
+      <div class="card__tab" data-tab="reviews">Reviews</div>
+      <div class="card__tab" data-tab="contribution">Contribution</div>
+      {%- if section.settings.custom_security_badge or show_payment_icons -%}
+        <div class="card__tab" data-tab="payment">Payment Options</div>
+      {% endif %}
+    </div>
+
+    <div class="card__tabs-content">
+      <div class="card__tab-panel" id="tab-description">
+        {{ product.description | remove: 'data-section-type="product"' }}
+      </div>
+      <div class="card__tab-panel hidden" id="tab-specs">
+        {% assign specs_json = product.metafields.custom.specs.value | parse_json %}
+
+          {% for item in specs_json %}
+            <div class="specs-row {% cycle 'even', 'odd' %}">
+              <div class="specs-key">{{ item.name }}</div>
+              <div class="specs-value">{{ item.value }}</div>
+            </div>
+          {% endfor %}
+      </div>
+      <div class="card__tab-panel hidden" id="tab-reviews">
+        <reevoo-embeddable
+          type="product"
+          product-id="{{ selected_variant.sku }}"
+          variant="{{ selected_variant.sku }}"
+          per-page="5"
+          locale="en-IE"
+        ></reevoo-embeddable>
+      </div>
+      <div class="card__tab-panel hidden" id="tab-media">
+        <div id="flix-inpage"></div>
+      </div>
+      <div class="card__tab-panel hidden" id="tab-contribution">
+        {%- for i in (1..3) -%}
+          {%- assign global_tab_option = 'tab_page_' | append: i | append: '_handle' -%}
+          {%- assign global_tab_page = pages[section.settings[global_tab_option]] -%}
+
+          {%- unless global_tab_page.empty? -%}
+            <div class="product-block-list__item product-block-list__item--content 567">
+              <div class="card">
+                {%- if section.settings.content_display_mode == 'collapse_all_except_description'
+                  or section.settings.content_display_mode == 'collapse_all'
+                -%}
+                  <button
+                    class="card__collapsible-button"
+                    data-action="toggle-collapsible"
+                    aria-expanded="false"
+                    aria-controls="global-tab-{{ i }}"
+                  >
+                    <span class="card__title heading h3">{{ global_tab_page.title }}</span>
+                    <span class="plus-button plus-button--large"></span>
+                  </button>
+
+                  <div id="global-tab-{{ i }}" class="card__collapsible">
+                    <div class="card__collapsible-content">
+                      <div class="rte text--pull">
+                        {{ global_tab_page.content }}
+                      </div>
+                    </div>
+                  </div>
+                {%- else -%}
+                  <div class="card__header">
+                    <h2 class="card__title heading h3">{{ global_tab_page.title }}</h2>
+                  </div>
+
+                  <div class="card__section expandable-content" aria-expanded="false">
+                    <div class="rte text--pull">
+                      {{ global_tab_page.content }}
+                    </div>
+
+                    <button class="expandable-content__toggle">
+                      <span class="expandable-content__toggle-icon"></span>
+                      <span
+                        class="expandable-content__toggle-text"
+                        data-view-more="{{ 'product.general.view_more' | t | escape }}"
+                        data-view-less="{{ 'product.general.view_less' | t | escape }}"
+                      >
+                        {{- 'product.general.view_more' | t -}}
+                      </span>
+                    </button>
+                  </div>
+                {%- endif -%}
+              </div>
+            </div>
+          {%- endunless -%}
+        {%- endfor -%}
+      </div>
+      {%- if section.settings.custom_security_badge or show_payment_icons -%}
+        <div class="card__tab-panel hidden" id="tab-payment">
+
+          <div class="product-block-list__item product-block-list__item--trust">
+            <div class="card">
+              <div class="card__header card__header--flex">
+                <h2 class="card__title heading h3">{{ section.settings.trust_title | escape }}</h2>
+
+                {%- render 'icon', icon: 'lock', width: 22, height: 24 -%}
+              </div>
+
+              <div class="card__section">
+                {%- if show_payment_icons -%}
+                  {%- if section.settings.custom_security_badge -%}
+                    <p class="card__subtitle heading h6">{{ 'product.general.payment' | t }}</p>
+                  {%- endif -%}
+
+                  <div class="payment-list">
+                    {% for type in shop.enabled_payment_types %}
+                      {{ type | payment_type_svg_tag: class: 'payment-list__item' }}
+                    {% endfor %}
+                  </div>
+
+                  <p class="payment-list__notice">{{ 'product.general.payment_notice' | t }}</p>
+                {%- endif -%}
+
+                {%- if show_payment_icons and section.settings.custom_security_badge -%}
+                  <hr class="card__separator">
+                {%- endif -%}
+
+                {%- if section.settings.custom_security_badge -%}
+                  {%- if show_payment_icons -%}
+                    <p class="card__subtitle heading h6">{{ 'product.general.security' | t }}</p>
+                  {%- endif -%}
+
+                  {%- assign badge_width = section.settings.custom_security_badge.width
+                    | at_most: 450
+                    | append: 'x'
+                  -%}
+                  <img
+                    class="product__trust-badge"
+                    style="width: {{ section.settings.custom_security_badge_width }}px"
+                    src="{{ section.settings.custom_security_badge | img_url: badge_width }}"
+                    srcset="{{ section.settings.custom_security_badge | img_url: badge_width }} 1x, {{ section.settings.custom_security_badge | img_url: badge_width, scale: 2 }} 2x"
+                    alt="{{ section.settings.custom_security_badge.alt | escape }}"
+                  >
+                {%- endif -%}
+              </div>
+            </div>
+          </div>
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+
+
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const tabs = document.querySelectorAll('.card__tab');
+        const panels = document.querySelectorAll('.card__tab-panel');
+
+        tabs.forEach(tab => {
+        tab.addEventListener('click', function () {
+            // Remove active from all tabs
+            tabs.forEach(t => t.classList.remove('active'));
+
+            // Hide all panels
+            panels.forEach(panel => panel.classList.add('hidden'));
+
+            // Activate clicked tab
+            this.classList.add('active');
+            const selectedTab = this.getAttribute('data-tab');
+            document.getElementById('tab-' + selectedTab).classList.remove('hidden');
+        });
+        });
+    });
+</script>
