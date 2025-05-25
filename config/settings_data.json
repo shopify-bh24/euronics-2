@@ -1211,14 +1211,13 @@
       },
       "collection_with_image_GUWk37": {
         "type": "collection-with-image",
-        "disabled": true,
         "name": "Collection with image",
         "settings": {
           "collection": "10-off-lg-tvs",
           "products_count": 12,
           "image": "shopify://shop_images/LG_TVS_600_x_500_px.png",
           "image_position": "right",
-          "background": "#FFFFFF",
+          "background": "#ffffff",
           "text_color": "#ffffff",
           "title": "Save Big on LG Tvs",
           "content": "Save Big on LG Tvs while stock last!",
