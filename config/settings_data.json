@@ -115,6 +115,7 @@
     "sections": {
       "cd10fa02-bd8e-4cf2-8d71-725033d3fe3b": {
         "type": "featured-collection",
+        "disabled": true,
         "settings": {
           "collection": "blomberg",
           "title": "Free Delivery on all Blomberg",
@@ -447,6 +448,7 @@
       },
       "featured_collection_xJ8td6": {
         "type": "featured-collection",
+        "disabled": true,
         "settings": {
           "collection": "refrigeration",
           "title": "Cooling",
@@ -1173,11 +1175,45 @@
           "button_text": "Shop Now",
           "button_link": "https://euronics.ie/collections/cooling"
         }
+      },
+      "slideshow_pqT8WT": {
+        "type": "slideshow",
+        "blocks": {
+          "image_9wEBLD": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/Beat_the_heat_1.jpg",
+              "mobile_image": "shopify://shop_images/Beat_the_heat2_1.jpg",
+              "show_overlay": false,
+              "overlay_opacity": 30,
+              "text_color": "#ffffff",
+              "title": "",
+              "content": "",
+              "content_position": "middle_center",
+              "button_background": "#ffffff",
+              "button_text_color": "#000000",
+              "button_text": "",
+              "link": "https://euronics.ie/collections/cooling"
+            }
+          }
+        },
+        "block_order": [
+          "image_9wEBLD"
+        ],
+        "name": "Slideshow",
+        "settings": {
+          "edge_to_edge": false,
+          "section_size": "preserve_ratio",
+          "carousel_effect": "slide",
+          "autoplay": true,
+          "cycle_speed": 5
+        }
       }
     },
     "content_for_index": [
       "slideshow",
       "shogun_custom_67d189261ae2a69c44a00334_pJGKpt",
+      "slideshow_pqT8WT",
       "collection_with_image_CQV3bH",
       "cd10fa02-bd8e-4cf2-8d71-725033d3fe3b",
       "shogun_custom_6672f94bad4fce565dc38a6e_RVVUGC",
