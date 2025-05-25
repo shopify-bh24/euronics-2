@@ -1,3 +1,80 @@
+<style>
+
+  .collection_with_image-section_container{
+    background-image: none !important;
+    display: flex;
+    gap: 2rem;
+    padding: 0;
+    height: 500px;
+  }
+  .collection_with_image-section_container .featured-collection__header{
+    background-image: url('{{ section.settings.image | img_url: '1000x' }}') !important;
+    background-size: cover;
+    width: 50%;
+    height: 500px;
+    border-radius: 10px;
+  }
+  .featured-collection__text{
+    font-size: 12px;
+    margin: 0;
+  }
+  .featured-collection__content{
+    width: 50%;
+  }
+  .featured-collection__content-header{
+    position: relative;
+    margin-top: 1rem;
+  }
+
+  .collection_with_image-section_container .product-list,
+  .collection_with_image-section_container .product-item{
+    background: none !important;
+  }
+
+  .featured-collection-view_all{
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    text-decoration: underline;
+    color: #1d428a;
+    transition: all 0.3s ease;
+  }
+
+  .featured-collection-view_all ~ .arrow{
+    position: absolute;
+    top: -5px;
+    right: 1rem;
+    opacity: 0;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+    font-size: 20px;
+    color: #1d428a;
+  }
+
+  .featured-collection-view_all-container:hover .featured-collection-view_all{
+    transform: translateX(-20px);
+  }
+
+  .featured-collection-view_all-container:hover .arrow{
+    opacity: 1;
+    transform: translateX(0);
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 1000px) {
+    .collection_with_image-section_container .featured-collection__header{
+      display: none;
+    }
+    .featured-collection__content{
+      width: 100%;
+    }
+    .collection_with_image-product_list{
+      overflow-x: auto;
+    }
+  }
+</style>
+
+
 {%- capture section_settings -%}
 {
   "stackable": false,
@@ -5,44 +82,100 @@
 }
 {%- endcapture -%}
 
+
+
 <section class="section" data-section-id="{{ section.id }}" data-section-type="featured-collection" data-section-settings='{{ section_settings }}'>
   <div class="container container--flush">
     {%- assign collection = collections[section.settings.collection] -%}
 
-    <div class="featured-collection lazyload" {% if section.settings.image %}data-bgset="{{ section.settings.image | img_url: '1000x' }} [--lap]"{% endif %}>
-      <header class="featured-collection__header lazyload" {% if section.settings.image %}data-bgset="{{ section.settings.image | img_url: '1000x' }} [--tablet]"{% endif %}>
-        {%- if section.settings.title != blank -%}
-          <h2 class="featured-collection__title heading h2">{{ section.settings.title | escape }}</h2>
-        {%- endif -%}
+    <div class="featured-collection lazyload collection_with_image-section_container" {% if section.settings.image %}data-bgset="{{ section.settings.image | img_url: '1000x' }} [--lap]"{% endif %}>
+      {%  if section.settings.image_position == 'left' %} 
+        <header class="featured-collection__header lazyload" {% if section.settings.image %}data-bgset="{{ section.settings.image | img_url: '1000x' }} [--tablet]"{% endif %}>
 
-        {%- if section.settings.content != blank -%}
-          <p class="featured-collection__text">{{ section.settings.content | escape | newline_to_br }}</p>
-        {%- endif -%}
+          {%- if section.settings.button_text != blank -%}
+            <a href="{{ section.settings.button_link | default: collection.url | default: '#' }}" class="featured-collection__cta button button--floating">{{ section.settings.button_text | escape }}</a>
+          {%- endif -%}
+        </header>
 
-        {%- if section.settings.button_text != blank -%}
-          <a href="{{ section.settings.button_link | default: collection.url | default: '#' }}" class="featured-collection__cta button button--floating">{{ section.settings.button_text | escape }}</a>
-        {%- endif -%}
-      </header>
+        <div class="featured-collection__content">
+          <div class="scroller scroller--flush">
+            <div class="scroller__inner">
+              <div class="featured-collection__content-header">
+                {%- if section.settings.title != blank -%}
+                  <h2 class="featured-collection__title heading h2">{{ section.settings.title | escape }}</h2>
+                {%- endif -%}
+                
+                {%- if section.settings.content != blank -%}
+                  <p class="featured-collection__text">{{ section.settings.content | escape | newline_to_br }}</p>
+                {%- endif -%}
 
-      <div class="featured-collection__content">
-        <div class="scroller scroller--flush">
-          <div class="scroller__inner">
-            <div class="product-list product-list--scrollable">
-              {%- assign grid_classes = '1/2--lap 1/3--desk 1/4--wide' -%}
+                <div class="featured-collection-view_all-container">
+                  <a class="featured-collection-view_all" href="{{section.settings.collection.url}}">View all</a>
+                  <span class="arrow">→</span>  
+                </div>
+              </div>
+              
+              <div class="product-list product-list--scrollable collection_with_image-product_list">
+                {% comment %} {%- assign grid_classes = '1/2--lap 1/3--desk 1/4--wide' -%} {% endcomment %}
+                {%- assign grid_classes = '1/2--lap 1/3--desk' -%}
 
-              {%- unless collection.empty? -%}
-                {%- for product in collection.products limit: section.settings.products_count -%}
-                  {%- render 'product-item', product: product, grid_classes: grid_classes -%}
-                {%- endfor -%}
-              {%- else -%}
-                {%- for i in (1..section.settings.products_count) -%}
-                  {%- render 'product-item-placeholder', grid_classes: grid_classes -%}
-                {%- endfor -%}
-              {%- endunless -%}
+                {%- unless collection.empty? -%}
+                  {%- for product in collection.products limit: section.settings.products_count -%}
+                    {%- render 'product-item', product: product, grid_classes: grid_classes -%}
+                  {%- endfor -%}
+                {%- else -%}
+                  {%- for i in (1..section.settings.products_count) -%}
+                    {%- render 'product-item-placeholder', grid_classes: grid_classes -%}
+                  {%- endfor -%}
+                {%- endunless -%}
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      {% else %}
+        <div class="featured-collection__content">
+          <div class="scroller scroller--flush">
+            <div class="scroller__inner">
+              <div class="featured-collection__content-header">
+                {%- if section.settings.title != blank -%}
+                  <h2 class="featured-collection__title heading h2">{{ section.settings.title | escape }}</h2>
+                {%- endif -%}
+                
+                {%- if section.settings.content != blank -%}
+                  <p class="featured-collection__text">{{ section.settings.content | escape | newline_to_br }}</p>
+                {%- endif -%}
+
+                <div class="featured-collection-view_all-container">
+                  <a class="featured-collection-view_all" href="{{section.settings.collection.url}}">View all</a>
+                  <span class="arrow">→</span>  
+                </div>
+              </div>
+              
+              <div class="product-list product-list--scrollable collection_with_image-product_list">
+                {% comment %} {%- assign grid_classes = '1/2--lap 1/3--desk 1/4--wide' -%} {% endcomment %}
+                {%- assign grid_classes = '1/2--lap 1/3--desk' -%}
+
+                {%- unless collection.empty? -%}
+                  {%- for product in collection.products limit: section.settings.products_count -%}
+                    {%- render 'product-item', product: product, grid_classes: grid_classes -%}
+                  {%- endfor -%}
+                {%- else -%}
+                  {%- for i in (1..section.settings.products_count) -%}
+                    {%- render 'product-item-placeholder', grid_classes: grid_classes -%}
+                  {%- endfor -%}
+                {%- endunless -%}
+              </div>
+            </div>
+          </div>
+        </div>
+        <header class="featured-collection__header lazyload" {% if section.settings.image %}data-bgset="{{ section.settings.image | img_url: '1000x' }} [--tablet]"{% endif %}>
+
+          {%- if section.settings.button_text != blank -%}
+            <a href="{{ section.settings.button_link | default: collection.url | default: '#' }}" class="featured-collection__cta button button--floating">{{ section.settings.button_text | escape }}</a>
+          {%- endif -%}
+        </header>
+      {% endif %}
+
     </div>
   </div>
 </section>
@@ -85,6 +218,16 @@
       "id": "image",
       "label": "Image",
       "info": "1000 x 400px .png with transparency recommended (hidden on mobile)"
+    },
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": "Image position",
+      "default": "left",
+      "options": [
+        { "value": "left", "label": "Left"},
+        { "value": "right", "label": "Right"}
+      ]
     },
     {
       "type": "color",

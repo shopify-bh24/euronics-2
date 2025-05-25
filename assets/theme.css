@@ -288,7 +288,7 @@ th {
 .flickity-slider {
   position: absolute;
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   will-change: transform;
 }
 
@@ -367,10 +367,11 @@ th {
   border-radius: 100%;
   visibility: visible;
   background: var(--flickity-arrow-color);
-  opacity: 0;
-  transition: all 0.2s ease-in-out;
-  transform: scale(0.7);
+  /* opacity: 0; */
+  /* transition: all 0.2s ease-in-out; */
+  /* transform: scale(0.7); */
   z-index: 1;
+  background: #1d428a;
 }
 
 .flickity-prev-next-button:hover {
@@ -1481,8 +1482,8 @@ body:not(.is-tabbing) textarea:focus {
   .aspect-ratio--tall img {
     width: 100%;
     height: 100%;
-    -o-object-fit: contain;
-    object-fit: contain;
+    -o-object-fit: cover;
+    object-fit: cover;
   }
 }
 
@@ -4364,15 +4365,18 @@ sold out label to create some consistence */
 
 .featured-collection__header {
   padding: 0 var(--mobile-container-gutter) 40px var(--mobile-container-gutter);
+  position: relative;
 }
 
 .featured-collection__title {
-  margin-bottom: 8px;
+  margin-bottom: 0px;
   color: inherit;
 }
 
 .featured-collection__cta {
-  margin-top: 8px;
+  position: absolute;
+  top: 60%;
+  left: 2rem;
 }
 
 .featured-collection__image-wrapper {
@@ -4387,6 +4391,7 @@ sold out label to create some consistence */
 .featured-collection .product-item {
   border: none;
   border-right: 1px solid var(--border-color);
+  /* gap: 1rem; */
 }
 
 .featured-collection .product-item::after {
@@ -6977,9 +6982,6 @@ the result for products and/or pages and blogs. We therefore then hide possible 
   margin: 0 -10px -20px -10px;
 }
 
-.mosaic__item {
-  padding: 0 10px 20px 10px;
-}
 
 .mosaic__item> :first-child {
   min-height: 240px;
@@ -7003,20 +7005,23 @@ the result for products and/or pages and blogs. We therefore then hide possible 
     margin: 0 -15px -30px -15px;
   }
 
-  .mosaic__item {
-    padding: 0 15px 30px 15px;
-  }
 }
 
 @media screen and (min-width: 1000px) {
   .mosaic {
     display: flex;
+    gap: 2rem;
   }
 
   .mosaic__column {
     display: flex;
     flex-direction: column;
-    flex: 1 0 0%;
+    gap: 2rem;
+  }
+
+  .mosaic__row{
+    display: flex;
+    gap: 2rem;
   }
 
   .mosaic__item {
@@ -9662,7 +9667,7 @@ are specific JUST for this element and break the generic abstractions... thanks 
 
 .product-item__image-wrapper {
   display: block;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
 }
 
 .product-item__image-wrapper .placeholder-svg {
@@ -9777,8 +9782,8 @@ are specific JUST for this element and break the generic abstractions... thanks 
 
   .product-item__image-wrapper--with-secondary .product-item__secondary-image {
     display: block;
-    -o-object-fit: contain;
-    object-fit: contain;
+    -o-object-fit: cover;
+    object-fit: cover;
     -o-object-position: center;
     object-position: center;
     visibility: hidden;
