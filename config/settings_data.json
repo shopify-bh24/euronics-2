@@ -1155,6 +1155,24 @@
         "type": "shogun-custom-682b279a5ba7c048f4377e46",
         "name": "Brand Logo Slideshow",
         "settings": {}
+      },
+      "collection_with_image_CQV3bH": {
+        "type": "collection-with-image",
+        "name": "Collection with image",
+        "settings": {
+          "collection": "cooling",
+          "products_count": 12,
+          "image": "shopify://shop_images/Home_Cooling_600_x_500_px_1.png",
+          "image_position": "left",
+          "background": "#FFFFFF",
+          "text_color": "#1d428a",
+          "title": "Cool Down",
+          "content": "Shop our full range of Fans and Air Conditioners",
+          "button_background": "#f1c400",
+          "button_text_color": "#1d428a",
+          "button_text": "Shop Now",
+          "button_link": "https://euronics.ie/collections/cooling"
+        }
       }
     },
     "content_for_index": [
@@ -1166,7 +1184,8 @@
       "featured_collection_xJ8td6",
       "shogun_custom_682b279a5ba7c048f4377e46_RKkndG",
       "feefo_review_carousel_kpAc8M",
-      "rich_text_PfKf9q"
+      "rich_text_PfKf9q",
+      "collection_with_image_CQV3bH"
     ],
     "blocks": {
       "7079518687644006178": {
