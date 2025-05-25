@@ -1213,7 +1213,7 @@
         "type": "collection-with-image",
         "name": "Collection with image",
         "settings": {
-          "collection": "10-off-lg-tvs",
+          "collection": "lg-10-promo",
           "products_count": 12,
           "image": "shopify://shop_images/LG_TVS_600_x_500_px_1.png",
           "image_position": "right",
