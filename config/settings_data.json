@@ -1202,7 +1202,7 @@
         ],
         "name": "Slideshow",
         "settings": {
-          "edge_to_edge": false,
+          "edge_to_edge": true,
           "section_size": "preserve_ratio",
           "carousel_effect": "slide",
           "autoplay": true,
