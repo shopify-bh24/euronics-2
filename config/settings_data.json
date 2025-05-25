@@ -48,7 +48,7 @@
     "show_discount": false,
     "discount_mode": "saving",
     "product_price_position": "before_title",
-    "product_image_size": "short",
+    "product_image_size": "square",
     "show_color_swatch": false,
     "show_inventory_quantity": false,
     "low_inventory_threshold": 0,
@@ -182,22 +182,23 @@
       "static-promotion-list": {
         "type": "static-promotion-list",
         "blocks": {
-          "77e82ac5-358f-466e-a9fa-d581c7f4b63c": {
+          "459322a0-fd14-49e8-9c51-778a286889be": {
             "type": "item",
             "disabled": true,
             "settings": {
-              "show_overlay": true,
-              "overlay_opacity": 50,
+              "image": "shopify://shop_images/hummblock.png",
+              "show_overlay": false,
+              "overlay_opacity": 21,
               "stretch_image": true,
-              "background": "#000000",
+              "background": "#ff6d1b",
               "text_color": "#ffffff",
-              "title": "Installation Options Available",
+              "title": "",
               "content": "",
               "content_position": "top_left",
-              "button_background": "#ffffff",
-              "button_text_color": "#000000",
-              "button_text": "find out more",
-              "button_link": "https://euronics.ie/pages/installation"
+              "button_background": "#1d428a",
+              "button_text_color": "#fafcfd",
+              "button_text": "",
+              "button_link": "https://euronics.ie/pages/humm-finance"
             }
           },
           "6c5816c1-a88e-4bec-84db-fb6e7f131343": {
@@ -219,23 +220,22 @@
               "button_link": "shopify://collections/the-big-winter-sale-at-euronics"
             }
           },
-          "459322a0-fd14-49e8-9c51-778a286889be": {
+          "77e82ac5-358f-466e-a9fa-d581c7f4b63c": {
             "type": "item",
             "disabled": true,
             "settings": {
-              "image": "shopify://shop_images/hummblock.png",
-              "show_overlay": false,
-              "overlay_opacity": 21,
+              "show_overlay": true,
+              "overlay_opacity": 50,
               "stretch_image": true,
-              "background": "#ff6d1b",
+              "background": "#000000",
               "text_color": "#ffffff",
-              "title": "",
+              "title": "Installation Options Available",
               "content": "",
               "content_position": "top_left",
-              "button_background": "#1d428a",
-              "button_text_color": "#fafcfd",
-              "button_text": "",
-              "button_link": "https://euronics.ie/pages/humm-finance"
+              "button_background": "#ffffff",
+              "button_text_color": "#000000",
+              "button_text": "find out more",
+              "button_link": "https://euronics.ie/pages/installation"
             }
           }
         },
@@ -362,22 +362,6 @@
       "product-template": {
         "type": "product-template",
         "blocks": {
-          "accordion_Getdr8": {
-            "type": "accordion",
-            "settings": {
-              "title": "100% Irish Owned",
-              "content": "<p>Visit one of our 60 stores nationwide for personal assistance.</p><p>All our stores are owned locally so you know you are supporting Irish businesses.</p>",
-              "icon": "shopify://shop_images/Ireland.svg"
-            }
-          },
-          "accordion_Xk7PBk": {
-            "type": "accordion",
-            "settings": {
-              "title": "Excellent Customer Service",
-              "content": "<p>Fast Customer Support ? We?re here to help, anytime.</p><p>Join Thousands of Satisfied Irish Customers - Rated 93% on Feefo.</p>",
-              "icon": "shopify://shop_images/customer_service.svg"
-            }
-          },
           "accordion_fyLtXh": {
             "type": "accordion",
             "settings": {
@@ -392,6 +376,22 @@
               "title": "Spread the Cost",
               "content": "<p>Spread the cost of your purchase easily wth HUMM. Learn more by clicking <a href=\"https://euronics.ie/pages/humm-finance\" title=\"https://euronics.ie/pages/humm-finance\">Here</a>. </p><p>Secure Checkout ? Your data is safe with our SSL encryption</p>",
               "icon": "shopify://shop_images/Spread_the_cost.png"
+            }
+          },
+          "accordion_Getdr8": {
+            "type": "accordion",
+            "settings": {
+              "title": "100% Irish Owned",
+              "content": "<p>Visit one of our 60 stores nationwide for personal assistance.</p><p>All our stores are owned locally so you know you are supporting Irish businesses.</p>",
+              "icon": "shopify://shop_images/Ireland.svg"
+            }
+          },
+          "accordion_Xk7PBk": {
+            "type": "accordion",
+            "settings": {
+              "title": "Excellent Customer Service",
+              "content": "<p>Fast Customer Support ? We?re here to help, anytime.</p><p>Join Thousands of Satisfied Irish Customers - Rated 93% on Feefo.</p>",
+              "icon": "shopify://shop_images/customer_service.svg"
             }
           }
         },
