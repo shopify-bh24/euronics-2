@@ -1211,6 +1211,7 @@
       },
       "collection_with_image_GUWk37": {
         "type": "collection-with-image",
+        "disabled": true,
         "name": "Collection with image",
         "settings": {
           "collection": "10-off-lg-tvs",
