@@ -138,7 +138,7 @@
           </div>
 
           <div class="mosaic__column">
-            {{block_5}}
+            {{block_5}}  
           </div>
       {%- endcase -%}
     </div>
@@ -181,6 +181,16 @@
           "id": "image",
           "label": "Image",
           "info": "800 x 520px .jpg recommended for standard images. 1100 x 1100px .jpg recommended for center images."
+        },
+        {
+          "type": "range",
+          "id": "image_width",
+          "label": "Image width",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "default": 33
         },
         {
           "type": "checkbox",

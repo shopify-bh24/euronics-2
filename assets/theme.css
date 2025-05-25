@@ -7030,6 +7030,10 @@ the result for products and/or pages and blogs. We therefore then hide possible 
     flex: 1 0 auto;
   }
 
+  .mosaic__item a{
+    border-radius: 10px;
+  }
+
   .mosaic__item> :first-child {
     flex: 1 0 auto;
     height: 100%;
