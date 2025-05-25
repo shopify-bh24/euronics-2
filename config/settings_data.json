@@ -1215,7 +1215,7 @@
         "settings": {
           "collection": "10-off-lg-tvs",
           "products_count": 12,
-          "image": "shopify://shop_images/LG_TVS_600_x_500_px.png",
+          "image": "shopify://shop_images/60a2c864-9151-4749-9fc0-b324332b2461.png",
           "image_position": "right",
           "background": "#ffffff",
           "text_color": "#ffffff",
@@ -1223,7 +1223,7 @@
           "content": "Save Big on LG Tvs while stock last!",
           "button_background": "#ffffff",
           "button_text_color": "#0774d7",
-          "button_text": "Shop Now",
+          "button_text": "",
           "button_link": ""
         }
       }
