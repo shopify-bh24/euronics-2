@@ -1208,6 +1208,24 @@
           "autoplay": true,
           "cycle_speed": 5
         }
+      },
+      "collection_with_image_GUWk37": {
+        "type": "collection-with-image",
+        "name": "Collection with image",
+        "settings": {
+          "collection": "10-off-lg-tvs",
+          "products_count": 12,
+          "image": "shopify://shop_images/LG_TVS_600_x_500_px.png",
+          "image_position": "right",
+          "background": "#FFFFFF",
+          "text_color": "#ffffff",
+          "title": "Save Big on LG Tvs",
+          "content": "Save Big on LG Tvs while stock last!",
+          "button_background": "#ffffff",
+          "button_text_color": "#0774d7",
+          "button_text": "Shop Now",
+          "button_link": ""
+        }
       }
     },
     "content_for_index": [
@@ -1218,6 +1236,7 @@
       "collection_with_image_CQV3bH",
       "cd10fa02-bd8e-4cf2-8d71-725033d3fe3b",
       "shogun_custom_681c7be4b37ad2f06e923a11_xb9dX6",
+      "collection_with_image_GUWk37",
       "shogun_custom_682b279a5ba7c048f4377e46_RKkndG",
       "featured_collection_xJ8td6",
       "feefo_review_carousel_kpAc8M",
