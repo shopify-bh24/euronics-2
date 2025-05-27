@@ -4371,6 +4371,11 @@ sold out label to create some consistence */
 .featured-collection__title {
   margin-bottom: 0px;
   color: inherit;
+
+}
+
+.featured-collection__content-header-left_position{
+  margin-left: 1.5rem;
 }
 
 .featured-collection__cta {
@@ -9654,6 +9659,7 @@ are specific JUST for this element and break the generic abstractions... thanks 
   flex-shrink: 0;
   background: var(--secondary-background);
   white-space: normal;
+  gap: 1rem;
 }
 
 .product-item::after {
