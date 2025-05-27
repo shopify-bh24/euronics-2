@@ -1211,11 +1211,12 @@
       },
       "collection_with_image_GUWk37": {
         "type": "collection-with-image",
+        "disabled": true,
         "name": "Collection with image",
         "settings": {
           "collection": "lg-10-promo",
           "products_count": 12,
-          "image": "shopify://shop_images/LG_TVS_600_x_500_px_1.png",
+          "image": "shopify://shop_images/600pxx500PX.png",
           "image_position": "right",
           "background": "#ffffff",
           "text_color": "#ffffff",
