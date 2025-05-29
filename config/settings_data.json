@@ -1150,17 +1150,14 @@
       },
       "shogun_custom_681c7be4b37ad2f06e923a11_xb9dX6": {
         "type": "shogun-custom-681c7be4b37ad2f06e923a11",
-        "name": "Huumm",
         "settings": {}
       },
       "shogun_custom_682b279a5ba7c048f4377e46_RKkndG": {
         "type": "shogun-custom-682b279a5ba7c048f4377e46",
-        "name": "Brand Logo Slideshow",
         "settings": {}
       },
       "collection_with_image_CQV3bH": {
         "type": "collection-with-image",
-        "name": "Collection with image",
         "settings": {
           "collection": "cooling",
           "products_count": 12,
@@ -1200,7 +1197,6 @@
         "block_order": [
           "image_9wEBLD"
         ],
-        "name": "Slideshow",
         "settings": {
           "edge_to_edge": true,
           "section_size": "preserve_ratio",
@@ -1211,12 +1207,10 @@
       },
       "collection_with_image_GUWk37": {
         "type": "collection-with-image",
-        "disabled": true,
-        "name": "Collection with image",
         "settings": {
           "collection": "lg-10-promo",
           "products_count": 12,
-          "image": "shopify://shop_images/600pxx500PX.png",
+          "image": "shopify://shop_images/LG_TVS_600_x_500_px_1.png",
           "image_position": "right",
           "background": "#ffffff",
           "text_color": "#ffffff",
