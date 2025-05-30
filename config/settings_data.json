@@ -1197,6 +1197,7 @@
         "block_order": [
           "image_9wEBLD"
         ],
+        "disabled": true,
         "settings": {
           "edge_to_edge": true,
           "section_size": "preserve_ratio",
