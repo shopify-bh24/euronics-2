@@ -1222,6 +1222,24 @@
           "button_text": "",
           "button_link": "https://euronics.ie/collections/lg-10-promo"
         }
+      },
+      "collection_with_image_mggPEN": {
+        "type": "collection-with-image",
+        "name": "Collection with image",
+        "settings": {
+          "collection": "robot-vacuum-cleaners",
+          "products_count": 20,
+          "image": "shopify://shop_images/Blocks2_5.jpg",
+          "image_position": "left",
+          "background": "#FFFFFF",
+          "text_color": "#ffffff",
+          "title": "Home of Robo Vacs",
+          "content": "Euronics has Ireland's largest range of Robo Vacs",
+          "button_background": "#ffffff",
+          "button_text_color": "#0774d7",
+          "button_text": "",
+          "button_link": "https://euronics.ie/collections/robot-vacuum-cleaners"
+        }
       }
     },
     "content_for_index": [
@@ -1235,6 +1253,7 @@
       "collection_with_image_GUWk37",
       "shogun_custom_682b279a5ba7c048f4377e46_RKkndG",
       "featured_collection_xJ8td6",
+      "collection_with_image_mggPEN",
       "feefo_review_carousel_kpAc8M",
       "rich_text_PfKf9q"
     ],
