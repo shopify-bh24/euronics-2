@@ -690,6 +690,26 @@
         "name": "json",
         "category": "JSON"
       }
+    },
+    {
+      "key": "battery-technology",
+      "namespace": "shopify",
+      "name": "Battery technology",
+      "description": "Specifies the type of battery used in electronics, such as alkaline or lithium-ion",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "oven-accessories-included",
+      "namespace": "shopify",
+      "name": "Oven accessories included",
+      "description": "Details the extra oven components included, such as roasting pan or wire rack",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
     }
   ],
   "variant": [
