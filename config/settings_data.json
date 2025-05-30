@@ -1229,9 +1229,9 @@
         "settings": {
           "collection": "robot-vacuum-cleaners",
           "products_count": 20,
-          "image": "shopify://shop_images/Blocks2_5.jpg",
+          "image": "shopify://shop_images/Robot.jpg",
           "image_position": "left",
-          "background": "#FFFFFF",
+          "background": "#ffffff",
           "text_color": "#ffffff",
           "title": "Home of Robo Vacs",
           "content": "Euronics has Ireland's largest range of Robo Vacs",
