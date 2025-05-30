@@ -1249,14 +1249,14 @@
           "products_count": 12,
           "image": "shopify://shop_images/6_0849ce16-f36e-4ec8-a66a-3b5280d92276.jpg",
           "image_position": "right",
-          "background": "#FFFFFF",
+          "background": "#ffffff",
           "text_color": "#ffffff",
           "title": "All things Apple",
           "content": "Shop the latest from Apple",
           "button_background": "#ffffff",
           "button_text_color": "#0774d7",
           "button_text": "",
-          "button_link": "shopify://collections/apple"
+          "button_link": "https://euronics.ie/collections/apple"
         }
       }
     },
