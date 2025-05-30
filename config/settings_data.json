@@ -1161,7 +1161,7 @@
         "settings": {
           "collection": "cooling",
           "products_count": 12,
-          "image": "shopify://shop_images/Home_Cooling_600_x_500_px_1.png",
+          "image": "shopify://shop_images/v2.jpg",
           "image_position": "left",
           "background": "#ffffff",
           "text_color": "#1d428a",
@@ -1169,7 +1169,7 @@
           "content": "Shop our full range of Fans and Air Conditioners",
           "button_background": "#f1c400",
           "button_text_color": "#1d428a",
-          "button_text": "Shop Now",
+          "button_text": "",
           "button_link": "https://euronics.ie/collections/cooling"
         }
       },
@@ -1210,7 +1210,7 @@
         "settings": {
           "collection": "lg-10-promo",
           "products_count": 12,
-          "image": "shopify://shop_images/LG_TVS_600_x_500_px_1.png",
+          "image": "shopify://shop_images/Blocks_4.jpg",
           "image_position": "right",
           "background": "#ffffff",
           "text_color": "#ffffff",
