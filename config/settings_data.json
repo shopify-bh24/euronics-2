@@ -1161,7 +1161,7 @@
         "settings": {
           "collection": "cooling",
           "products_count": 12,
-          "image": "shopify://shop_images/v2.jpg",
+          "image": "shopify://shop_images/Blocks3_3.jpg",
           "image_position": "left",
           "background": "#ffffff",
           "text_color": "#1d428a",
@@ -1211,7 +1211,7 @@
         "settings": {
           "collection": "lg-10-promo",
           "products_count": 12,
-          "image": "shopify://shop_images/Blocks_4.jpg",
+          "image": "shopify://shop_images/Blocks_5.jpg",
           "image_position": "right",
           "background": "#ffffff",
           "text_color": "#ffffff",
@@ -1229,7 +1229,7 @@
         "settings": {
           "collection": "robot-vacuum-cleaners",
           "products_count": 20,
-          "image": "shopify://shop_images/Robot.jpg",
+          "image": "shopify://shop_images/Blocks_vacs.jpg",
           "image_position": "left",
           "background": "#ffffff",
           "text_color": "#ffffff",
