@@ -1047,6 +1047,7 @@
           },
           "image_PLE6VK": {
             "type": "image",
+            "disabled": true,
             "settings": {
               "image": "shopify://shop_images/LG_Desktop.jpg",
               "mobile_image": "shopify://shop_images/LG_Mobile.jpg",
