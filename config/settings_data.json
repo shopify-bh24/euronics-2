@@ -367,7 +367,7 @@
             "type": "accordion",
             "settings": {
               "title": "Fast Nationwide Delivery",
-              "content": "<p>Fast, Reliable Delivery Across Ireland ? Enjoy prompt service wherever you are</p><p>Local Pickup & Support ? Visit one of our 60 stores nationwide for personal assistance</p>",
+              "content": "<p><strong>Fast, Reliable Delivery Across Ireland</strong>. Enjoy prompt service wherever you are. We aim to deliver your order within 2 business days, however, sometimes orders can take 3 - 5 business days for delivery.</p><p><strong>Visit one of our 60 stores nationwide for personal assistance</strong></p>",
               "icon": "shopify://shop_images/nationwide_delivery.svg"
             }
           },
