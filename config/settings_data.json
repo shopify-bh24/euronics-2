@@ -113,20 +113,6 @@
     "checkout_sidebar_background_color": "#fafcfd",
     "checkout_error_color": "#e72662",
     "sections": {
-      "cd10fa02-bd8e-4cf2-8d71-725033d3fe3b": {
-        "type": "featured-collection",
-        "disabled": true,
-        "settings": {
-          "collection": "blomberg",
-          "title": "Free Delivery on all Blomberg",
-          "products_count": 29,
-          "layout": "vertical",
-          "stack_products": false,
-          "show_quick_buy": false,
-          "link_title": "View all",
-          "link_url": ""
-        }
-      },
       "footer": {
         "type": "footer",
         "blocks": {
@@ -327,7 +313,6 @@
       },
       "shogun_custom_67d189261ae2a69c44a00334_pJGKpt": {
         "type": "shogun-custom-67d189261ae2a69c44a00334",
-        "disabled": true,
         "settings": {}
       },
       "blog-sidebar": {
@@ -445,20 +430,6 @@
           "content": "<p>Euronics.ie is Ireland's leading retailer for top-brand TVs, kitchen appliances, and home electronics. With <strong>over 60 stores nationwide</strong>, each independently run by local business owners, we proudly <strong>support Shop Local</strong>. As <strong>kitchen appliance specialists</strong>, we stock <strong>Ireland's largest range of integrated home appliances </strong>from energy-efficient washing machines and dishwashers to advanced refrigeration and cooking solutions. Beyond the kitchen, we also carry the latest consumer electronics, such as laptops for work or school, plus high-tech gadgets like drones, backup power supplies, and innovative robot vacuums. Enjoy <strong>competitive prices</strong>, <strong>fast nationwide delivery</strong>, and <strong>expert advice</strong> on everything from home entertainment to personal tech. <strong>Euronics, a human touch in a digital world.</strong></p>",
           "button_text": "",
           "button_link": "shopify://collections/all"
-        }
-      },
-      "featured_collection_xJ8td6": {
-        "type": "featured-collection",
-        "disabled": true,
-        "settings": {
-          "collection": "refrigeration",
-          "title": "Cooling",
-          "products_count": 24,
-          "layout": "vertical",
-          "stack_products": false,
-          "show_quick_buy": false,
-          "link_title": "View all",
-          "link_url": ""
         }
       },
       "blog-template": {
@@ -1159,73 +1130,6 @@
         "type": "shogun-custom-682b279a5ba7c048f4377e46",
         "settings": {}
       },
-      "collection_with_image_CQV3bH": {
-        "type": "collection-with-image",
-        "settings": {
-          "collection": "cooling",
-          "products_count": 12,
-          "image": "shopify://shop_images/Blocks3_3.jpg",
-          "image_position": "left",
-          "background": "#ffffff",
-          "text_color": "#1d428a",
-          "title": "Cool Down",
-          "content": "Shop our full range of Fans and Air Conditioners",
-          "button_background": "#f1c400",
-          "button_text_color": "#1d428a",
-          "button_text": "",
-          "button_link": "https://euronics.ie/collections/cooling"
-        }
-      },
-      "slideshow_pqT8WT": {
-        "type": "slideshow",
-        "blocks": {
-          "image_9wEBLD": {
-            "type": "image",
-            "settings": {
-              "image": "shopify://shop_images/Beat_the_heat_1.jpg",
-              "mobile_image": "shopify://shop_images/Beat_the_heat2_1.jpg",
-              "show_overlay": false,
-              "overlay_opacity": 30,
-              "text_color": "#ffffff",
-              "title": "",
-              "content": "",
-              "content_position": "middle_center",
-              "button_background": "#ffffff",
-              "button_text_color": "#000000",
-              "button_text": "",
-              "link": "https://euronics.ie/collections/cooling"
-            }
-          }
-        },
-        "block_order": [
-          "image_9wEBLD"
-        ],
-        "disabled": true,
-        "settings": {
-          "edge_to_edge": true,
-          "section_size": "preserve_ratio",
-          "carousel_effect": "slide",
-          "autoplay": true,
-          "cycle_speed": 5
-        }
-      },
-      "collection_with_image_GUWk37": {
-        "type": "collection-with-image",
-        "settings": {
-          "collection": "lg-10-promo",
-          "products_count": 12,
-          "image": "shopify://shop_images/Blocks_5.jpg",
-          "image_position": "right",
-          "background": "#ffffff",
-          "text_color": "#ffffff",
-          "title": "Save Big on LG Tvs",
-          "content": "Save Big on LG Tvs while stock last!",
-          "button_background": "#ffffff",
-          "button_text_color": "#0774d7",
-          "button_text": "",
-          "button_link": "https://euronics.ie/collections/lg-10-promo"
-        }
-      },
       "collection_with_image_mggPEN": {
         "type": "collection-with-image",
         "name": "Collection with image",
@@ -1266,15 +1170,10 @@
     "content_for_index": [
       "slideshow",
       "shogun_custom_67d189261ae2a69c44a00334_pJGKpt",
-      "slideshow_pqT8WT",
       "shogun_custom_6672f94bad4fce565dc38a6e_RVVUGC",
-      "collection_with_image_CQV3bH",
-      "cd10fa02-bd8e-4cf2-8d71-725033d3fe3b",
       "shogun_custom_681c7be4b37ad2f06e923a11_xb9dX6",
-      "collection_with_image_GUWk37",
-      "shogun_custom_682b279a5ba7c048f4377e46_RKkndG",
-      "featured_collection_xJ8td6",
       "collection_with_image_mggPEN",
+      "shogun_custom_682b279a5ba7c048f4377e46_RKkndG",
       "feefo_review_carousel_kpAc8M",
       "collection_with_image_4L47nz",
       "rich_text_PfKf9q"
