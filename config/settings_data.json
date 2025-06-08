@@ -1156,7 +1156,7 @@
           "collection": "apple",
           "products_count": 12,
           "image": "shopify://shop_images/6_0849ce16-f36e-4ec8-a66a-3b5280d92276.jpg",
-          "image_position": "right",
+          "image_position": "left",
           "background": "#ffffff",
           "text_color": "#ffffff",
           "title": "All things Apple",
