@@ -1232,14 +1232,6 @@
           "autoplay": true,
           "cycle_speed": 5
         }
-      },
-      "custom_html_dj9gaB": {
-        "type": "custom-html",
-        "name": "Custom HTML",
-        "settings": {
-          "title": "",
-          "html": "<div class=\"countdown-timer-block\" countdown-timer-id=\"cmbpl2x21003y12gdxb5edflk\"></div>"
-        }
       }
     },
     "content_for_index": [
@@ -1253,8 +1245,7 @@
       "slideshow_iTaP94",
       "feefo_review_carousel_kpAc8M",
       "shogun_custom_682b279a5ba7c048f4377e46_RKkndG",
-      "rich_text_PfKf9q",
-      "custom_html_dj9gaB"
+      "rich_text_PfKf9q"
     ],
     "blocks": {
       "7079518687644006178": {
@@ -1354,8 +1345,8 @@
           "storefrontAccessToken": ""
         }
       },
-      "12657775114333427046": {
-        "type": "shopify://apps/countdown-timer-essential/blocks/app_embed/722378e8-5a70-4eae-aa89-9e44e8e9f6de",
+      "7147999719060634790": {
+        "type": "shopify://apps/gsc-countdown-timer/blocks/countdown-bar/58dc5b1b-43d2-4209-b1f3-52aff31643ed",
         "disabled": false,
         "settings": {}
       }
