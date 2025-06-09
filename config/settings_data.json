@@ -660,7 +660,7 @@
       "announcement-bar": {
         "type": "announcement-bar",
         "settings": {
-          "show_announcement": true,
+          "show_announcement": false,
           "background": "#f1c400",
           "text_color": "#ffffff",
           "text": "60 Stores Nationwide - See Our Store Locator",
