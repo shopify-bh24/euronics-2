@@ -1232,6 +1232,14 @@
           "autoplay": true,
           "cycle_speed": 5
         }
+      },
+      "custom_html_dj9gaB": {
+        "type": "custom-html",
+        "name": "Custom HTML",
+        "settings": {
+          "title": "",
+          "html": "<div class=\"countdown-timer-block\" countdown-timer-id=\"cmbpl2x21003y12gdxb5edflk\"></div>"
+        }
       }
     },
     "content_for_index": [
@@ -1245,7 +1253,8 @@
       "slideshow_iTaP94",
       "feefo_review_carousel_kpAc8M",
       "shogun_custom_682b279a5ba7c048f4377e46_RKkndG",
-      "rich_text_PfKf9q"
+      "rich_text_PfKf9q",
+      "custom_html_dj9gaB"
     ],
     "blocks": {
       "7079518687644006178": {
