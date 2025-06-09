@@ -953,7 +953,7 @@
           "339d587a-9d9e-450f-96cd-76ea884173d9"
         ],
         "settings": {
-          "enable_sticky_header": true,
+          "enable_sticky_header": false,
           "logo": "shopify://shop_images/euronicsv2.png",
           "logo_max_width": 270,
           "mobile_logo_max_width": 160,
