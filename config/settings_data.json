@@ -1252,7 +1252,6 @@
         "block_order": [
           "image_DRRJk8"
         ],
-        "name": "Slideshow",
         "settings": {
           "edge_to_edge": true,
           "section_size": "preserve_ratio",
@@ -1260,10 +1259,16 @@
           "autoplay": true,
           "cycle_speed": 5
         }
+      },
+      "shogun_custom_684b035ef11438d919eb0e71_y8YQWG": {
+        "type": "shogun-custom-684b035ef11438d919eb0e71",
+        "name": "20th Anniversary Section",
+        "settings": {}
       }
     },
     "content_for_index": [
       "slideshow_N8RKfA",
+      "shogun_custom_684b035ef11438d919eb0e71_y8YQWG",
       "shogun_custom_6672f94bad4fce565dc38a6e_RVVUGC",
       "slideshow",
       "shogun_custom_67d189261ae2a69c44a00334_pJGKpt",
