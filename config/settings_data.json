@@ -1132,7 +1132,6 @@
       },
       "collection_with_image_mggPEN": {
         "type": "collection-with-image",
-        "name": "Collection with image",
         "settings": {
           "collection": "robot-vacuum-cleaners",
           "products_count": 20,
@@ -1150,7 +1149,6 @@
       },
       "collection_with_image_4L47nz": {
         "type": "collection-with-image",
-        "name": "Collection with image",
         "settings": {
           "collection": "apple",
           "products_count": 12,
@@ -1190,7 +1188,6 @@
         "block_order": [
           "image_GpBBh7"
         ],
-        "name": "Slideshow",
         "settings": {
           "edge_to_edge": false,
           "section_size": "preserve_ratio",
@@ -1223,9 +1220,41 @@
         "block_order": [
           "image_TwpHyH"
         ],
-        "name": "Slideshow",
         "settings": {
           "edge_to_edge": false,
+          "section_size": "preserve_ratio",
+          "carousel_effect": "slide",
+          "autoplay": true,
+          "cycle_speed": 5
+        }
+      },
+      "slideshow_N8RKfA": {
+        "type": "slideshow",
+        "blocks": {
+          "image_DRRJk8": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/Desktop_v2.png",
+              "mobile_image": "shopify://shop_images/Mobile.png",
+              "show_overlay": false,
+              "overlay_opacity": 30,
+              "text_color": "#ffffff",
+              "title": "",
+              "content": "",
+              "content_position": "middle_center",
+              "button_background": "#ffffff",
+              "button_text_color": "#000000",
+              "button_text": "",
+              "link": "https://euronics.ie/collections/20th-anniversary-sale"
+            }
+          }
+        },
+        "block_order": [
+          "image_DRRJk8"
+        ],
+        "name": "Slideshow",
+        "settings": {
+          "edge_to_edge": true,
           "section_size": "preserve_ratio",
           "carousel_effect": "slide",
           "autoplay": true,
@@ -1234,8 +1263,9 @@
       }
     },
     "content_for_index": [
-      "slideshow",
+      "slideshow_N8RKfA",
       "shogun_custom_6672f94bad4fce565dc38a6e_RVVUGC",
+      "slideshow",
       "shogun_custom_67d189261ae2a69c44a00334_pJGKpt",
       "collection_with_image_mggPEN",
       "slideshow_MDcC64",
