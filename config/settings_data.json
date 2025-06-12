@@ -1096,7 +1096,7 @@
           "image_U3kMim"
         ],
         "settings": {
-          "edge_to_edge": true,
+          "edge_to_edge": false,
           "section_size": "preserve_ratio",
           "carousel_effect": "fade",
           "autoplay": true,
@@ -1262,7 +1262,6 @@
       },
       "shogun_custom_684b035ef11438d919eb0e71_y8YQWG": {
         "type": "shogun-custom-684b035ef11438d919eb0e71",
-        "name": "20th Anniversary Section",
         "settings": {}
       }
     },
