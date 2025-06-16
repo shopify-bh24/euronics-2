@@ -123,21 +123,25 @@
           </div>
 
         {%-  when 5 -%}
-          <div class="mosaic__column">
+          <div class="mosaic__column" style="width: 40%;">
             {{ block_1 }}
           </div>
 
-          <div class="mosaic__column">
+          <div class="mosaic__column" style="width: 35%;">
             <div class="mosaic__row">
               {{block_2}}
             </div>
             <div class="mosaic__row">
-              {{block_3}}
-              {{block_4}}
+              <div class="mosaic__cell" style="width: 50%;">
+                {{block_3}}
+              </div>
+              <div class="mosaic__cell" style="width: 50%;">
+                {{block_4}}
+              </div>
             </div>
           </div>
 
-          <div class="mosaic__column">
+          <div class="mosaic__column" style="width: 25%;">
             {{block_5}}  
           </div>
       {%- endcase -%}
