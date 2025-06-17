@@ -6993,11 +6993,11 @@ the result for products and/or pages and blogs. We therefore then hide possible 
 
 
 .mosaic__item> :first-child {
-  min-height: 240px;
+  /* min-height: 240px; */
 }
 
 .mosaic--large .mosaic__item> :first-child {
-  min-height: 280px;
+  /* min-height: 280px; */
 }
 
 @media screen and (max-width: 999px) {
@@ -7005,7 +7005,7 @@ the result for products and/or pages and blogs. We therefore then hide possible 
   /* On mobile we increase the height of some elements (so that elements that appear bigger on desktop also appear bigger on mobile */
   .mosaic--two-columns .mosaic__column:first-child .mosaic__item> :first-child,
   .mosaic--three-columns .mosaic__column:nth-child(2) .mosaic__item> :first-child {
-    min-height: 340px;
+    /* min-height: 340px; */
   }
 }
 
@@ -7020,23 +7020,26 @@ the result for products and/or pages and blogs. We therefore then hide possible 
   .mosaic {
     display: flex;
     gap: 1rem;
+    height: 560px;
   }
 
   .mosaic__column {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    height: 100%;
   }
 
   .mosaic__row{
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
   }
 
   .mosaic__item {
     display: flex;
     flex-direction: column;
     flex: 1 0 auto;
+    height: 100%;
   }
 
   .mosaic__item a{
@@ -7046,15 +7049,15 @@ the result for products and/or pages and blogs. We therefore then hide possible 
   .mosaic__item> :first-child {
     flex: 1 0 auto;
     height: 100%;
-    min-height: 260px;
+    /* min-height: 260px; */
   }
 
   .mosaic--small .mosaic__item> :first-child {
-    min-height: 225px;
+    /* min-height: 225px; */
   }
 
   .mosaic--large .mosaic__item> :first-child {
-    min-height: 300px;
+    /* min-height: 300px; */
   }
 
   /* In this configuration the first column is larger */
@@ -10011,7 +10014,7 @@ are specific JUST for this element and break the generic abstractions... thanks 
 .promo-block {
   position: relative;
   display: flex;
-  min-height: 240px;
+  min-height: unset !important;
   padding: 20px 24px;
   border-radius: 3px;
   overflow: hidden;

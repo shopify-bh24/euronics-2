@@ -1,11 +1,11 @@
 <style>
   @media screen and (min-width: 1000px) {
     .mosaic__column--1 {
-      width: 40%;
+      width: 43%;
     }
 
     .mosaic__column--2 {
-      width: 35%;
+      width: 32%;
     }
 
     .mosaic__column--3 {
@@ -15,7 +15,14 @@
     .mosaic__cell{
       width: 50%;
     }
-  }
+    
+    .mosaic__row--1{
+      height: 45%;
+    }
+
+    .mosaic__row--2{
+      height: 55%;
+    }
 
   @media screen and (max-width: 1000px) {
     .mosaic__item{
@@ -155,10 +162,10 @@
           </div>
 
           <div class="mosaic__column mosaic__column--2">
-            <div class="mosaic__row">
+            <div class="mosaic__row mosaic__row--1">
               {{block_2}}
             </div>
-            <div class="mosaic__row">
+            <div class="mosaic__row mosaic__row--2">
               <div class="mosaic__cell">
                 {{block_3}}
               </div>
