@@ -1,3 +1,30 @@
+<style>
+  @media screen and (min-width: 1000px) {
+    .mosaic__column--1 {
+      width: 40%;
+    }
+
+    .mosaic__column--2 {
+      width: 35%;
+    }
+
+    .mosaic__column--3 {
+      width: 25%;
+    }
+    
+    .mosaic__cell{
+      width: 50%;
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    .mosaic__item{
+      margin: 10px 0px;
+    }
+    
+  }
+</style>
+
 <section class="section" data-section-id="{{ section.id }}" data-section-type="mosaic">
   <div class="container">
     {%- for block in section.blocks -%}
@@ -123,25 +150,25 @@
           </div>
 
         {%-  when 5 -%}
-          <div class="mosaic__column" style="width: 40%;">
+          <div class="mosaic__column mosaic__column--1">
             {{ block_1 }}
           </div>
 
-          <div class="mosaic__column" style="width: 35%;">
+          <div class="mosaic__column mosaic__column--2">
             <div class="mosaic__row">
               {{block_2}}
             </div>
             <div class="mosaic__row">
-              <div class="mosaic__cell" style="width: 50%;">
+              <div class="mosaic__cell">
                 {{block_3}}
               </div>
-              <div class="mosaic__cell" style="width: 50%;">
+              <div class="mosaic__cell">
                 {{block_4}}
               </div>
             </div>
           </div>
 
-          <div class="mosaic__column" style="width: 25%;">
+          <div class="mosaic__column mosaic__column--3">
             {{block_5}}  
           </div>
       {%- endcase -%}
