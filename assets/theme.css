@@ -7019,13 +7019,13 @@ the result for products and/or pages and blogs. We therefore then hide possible 
 @media screen and (min-width: 1000px) {
   .mosaic {
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
   }
 
   .mosaic__column {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
   }
 
   .mosaic__row{
