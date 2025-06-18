@@ -44,14 +44,36 @@
             {%- endif -%}
 
             <div class="promo-block__image-clip">
-              <div class="promo-block__image-wrapper promo-block__image-wrapper--cover lazyload image--fade-in" {% if block.settings.image %}data-bgset="{{ bgset }}" data-sizes="auto"{% endif %}>
-                {%- unless block.settings.image -%}
+              <div class="promo-block__image-wrapper promo-block__image-wrapper--cover lazyload image--fade-in">
+                {% if block.settings.image or block.settings.image_mobile %}
+                  <picture>
+                    {% if block.settings.image_mobile %}
+                      <source 
+                        srcset="{{ block.settings.image_mobile | image_url: width: 450 }}" 
+                        media="(max-width: 449px)">
+                    {% endif %}
+                    {% if block.settings.image %}
+                      <source 
+                        srcset="{{ block.settings.image | image_url: width: 1500 }}" 
+                        media="(min-width: 450px)">
+                    {% endif %}
+                    <img 
+                      src="{{ block.settings.image | image_url: width: 1500 }}"
+                      alt="{{ block.settings.image.alt | escape }}"
+                      class="promo-block__image lazyload"
+                      loading="lazy"
+                      width="1500"
+                      height="auto">
+                  </picture>
+                {% else %}
                   <div class="placeholder-background">
                     {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
                   </div>
-                {%- endunless -%}
+                {% endif %}
               </div>
             </div>
+            
+            
 
             <div class="promo-block__inner">
               {%- if block.settings.title != blank -%}
@@ -218,8 +240,12 @@
         {
           "type": "image_picker",
           "id": "image",
-          "label": "Image",
-          "info": "800 x 520px .jpg recommended for standard images. 1100 x 1100px .jpg recommended for center images."
+          "label": "Image Desktop"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_mobile",
+          "label": "Image Mobile"
         },
         {
           "type": "range",
