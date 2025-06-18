@@ -1264,109 +1264,6 @@
       "shogun_custom_684b035ef11438d919eb0e71_y8YQWG": {
         "type": "shogun-custom-684b035ef11438d919eb0e71",
         "settings": {}
-      },
-      "mosaic_wWJXbp": {
-        "type": "mosaic",
-        "blocks": {
-          "item_VW4AjQ": {
-            "type": "item",
-            "settings": {
-              "image": "shopify://shop_images/thum-1600x1062_e9eb32c6-1d4a-4f44-8ffa-2bb0305cb543.jpg",
-              "image_mobile": "shopify://shop_images/thum-1600x1062_24b8f543-6806-42a9-9fb4-d91afc4884d6.jpg",
-              "image_width": 33,
-              "show_overlay": false,
-              "overlay_opacity": 50,
-              "background": "#f3f4f4",
-              "text_color": "#4f5558",
-              "title": "Your heading",
-              "content": "Tell more about your product, collection...",
-              "content_position": "top_left",
-              "button_background": "#4f5558",
-              "button_text_color": "#f3f4f4",
-              "button_text": "Learn more",
-              "link": ""
-            }
-          },
-          "item_zVXdYU": {
-            "type": "item",
-            "settings": {
-              "image_width": 33,
-              "show_overlay": false,
-              "overlay_opacity": 50,
-              "background": "#f3f4f4",
-              "text_color": "#4f5558",
-              "title": "Your heading",
-              "content": "Tell more about your product, collection...",
-              "content_position": "top_left",
-              "button_background": "#4f5558",
-              "button_text_color": "#f3f4f4",
-              "button_text": "Learn more",
-              "link": ""
-            }
-          },
-          "item_BXDA7p": {
-            "type": "item",
-            "settings": {
-              "image_width": 33,
-              "show_overlay": false,
-              "overlay_opacity": 50,
-              "background": "#f3f4f4",
-              "text_color": "#4f5558",
-              "title": "Your heading",
-              "content": "Tell more about your product, collection...",
-              "content_position": "top_left",
-              "button_background": "#4f5558",
-              "button_text_color": "#f3f4f4",
-              "button_text": "Learn more",
-              "link": ""
-            }
-          },
-          "item_VUK9je": {
-            "type": "item",
-            "settings": {
-              "image_width": 33,
-              "show_overlay": false,
-              "overlay_opacity": 50,
-              "background": "#f3f4f4",
-              "text_color": "#4f5558",
-              "title": "Your heading",
-              "content": "Tell more about your product, collection...",
-              "content_position": "top_left",
-              "button_background": "#4f5558",
-              "button_text_color": "#f3f4f4",
-              "button_text": "Learn more",
-              "link": ""
-            }
-          },
-          "item_azFjcq": {
-            "type": "item",
-            "settings": {
-              "image_width": 33,
-              "show_overlay": false,
-              "overlay_opacity": 50,
-              "background": "#f3f4f4",
-              "text_color": "#4f5558",
-              "title": "Your heading",
-              "content": "Tell more about your product, collection...",
-              "content_position": "top_left",
-              "button_background": "#4f5558",
-              "button_text_color": "#f3f4f4",
-              "button_text": "Learn more",
-              "link": ""
-            }
-          }
-        },
-        "block_order": [
-          "item_VW4AjQ",
-          "item_zVXdYU",
-          "item_BXDA7p",
-          "item_VUK9je",
-          "item_azFjcq"
-        ],
-        "name": "Mosaic",
-        "settings": {
-          "section_size": "medium"
-        }
       }
     },
     "content_for_index": [
@@ -1382,8 +1279,7 @@
       "slideshow_iTaP94",
       "feefo_review_carousel_kpAc8M",
       "shogun_custom_682b279a5ba7c048f4377e46_RKkndG",
-      "rich_text_PfKf9q",
-      "mosaic_wWJXbp"
+      "rich_text_PfKf9q"
     ],
     "blocks": {
       "7079518687644006178": {
