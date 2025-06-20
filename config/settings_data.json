@@ -1264,10 +1264,29 @@
       "shogun_custom_684b035ef11438d919eb0e71_y8YQWG": {
         "type": "shogun-custom-684b035ef11438d919eb0e71",
         "settings": {}
+      },
+      "collection_with_image_JJydkX": {
+        "type": "collection-with-image",
+        "name": "Collection with image",
+        "settings": {
+          "collection": "cooling",
+          "products_count": 12,
+          "image": "shopify://shop_images/Blocks3_3_bc6056a8-647e-422c-a661-edab6ff593e6.jpg",
+          "image_position": "left",
+          "background": "#FFFFFF",
+          "text_color": "#ffffff",
+          "title": "Featured collection",
+          "content": "Tell more about your product, collection...",
+          "button_background": "#ffffff",
+          "button_text_color": "#0774d7",
+          "button_text": "Learn more",
+          "button_link": ""
+        }
       }
     },
     "content_for_index": [
       "slideshow_N8RKfA",
+      "collection_with_image_JJydkX",
       "shogun_custom_684b035ef11438d919eb0e71_y8YQWG",
       "shogun_custom_6672f94bad4fce565dc38a6e_RVVUGC",
       "slideshow",
