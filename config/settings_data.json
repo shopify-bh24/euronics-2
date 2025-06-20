@@ -1275,12 +1275,12 @@
           "image_position": "left",
           "background": "#FFFFFF",
           "text_color": "#ffffff",
-          "title": "Featured collection",
-          "content": "Tell more about your product, collection...",
+          "title": "Cool Down this Summer",
+          "content": "Browse our wide range of cooling fans and air conditioners",
           "button_background": "#ffffff",
           "button_text_color": "#0774d7",
-          "button_text": "Learn more",
-          "button_link": ""
+          "button_text": "",
+          "button_link": "https://euronics.ie/collections/cooling"
         }
       }
     },
