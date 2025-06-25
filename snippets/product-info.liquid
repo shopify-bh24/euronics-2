@@ -48,6 +48,16 @@
         </h3>
       {%- endif -%}
 
+      {% if product.metafields.custom.banner_image %}
+        <img src="{{ product.metafields.custom.image | image_url: width: 600 }}" alt="Custom image">
+      {% endif %}
+      
+      {% if product.metafields.custom.banner_image_url %}
+        <a href="{{ product.metafields.custom.image_url }}" target="_blank">View More</a>
+      {% endif %}
+      
+
+
       {%- capture product_labels -%}
         {%- for tag in product.tags -%}
           {%- if tag contains '__label:' -%}
