@@ -1236,8 +1236,8 @@
           "image_DRRJk8": {
             "type": "image",
             "settings": {
-              "image": "shopify://shop_images/Desktop_v2.png",
-              "mobile_image": "shopify://shop_images/Mobile.png",
+              "image": "shopify://shop_images/sale_ends2.jpg",
+              "mobile_image": "shopify://shop_images/sale_ends.jpg",
               "show_overlay": false,
               "overlay_opacity": 30,
               "text_color": "#ffffff",
