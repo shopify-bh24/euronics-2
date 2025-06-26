@@ -1,12 +1,12 @@
 <style>
-  .product-banner-mobile{
+  .product-promoting-banner-mobile{
     display: none;
   }
   @media (max-width: 1000px) {
-    .product-banner-desktop {
+    .product-promoting-banner-desktop {
       display: none;
     }
-    .product-banner-mobile{
+    .product-promoting-banner-mobile{
       display: block;
     }
   }
@@ -97,11 +97,11 @@
 
           {%- if product.media.size > 0 -%}
             <div class="product-block-list__item product-block-list__item--gallery">
-              {% assign banner = product.metafields.custom.product_banner.value %}
-              {% if banner %}
-                <div class="product-banner-mobile">
-                  <a href="{{ banner.url }}" target="_blank">
-                    <img src="{{ banner.image | image_url: width: 1200 }}" style="margin-bottom:1rem; width: 100%;" alt="Banner Image"> 
+              {% assign product_banner = product.metafields.custom.product_banner.value %}
+              {% if product_banner %}
+                <div class="product-promoting-banner-mobile">
+                  <a href="{{ product_banner.url }}" target="_blank">
+                    <img src="{{ product_banner.image | image_url: width: 1200 }}" style="margin-bottom:1rem; width: 100%;" alt="Banner Image"> 
                   </a>
                 </div>
               {% endif %}
@@ -110,14 +110,14 @@
           {%- endif -%}
 
           <div class="product-block-list__item product-block-list__item--info">
-            {% assign banner = product.metafields.custom.product_banner.value %}
-            {% if banner %}
-              <div class="product-banner-desktop">
-                <a href="{{ banner.url }}" target="_blank">
-                  <img src="{{ banner.image | image_url: width: 1200 }}" style="margin-bottom:1rem; width: 100%;" alt="Banner Image"> 
+            {% assign product_banner = product.metafields.custom.product_banner.value %}
+            {% if product_banner %}
+              <div class="product-promoting-banner-desktop">
+                <a href="{{ product_banner.url }}" target="_blank">
+                  <img src="{{ product_banner.image | image_url: width: 1200 }}" style="margin-bottom:1rem; width: 100%;" alt="Banner Image"> 
                 </a>
               </div>
-            {% endif %}
+            {% endif %} 
             {% render 'product-info' %}
           </div>
 
