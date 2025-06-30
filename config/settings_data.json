@@ -1253,7 +1253,6 @@
         "block_order": [
           "image_DRRJk8"
         ],
-        "disabled": true,
         "settings": {
           "edge_to_edge": true,
           "section_size": "preserve_ratio",
