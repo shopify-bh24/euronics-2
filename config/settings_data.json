@@ -1021,7 +1021,6 @@
             "type": "image",
             "disabled": true,
             "settings": {
-              "image": "shopify://shop_images/2160x500_b1fbfa55-c0d3-4a2e-bfb5-9c6f158cfdac.jpg",
               "mobile_image": "shopify://shop_images/750x880_9ecc5edb-0b1e-45ff-a226-3ec01ffc8c93.jpg",
               "show_overlay": false,
               "overlay_opacity": 30,
@@ -1171,8 +1170,8 @@
           "image_GpBBh7": {
             "type": "image",
             "settings": {
-              "image": "shopify://shop_images/2160x500_b1fbfa55-c0d3-4a2e-bfb5-9c6f158cfdac.jpg",
-              "mobile_image": "shopify://shop_images/750x880_9ecc5edb-0b1e-45ff-a226-3ec01ffc8c93.jpg",
+              "image": "shopify://shop_images/homepage_2160x500px_2x_2.jpg",
+              "mobile_image": "shopify://shop_images/homepage_750x880px_2x_1.jpg",
               "show_overlay": false,
               "overlay_opacity": 30,
               "text_color": "#ffffff",
@@ -1182,7 +1181,7 @@
               "button_background": "#ffffff",
               "button_text_color": "#000000",
               "button_text": "",
-              "link": "https://euronics.ie/collections/robot-vacuum-cleaners/products/eufy-robot-vacuum-omni-e28-t2352v11"
+              "link": "https://euronics.ie/pages/blomberg-competition-entry"
             }
           }
         },
