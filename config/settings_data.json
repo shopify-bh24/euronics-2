@@ -1169,6 +1169,7 @@
         "blocks": {
           "image_GpBBh7": {
             "type": "image",
+            "disabled": true,
             "settings": {
               "image": "shopify://shop_images/homepage_2160x500px_2x_2.jpg",
               "mobile_image": "shopify://shop_images/homepage_750x880px_2x_1.jpg",
