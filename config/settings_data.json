@@ -1253,6 +1253,7 @@
         "block_order": [
           "image_DRRJk8"
         ],
+        "disabled": true,
         "settings": {
           "edge_to_edge": true,
           "section_size": "preserve_ratio",
@@ -1286,11 +1287,11 @@
       }
     },
     "content_for_index": [
+      "slideshow",
       "slideshow_N8RKfA",
       "shogun_custom_67d189261ae2a69c44a00334_pJGKpt",
       "shogun_custom_684b035ef11438d919eb0e71_y8YQWG",
       "collection_with_image_JJydkX",
-      "slideshow",
       "shogun_custom_6672f94bad4fce565dc38a6e_RVVUGC",
       "collection_with_image_mggPEN",
       "slideshow_MDcC64",
