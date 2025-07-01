@@ -982,6 +982,23 @@
       "slideshow": {
         "type": "slideshow",
         "blocks": {
+          "image_PLE6VK": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/homepage_2160x500px_2x_2.jpg",
+              "mobile_image": "shopify://shop_images/homepage_750x880px_2x_1.jpg",
+              "show_overlay": false,
+              "overlay_opacity": 30,
+              "text_color": "#ffffff",
+              "title": "",
+              "content": "",
+              "content_position": "middle_center",
+              "button_background": "#ffffff",
+              "button_text_color": "#000000",
+              "button_text": "",
+              "link": "https://euronics.ie/pages/blomberg-competition-entry"
+            }
+          },
           "7d2b6ae6-0eb2-4010-928b-ba81517821a6": {
             "type": "image",
             "settings": {
@@ -1015,24 +1032,6 @@
               "button_text_color": "#000000",
               "button_text": "",
               "link": "https://euronics.ie/pages/brown-bread-competition"
-            }
-          },
-          "image_PLE6VK": {
-            "type": "image",
-            "disabled": true,
-            "settings": {
-              "image": "shopify://shop_images/homepage_2160x500px_2x_2.jpg",
-              "mobile_image": "shopify://shop_images/homepage_750x880px_2x_1.jpg",
-              "show_overlay": false,
-              "overlay_opacity": 30,
-              "text_color": "#ffffff",
-              "title": "",
-              "content": "",
-              "content_position": "middle_center",
-              "button_background": "#ffffff",
-              "button_text_color": "#000000",
-              "button_text": "",
-              "link": "https://euronics.ie/pages/blomberg-competition-entry"
             }
           },
           "image_NDnLtE": {
@@ -1090,9 +1089,9 @@
           }
         },
         "block_order": [
+          "image_PLE6VK",
           "7d2b6ae6-0eb2-4010-928b-ba81517821a6",
           "image_nh6PK3",
-          "image_PLE6VK",
           "image_NDnLtE",
           "image_iJQhfF",
           "image_U3kMim"
