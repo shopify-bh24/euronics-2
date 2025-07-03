@@ -358,6 +358,40 @@
                   {%- endif -%}
                 {%- endfor -%}
 
+                <!-- Feature icons and logos near images -->
+                <div id="ccs-feature-icons"></div>
+                <div id="ccs-logos"></div>
+
+                <!-- Inline marketing content below the fold -->
+                <div id="ccs-inline-content"></div>
+
+
+                <script type='text/javascript'>
+                var ccs_cc_args = ccs_cc_args || [];
+              
+                // Dynamic product data from Shopify
+                ccs_cc_args.push(['cpn', '{{ product.id }}']);                          // Shopify product ID
+                ccs_cc_args.push(['mf', '{{ product.vendor | escape }}']);             // Manufacturer name
+                ccs_cc_args.push(['pn', '{{ product.metafields.custom.mpn }}']);       // Manufacturer Part Number
+                ccs_cc_args.push(['upcean', '{{ product.barcode }}']);                 // EAN/UPC if available
+                ccs_cc_args.push(['lang', 'en']);                                      // Language
+                ccs_cc_args.push(['market', 'IE']);                                    // Country code
+              
+                (function () {
+                  var o = ccs_cc_args;
+                  o.push(['_SKey', 'b907807a']);
+                  o.push(['_ZoneId', 'cb4ddf418d']);
+                  var sc = document.createElement('script');
+                  sc.type = 'text/javascript';
+                  sc.async = true;
+                  sc.src = (document.location.protocol === 'https:' ? 'https://' : 'http://') + 'cdn.cs.1worldsync.com/jsc/h1ws.js';
+                  var n = document.getElementsByTagName('script')[0];
+                  n.parentNode.insertBefore(sc, n);
+                })();
+              </script>
+              
+
+
                 {%- comment -%}
                   --------------------------------------------------------------------------------------
                   FLIXMEDIA
@@ -576,6 +610,22 @@ var m=document.getElementsByTagName('head')[0];m.parentNode.insertBefore(s, m);}
     }, 1500);
   };
 </script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const bssBadge = document.querySelector('.bss_pl_img');
+    const customBanner = document.querySelector('.product-promoting-banner-mobile');
+
+    // Example: Move badge outside your custom banner
+    if (bssBadge && customBanner && customBanner.contains(bssBadge)) {
+      document.body.appendChild(bssBadge); // Moves it to body
+    }
+
+    // OR: Remove it entirely if you don't want it at all
+    // if (bssBadge) bssBadge.remove();
+  });
+</script>
+
 
 
 {% schema %}
