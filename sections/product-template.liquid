@@ -375,7 +375,7 @@
                 ccs_cc_args.push(['pn', '{{ product.metafields.custom.mpn }}']);       // Manufacturer Part Number
                 ccs_cc_args.push(['upcean', '{{ product.barcode }}']);                 // EAN/UPC if available
                 ccs_cc_args.push(['lang', 'en']);                                      // Language
-                ccs_cc_args.push(['market', 'GB']);                                    // Country code
+                ccs_cc_args.push(['market', 'GB,IE']);                                    // Country code
               
                 (function () {
                   var o = ccs_cc_args;
