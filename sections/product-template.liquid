@@ -372,7 +372,7 @@
                 // Dynamic product data from Shopify
                 ccs_cc_args.push(['cpn', '{{ product.id }}']);                          // Shopify product ID
                 ccs_cc_args.push(['mf', '{{ product.vendor | escape }}']);             // Manufacturer name
-                ccs_cc_args.push(['pn', '{{ product.id }}']);       // Manufacturer Part Number
+                ccs_cc_args.push(['pn', '{{ product.metafields.custom.mpn }}']);       // Manufacturer Part Number
                 ccs_cc_args.push(['upcean', '{{ product.barcode }}']);                 // EAN/UPC if available
                 ccs_cc_args.push(['lang', 'en']);                                      // Language
                 ccs_cc_args.push(['market', 'GB']);                                    // Country code
