@@ -143,56 +143,55 @@
 
       <div class="card__tab-panel" id="tab-description">
 
-        <!-- Feature icons and logos near images -->
-        <div id="ccs-feature-icons"></div>
-        <div id="ccs-logos"></div>
+      <div id="flix-inpage">
 
-        <!-- Inline marketing content below the fold -->
-        <div id="ccs-inline-content"></div>
+      <div id="ccs-feature-icons"></div>
+      <div id="ccs-logos"></div>
+      <div id="ccs-inline-content"></div>
 
 
-        <script type='text/javascript'>
-          var ccs_cc_args = ccs_cc_args || [];
-        
-          // Pull product data from Shopify
-          var cpn = '{{ product.id }}';                                      // Unique Shopify product ID
-          var mf = '{{ product.vendor | escape }}';                          // Manufacturer name (e.g., "Samsung")
-          var pn = '{{ product.variants.first.sku | escape }}';           // Manufacturer Part Number
-          var upcean = '{{ product.barcode }}';                              // EAN or UPC code
-          var lang = 'en';                                                   // ISO 639-1 language code
-          var market = 'IE';                                                 // Country code (IE = Ireland)
-        
-          // Debug logs to verify data
-          console.log('ccs_cc_args debug:', {
-            cpn: cpn,
-            mf: mf,
-            pn: pn,
-            upcean: upcean, 
-            lang: lang,
-            market: market
-          }); 
-        
-          // Add values to 1WorldSync config array
-          ccs_cc_args.push(['cpn', cpn]);
-          ccs_cc_args.push(['mf', mf]);
-          ccs_cc_args.push(['pn', pn]);
-          ccs_cc_args.push(['upcean', upcean]);
-          ccs_cc_args.push(['lang', lang]);
-          ccs_cc_args.push(['market', market]);
-        
-          // Load 1WorldSync's script
-          (function () {
-            var o = ccs_cc_args;
-            o.push(['_SKey', 'b907807a']);     // Provided by vendor
-            o.push(['_ZoneId', 'cb4ddf418d']); // Provided by vendor
-            var sc = document.createElement('script');
-            sc.type = 'text/javascript';
-            sc.async = true;
-            sc.src = (document.location.protocol === 'https:' ? 'https://' : 'http://') + 'cdn.cs.1worldsync.com/jsc/h1ws.js';
-            var n = document.getElementsByTagName('script')[0];
-            n.parentNode.insertBefore(sc, n);
-          })();
-        </script>
+      <script type='text/javascript'>
+        var ccs_cc_args = ccs_cc_args || [];
+      
+        // Pull product data from Shopify
+        var cpn = '{{ product.id }}';                                      // Unique Shopify product ID
+        var mf = '{{ product.vendor | escape }}';                          // Manufacturer name (e.g., "Samsung")
+        var pn = '{{ product.metafields.custom.mpn| escape }}';           // Manufacturer Part Number
+        var upcean = '{{ product.barcode }}';                              // EAN or UPC code
+        var lang = 'en';                                                   // ISO 639-1 language code
+        var market = 'IE';                                                 // Country code (IE = Ireland)
+       
+        // Debug logs to verify data
+        console.log('ccs_cc_args debug:', {
+          cpn: cpn,
+          mf: mf,
+          pn: pn,
+          upcean: upcean, 
+          lang: lang,
+          market: market
+        }); 
+      
+        // Add values to 1WorldSync config array
+        ccs_cc_args.push(['cpn', cpn]);
+        ccs_cc_args.push(['mf', mf]);
+        ccs_cc_args.push(['pn', pn]);
+        ccs_cc_args.push(['upcean', upcean]);
+        ccs_cc_args.push(['lang', lang]);
+        ccs_cc_args.push(['market', market]);
+      
+        // Load 1WorldSync's script
+        (function () {
+          var o = ccs_cc_args;
+          o.push(['_SKey', 'b907807a']);     // Provided by vendor
+          o.push(['_ZoneId', 'cb4ddf418d']); // Provided by vendor
+          var sc = document.createElement('script');
+          sc.type = 'text/javascript';
+          sc.async = true;
+          sc.src = (document.location.protocol === 'https:' ? 'https://' : 'http://') + 'cdn.cs.1worldsync.com/jsc/h1ws.js';
+          var n = document.getElementsByTagName('script')[0];
+          n.parentNode.insertBefore(sc, n);
+        })();
+      </script>  
 
 
         {{ product.description | remove: 'data-section-type="product"' }}
@@ -270,11 +269,11 @@
         ></reevoo-embeddable>
       </div>
       <div class="card__tab-panel hidden" id="tab-media">
-        <!-- Feature icons and logos near images -->
+
+        {% comment %} <div id="flix-inpage">
+
         <div id="ccs-feature-icons"></div>
         <div id="ccs-logos"></div>
-
-        <!-- Inline marketing content below the fold -->
         <div id="ccs-inline-content"></div>
 
 
@@ -284,7 +283,7 @@
           // Pull product data from Shopify
           var cpn = '{{ product.id }}';                                      // Unique Shopify product ID
           var mf = '{{ product.vendor | escape }}';                          // Manufacturer name (e.g., "Samsung")
-          var pn = '{{ product.variants.first.sku | escape }}';           // Manufacturer Part Number
+          var pn = '{{ product.metafields.custom.mpn| escape }}';           // Manufacturer Part Number
           var upcean = '{{ product.barcode }}';                              // EAN or UPC code
           var lang = 'en';                                                   // ISO 639-1 language code
           var market = 'IE';                                                 // Country code (IE = Ireland)
@@ -319,8 +318,8 @@
             var n = document.getElementsByTagName('script')[0];
             n.parentNode.insertBefore(sc, n);
           })();
-        </script>
-        <div id="flix-inpage"></div>
+        </script>   {% endcomment %}
+        </div>
       </div>
       {%- if section.settings.custom_security_badge or show_payment_icons -%}
         <div class="card__tab-panel hidden" id="tab-payment">
