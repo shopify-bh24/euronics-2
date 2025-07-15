@@ -1294,10 +1294,10 @@
       "collection_with_image_JJydkX",
       "shogun_custom_6672f94bad4fce565dc38a6e_RVVUGC",
       "collection_with_image_mggPEN",
+      "slideshow_iTaP94",
       "slideshow_MDcC64",
       "collection_with_image_4L47nz",
       "shogun_custom_681c7be4b37ad2f06e923a11_xb9dX6",
-      "slideshow_iTaP94",
       "feefo_review_carousel_kpAc8M",
       "shogun_custom_682b279a5ba7c048f4377e46_RKkndG",
       "rich_text_PfKf9q"
@@ -1349,11 +1349,6 @@
       },
       "11945366711752539959": {
         "type": "shopify://apps/zendesk/blocks/zendesk_web_widget/c0b417b1-b90b-4754-baaf-f55627e6acd4",
-        "disabled": false,
-        "settings": {}
-      },
-      "16216491870256628967": {
-        "type": "shopify://apps/bss-labels-badges/blocks/bss-pl-config-data/91bfe765-b604-49a1-805e-3599fa600b24",
         "disabled": false,
         "settings": {}
       },
