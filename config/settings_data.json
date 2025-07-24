@@ -982,6 +982,23 @@
       "slideshow": {
         "type": "slideshow",
         "blocks": {
+          "image_U3kMim": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/Ninja_Promo_Desktop.png",
+              "mobile_image": "shopify://shop_images/Ninja_Promo_Mobile.png",
+              "show_overlay": false,
+              "overlay_opacity": 30,
+              "text_color": "#ffffff",
+              "title": "",
+              "content": "",
+              "content_position": "middle_center",
+              "button_background": "#ffffff",
+              "button_text_color": "#000000",
+              "button_text": "",
+              "link": "shopify://collections/ninja"
+            }
+          },
           "image_PLE6VK": {
             "type": "image",
             "settings": {
@@ -1049,32 +1066,14 @@
               "button_text": "",
               "link": "https://euronics.ie/collections/electrolux"
             }
-          },
-          "image_U3kMim": {
-            "type": "image",
-            "disabled": true,
-            "settings": {
-              "image": "shopify://shop_images/NEFF_Multibuy_Cashback_IRE_Euronics_2160x500_b539d4f2-5e9c-46a1-b519-5cfb0467f62c.jpg",
-              "mobile_image": "shopify://shop_images/NEFF_Multibuy_Cashback_IRE_Euronics_750x880_701de555-caf1-4fe3-8c73-f17a83c643d0.jpg",
-              "show_overlay": false,
-              "overlay_opacity": 30,
-              "text_color": "#ffffff",
-              "title": "",
-              "content": "",
-              "content_position": "middle_center",
-              "button_background": "#ffffff",
-              "button_text_color": "#000000",
-              "button_text": "",
-              "link": "https://euronics.ie/collections/neff"
-            }
           }
         },
         "block_order": [
+          "image_U3kMim",
           "image_PLE6VK",
           "image_iJQhfF",
           "image_nh6PK3",
-          "image_NDnLtE",
-          "image_U3kMim"
+          "image_NDnLtE"
         ],
         "settings": {
           "edge_to_edge": true,
