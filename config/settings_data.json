@@ -1055,8 +1055,8 @@
             "type": "image",
             "disabled": true,
             "settings": {
-              "image": "shopify://shop_images/Electrolux_Desktop_199210bc-a631-449b-a472-d48644e443a0.jpg",
-              "mobile_image": "shopify://shop_images/Electrolux_Mobile_1_3d9734cc-b127-446e-bf0b-163b2a3ca591.jpg",
+              "image": "shopify://shop_images/E03398309_TVAV_1641_Q3_Cask_Back_Euronics_Ireland_2160x720px_v02.jpg",
+              "mobile_image": "shopify://shop_images/E03398309_TVAV_1641_Q3_Cask_Back_Euronics_Ireland_750x1100px_v02.jpg",
               "show_overlay": false,
               "overlay_opacity": 30,
               "text_color": "#ffffff",
@@ -1066,7 +1066,7 @@
               "button_background": "#ffffff",
               "button_text_color": "#000000",
               "button_text": "",
-              "link": "https://euronics.ie/collections/electrolux"
+              "link": "https://euronics.ie/collections/samsung-tvs-2025-range"
             }
           }
         },
