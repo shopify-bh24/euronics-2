@@ -1053,8 +1053,8 @@
           "image_nh6PK3": {
             "type": "image",
             "settings": {
-              "image": "shopify://shop_images/Euronics_Haier_Homepage_Desktop_Banner_2160x500_a4ca2217-1214-4a65-9f60-3ba29da78663.jpg",
-              "mobile_image": "shopify://shop_images/Euronics_Haier_Homepage_Mobile_Banner_750x880_e0878a9f-b217-4664-b692-303381cda443.jpg",
+              "image": "shopify://shop_images/2160x500_73a6f5d2-c40f-4157-9ce9-685c46f84b75.png",
+              "mobile_image": "shopify://shop_images/750x880.png",
               "show_overlay": false,
               "overlay_opacity": 30,
               "text_color": "#ffffff",
@@ -1064,7 +1064,7 @@
               "button_background": "#ffffff",
               "button_text_color": "#000000",
               "button_text": "",
-              "link": "https://euronics.ie/collections/hier-summer-cashback"
+              "link": "https://euronics.ie/collections/liebherr"
             }
           }
         },
