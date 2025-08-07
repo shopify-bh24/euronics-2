@@ -1,0 +1,178 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "Breadcrumb": {
+      "type": "Breadcrumb",
+      "settings": {}
+    },
+    "colletion_banner": {
+      "type": "colletion_banner",
+      "settings": {
+        "collection_banner": "shopify://shop_images/hoover-brand-page-header.png",
+        "height_image": "auto"
+      }
+    },
+    "text_image_overlay": {
+      "type": "text_image_overlay",
+      "settings": {
+        "title": "HOOVER. PROVIDING APPLIANCES FOR THE WAY YOU LIVE.",
+        "title_color": "#1d4389",
+        "description": "<p>If you require high-quality products, then look no further than Hoover. Their range of products are modern, reliable, practical and above all easy to use.</p><p>The Hoover range includes washing machines, washer dryers, tumble dryers, dishwashers, refrigeration, built-in and floorcare products. Hoover have included a number of innovative and technologically advanced features which are ideal for busy lifestyles. They are sure to meet your everyday needs not just for now, but for the future as well.</p>",
+        "text_alignment": "left",
+        "select_view": "video",
+        "image_div": "shopify://shop_images/1_9ac00729-da60-4876-9a6c-963a2e37a22a.jpg",
+        "video_url": "https://cdn.shopify.com/s/files/1/0550/5807/1748/files/file_example_MP4_480_1_5MG.mp4?v=1627385857",
+        "you_tube_url": ""
+      }
+    },
+    "three_grid_block": {
+      "type": "three_grid_block",
+      "blocks": {
+        "8d02f7d0-0769-4b05-a3e6-d355de168958": {
+          "type": "three_gird_block",
+          "settings": {
+            "image": "shopify://shop_images/Washing-Machines.jpg",
+            "title": "Washing Machines",
+            "title_color": "#ffffff",
+            "title_bg": "#da0e31",
+            "content": "",
+            "btn_ttl": "view all",
+            "btn_url": "shopify://collections/washing-machines"
+          }
+        },
+        "d2ac1691-a29f-4d1c-9fcc-9839f84a36ee": {
+          "type": "three_gird_block",
+          "settings": {
+            "image": "shopify://shop_images/Washer-dryers.jpg",
+            "title": "Washer Dryers",
+            "title_color": "#ffffff",
+            "title_bg": "#da0e31",
+            "content": "",
+            "btn_ttl": "view all",
+            "btn_url": "shopify://collections/washer-dryers"
+          }
+        },
+        "3fca2bf5-6342-4f30-9de8-bf83df8e682f": {
+          "type": "three_gird_block",
+          "settings": {
+            "image": "shopify://shop_images/Tumble-Dryers.jpg",
+            "title": "Tumble Dryers",
+            "title_color": "#ffffff",
+            "title_bg": "#da0e31",
+            "content": "",
+            "btn_ttl": "view all",
+            "btn_url": "shopify://collections/dryers"
+          }
+        }
+      },
+      "block_order": [
+        "8d02f7d0-0769-4b05-a3e6-d355de168958",
+        "d2ac1691-a29f-4d1c-9fcc-9839f84a36ee",
+        "3fca2bf5-6342-4f30-9de8-bf83df8e682f"
+      ],
+      "settings": {
+        "grid": 3
+      }
+    },
+    "service_icon_block": {
+      "type": "service_icon_block",
+      "blocks": {
+        "e1973b97-439d-42d0-84fa-f0906fcd56d8": {
+          "type": "service_icon",
+          "settings": {
+            "serv_icon": "shopify://shop_images/Health_Check.png",
+            "title": "Health check diagnostics"
+          }
+        },
+        "2742bcf1-60e1-420a-9a78-6cf20509d93b": {
+          "type": "service_icon",
+          "settings": {
+            "serv_icon": "shopify://shop_images/Download.png",
+            "title": "Download new wash cycles"
+          }
+        },
+        "26fdca9e-f495-45cb-a9c4-e69914afb392": {
+          "type": "service_icon",
+          "settings": {
+            "serv_icon": "shopify://shop_images/Monitors_Energy.png",
+            "title": "Monitors energy consumption"
+          }
+        },
+        "28759064-f67f-4b5b-a5bd-5798e2898367": {
+          "type": "service_icon",
+          "settings": {
+            "serv_icon": "shopify://shop_images/User_Manuals.png",
+            "title": "Instant access to user manuals"
+          }
+        }
+      },
+      "block_order": [
+        "e1973b97-439d-42d0-84fa-f0906fcd56d8",
+        "2742bcf1-60e1-420a-9a78-6cf20509d93b",
+        "26fdca9e-f495-45cb-a9c4-e69914afb392",
+        "28759064-f67f-4b5b-a5bd-5798e2898367"
+      ],
+      "settings": {
+        "bg_color": "#eeeaeb",
+        "logo_image": "shopify://shop_images/One_Touch.png",
+        "title": "Clever connected laundry appliances",
+        "title_color": "#de0d31",
+        "description": "<p>Affordable technology for everyone that’s simple to use and works in the same way as contactless payment - just tap and connect.</p>",
+        "text_alignment": "left",
+        "video_url": "",
+        "you_tube_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc"
+      }
+    },
+    "collection_new_template": {
+      "type": "collection_new_template",
+      "settings": {
+        "show_collection_image": true,
+        "collapse_collection_description": false,
+        "collection_image_size": "small",
+        "products_per_row": "4",
+        "default_products_per_page": 24,
+        "default_view_layout": "grid",
+        "show_quick_buy": "list",
+        "show_quick_view": "list",
+        "quick_links": "",
+        "quick_links_show_products_count": true,
+        "show_filters": true,
+        "show_filter_color_swatch": true,
+        "filter_type": "group",
+        "open_group_filters_mode": "first_open",
+        "filter_group_order": ""
+      }
+    },
+    "shogun-above": {
+      "type": "shogun-above",
+      "settings": {}
+    },
+    "shogun-below": {
+      "type": "shogun-below",
+      "settings": {}
+    },
+    "shogun-helper": {
+      "type": "shogun-helper",
+      "settings": {}
+    }
+  },
+  "order": [
+    "shogun-helper",
+    "shogun-above",
+    "Breadcrumb",
+    "colletion_banner",
+    "text_image_overlay",
+    "three_grid_block",
+    "service_icon_block",
+    "collection_new_template",
+    "shogun-below"
+  ]
+}
