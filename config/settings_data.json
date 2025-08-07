@@ -48,7 +48,7 @@
     "show_discount": false,
     "discount_mode": "saving",
     "product_price_position": "before_title",
-    "product_image_size": "short",
+    "product_image_size": "natural",
     "show_color_swatch": false,
     "show_inventory_quantity": false,
     "low_inventory_threshold": 0,
@@ -765,7 +765,7 @@
         "settings": {
           "show_collection_image": true,
           "collapse_collection_description": false,
-          "collection_image_size": "medium",
+          "collection_image_size": "preserve_ratio",
           "products_per_row": "4",
           "default_products_per_page": 24,
           "default_view_layout": "grid",
