@@ -1001,10 +1001,9 @@
           },
           "image_NDnLtE": {
             "type": "image",
-            "disabled": true,
             "settings": {
-              "image": "shopify://shop_images/Desktop_Cashback_1.jpg",
-              "mobile_image": "shopify://shop_images/Mobile_Cashback2_1.jpg",
+              "image": "shopify://shop_images/Cashback_Desktop_1.jpg",
+              "mobile_image": "shopify://shop_images/Cashback_Mobile_1.jpg",
               "show_overlay": false,
               "overlay_opacity": 30,
               "text_color": "#ffffff",
@@ -1014,7 +1013,7 @@
               "button_background": "#ffffff",
               "button_text_color": "#000000",
               "button_text": "",
-              "link": "https://euronics.ie/collections/samsung-tvs-2025-range"
+              "link": "https://euronics.ie/collections/samsung-tv-audio"
             }
           },
           "image_PLE6VK": {
