@@ -1347,11 +1347,6 @@
           "greeting_message": "Welcome to Euronics Ireland! There are some common questions below, or you can get in touch directly with our team."
         }
       },
-      "4318962865815008709": {
-        "type": "shopify://apps/boost-ai-search-discovery/blocks/boost-sd/7fc998ae-a150-4367-bab8-505d8a4503f7",
-        "disabled": false,
-        "settings": {}
-      },
       "9901917232353999808": {
         "type": "shopify://apps/buddha-mega-menu-navigation/blocks/megamenu/dbb4ce56-bf86-4830-9b3d-16efbef51c6f",
         "disabled": false,
@@ -1389,6 +1384,11 @@
       "16216491870256628967": {
         "type": "shopify://apps/ta-labels-badges/blocks/bss-pl-config-data/91bfe765-b604-49a1-805e-3599fa600b24",
         "disabled": false,
+        "settings": {}
+      },
+      "4318962865815008709": {
+        "type": "shopify://apps/boost-ai-search-filter/blocks/boost-sd/7fc998ae-a150-4367-bab8-505d8a4503f7",
+        "disabled": true,
         "settings": {}
       }
     }
