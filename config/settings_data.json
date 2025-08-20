@@ -984,10 +984,9 @@
         "blocks": {
           "image_U3kMim": {
             "type": "image",
-            "disabled": true,
             "settings": {
-              "image": "shopify://shop_images/Gowan_Home_Euronics_Desktop_Mixed_2160x500px.jpg",
-              "mobile_image": "shopify://shop_images/Gowan_Home_Euronics_Mobile_Mixed_750x880px.jpg",
+              "image": "shopify://shop_images/Euronics_2160x500px_c66eb6a2-65d0-417e-8956-3fac18d9b3f6.jpg",
+              "mobile_image": "shopify://shop_images/Euronics_750x880px.jpg",
               "show_overlay": false,
               "overlay_opacity": 30,
               "text_color": "#ffffff",
@@ -997,7 +996,7 @@
               "button_background": "#ffffff",
               "button_text_color": "#000000",
               "button_text": "",
-              "link": "shopify://collections/ninja-summer-sale"
+              "link": "https://euronics.ie/collections/electrolux"
             }
           },
           "image_NDnLtE": {
