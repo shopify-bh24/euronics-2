@@ -1246,11 +1246,29 @@
               "button_text": "",
               "link": "https://euronics.ie/collections/anker"
             }
+          },
+          "image_ybdMp9": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/x1_nebula_2160x500_863fe5ec-9109-44f0-893b-bea6b2bc62ca.jpg",
+              "mobile_image": "shopify://shop_images/x1_nebula_750x880_d9aef6bd-b206-4bf9-a926-877427888189.jpg",
+              "show_overlay": false,
+              "overlay_opacity": 30,
+              "text_color": "#ffffff",
+              "title": "",
+              "content": "",
+              "content_position": "middle_center",
+              "button_background": "#ffffff",
+              "button_text_color": "#000000",
+              "button_text": "",
+              "link": "https://euronics.ie/collections/nebula/products/nebula-x1-triple-laser-4k-smart-projector-d23512f1"
+            }
           }
         },
         "block_order": [
           "image_DRRJk8",
-          "image_ybdMHY"
+          "image_ybdMHY",
+          "image_ybdMp9"
         ],
         "settings": {
           "edge_to_edge": false,
