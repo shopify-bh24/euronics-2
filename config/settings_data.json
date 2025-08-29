@@ -1216,8 +1216,8 @@
           "image_DRRJk8": {
             "type": "image",
             "settings": {
-              "image": "shopify://shop_images/Sale_Desktop_3_1.jpg",
-              "mobile_image": "shopify://shop_images/sale_ends.jpg",
+              "image": "shopify://shop_images/2160x500_5bd1ec03-92e4-4875-9333-717f09db6f37.jpg",
+              "mobile_image": "shopify://shop_images/750x880_c1278b94-6efc-4970-8be3-a83e387c7895.jpg",
               "show_overlay": false,
               "overlay_opacity": 30,
               "text_color": "#ffffff",
@@ -1227,16 +1227,15 @@
               "button_background": "#ffffff",
               "button_text_color": "#000000",
               "button_text": "",
-              "link": "https://euronics.ie/collections/20th-anniversary-sale"
+              "link": "https://euronics.ie/collections/nebula"
             }
           }
         },
         "block_order": [
           "image_DRRJk8"
         ],
-        "disabled": true,
         "settings": {
-          "edge_to_edge": true,
+          "edge_to_edge": false,
           "section_size": "preserve_ratio",
           "carousel_effect": "slide",
           "autoplay": true,
@@ -1270,10 +1269,10 @@
     },
     "content_for_index": [
       "slideshow",
-      "slideshow_N8RKfA",
       "shogun_custom_67d189261ae2a69c44a00334_pJGKpt",
       "shogun_custom_684b035ef11438d919eb0e71_y8YQWG",
       "shogun_custom_6672f94bad4fce565dc38a6e_RVVUGC",
+      "slideshow_N8RKfA",
       "collection_with_image_mggPEN",
       "slideshow_iTaP94",
       "slideshow_MDcC64",
