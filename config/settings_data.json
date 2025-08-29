@@ -999,6 +999,23 @@
               "link": "https://euronics.ie/collections/smart-tech-sale"
             }
           },
+          "image_iJQhfF": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/EC9455.M.png",
+              "mobile_image": "shopify://shop_images/EC9455.M_1.png",
+              "show_overlay": false,
+              "overlay_opacity": 30,
+              "text_color": "#ffffff",
+              "title": "",
+              "content": "",
+              "content_position": "middle_center",
+              "button_background": "#ffffff",
+              "button_text_color": "#000000",
+              "button_text": "",
+              "link": "https://euronics.ie/products/de-longhi-la-specialista-touch-manual-coffee-maker-ec9455-m"
+            }
+          },
           "image_U3kMim": {
             "type": "image",
             "settings": {
@@ -1033,24 +1050,6 @@
               "link": "https://euronics.ie/pages/blomberg-competition-entry"
             }
           },
-          "image_iJQhfF": {
-            "type": "image",
-            "disabled": true,
-            "settings": {
-              "image": "shopify://shop_images/EURONICS_IRE_FOC_2160x500_85efabde-acf6-4684-b226-551237a095f2.jpg",
-              "mobile_image": "shopify://shop_images/EURONICS_IRE_FOC_750x880_92618947-c4df-4e7d-8ff5-622dc7a146e9.jpg",
-              "show_overlay": false,
-              "overlay_opacity": 30,
-              "text_color": "#ffffff",
-              "title": "",
-              "content": "",
-              "content_position": "middle_center",
-              "button_background": "#ffffff",
-              "button_text_color": "#000000",
-              "button_text": "",
-              "link": "shopify://collections/lg-soundbar-offer"
-            }
-          },
           "image_nh6PK3": {
             "type": "image",
             "settings": {
@@ -1071,9 +1070,9 @@
         },
         "block_order": [
           "image_NDnLtE",
+          "image_iJQhfF",
           "image_U3kMim",
           "image_PLE6VK",
-          "image_iJQhfF",
           "image_nh6PK3"
         ],
         "settings": {
