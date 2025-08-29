@@ -1229,10 +1229,28 @@
               "button_text": "",
               "link": "https://euronics.ie/collections/nebula"
             }
+          },
+          "image_ybdMHY": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/2160_x_500.jpg",
+              "mobile_image": "shopify://shop_images/750_x_880.jpg",
+              "show_overlay": false,
+              "overlay_opacity": 30,
+              "text_color": "#ffffff",
+              "title": "",
+              "content": "",
+              "content_position": "middle_center",
+              "button_background": "#ffffff",
+              "button_text_color": "#000000",
+              "button_text": "",
+              "link": "https://euronics.ie/collections/anker"
+            }
           }
         },
         "block_order": [
-          "image_DRRJk8"
+          "image_DRRJk8",
+          "image_ybdMHY"
         ],
         "settings": {
           "edge_to_edge": false,
