@@ -1066,6 +1066,23 @@
               "button_text": "",
               "link": "https://euronics.ie/collections/liebherr"
             }
+          },
+          "image_Epzp3J": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/Big_TV_Days.jpg",
+              "mobile_image": "shopify://shop_images/Big_TV_Days2.jpg",
+              "show_overlay": false,
+              "overlay_opacity": 30,
+              "text_color": "#ffffff",
+              "title": "",
+              "content": "",
+              "content_position": "middle_center",
+              "button_background": "#ffffff",
+              "button_text_color": "#000000",
+              "button_text": "",
+              "link": ""
+            }
           }
         },
         "block_order": [
@@ -1073,7 +1090,8 @@
           "image_iJQhfF",
           "image_U3kMim",
           "image_PLE6VK",
-          "image_nh6PK3"
+          "image_nh6PK3",
+          "image_Epzp3J"
         ],
         "settings": {
           "edge_to_edge": true,
