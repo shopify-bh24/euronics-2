@@ -1053,8 +1053,8 @@
           "image_nh6PK3": {
             "type": "image",
             "settings": {
-              "image": "shopify://shop_images/2160x500_73a6f5d2-c40f-4157-9ce9-685c46f84b75.png",
-              "mobile_image": "shopify://shop_images/750x880.png",
+              "image": "shopify://shop_images/BSH_IE_Finish_Promo_Banner13_2160x500_6d7d1ecd-460a-4a73-8d28-8fa09880b742.jpg",
+              "mobile_image": "shopify://shop_images/BSH_IE_Finish_Promo_Banner14_750x880_bd19a8c5-dc60-432e-9d69-3a3e65956335.jpg",
               "show_overlay": false,
               "overlay_opacity": 30,
               "text_color": "#ffffff",
@@ -1064,7 +1064,7 @@
               "button_background": "#ffffff",
               "button_text_color": "#000000",
               "button_text": "",
-              "link": "https://euronics.ie/collections/liebherr"
+              "link": "https://euronics.ie/collections/bosch-finish-promotion"
             }
           },
           "image_Epzp3J": {
