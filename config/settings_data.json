@@ -984,6 +984,7 @@
         "blocks": {
           "image_NDnLtE": {
             "type": "image",
+            "disabled": true,
             "settings": {
               "image": "shopify://shop_images/Sale_Desktop_3_1.jpg",
               "mobile_image": "shopify://shop_images/Sale_Mobile_2.jpg",
