@@ -984,10 +984,9 @@
         "blocks": {
           "image_NDnLtE": {
             "type": "image",
-            "disabled": true,
             "settings": {
-              "image": "shopify://shop_images/Sale_Desktop_3_1.jpg",
-              "mobile_image": "shopify://shop_images/Sale_Mobile_2.jpg",
+              "image": "shopify://shop_images/RUGBY_EURONICSIRE_10OFF_2160x500_5d91a641-f795-43de-bd0c-32b3732b46dc.jpg",
+              "mobile_image": "shopify://shop_images/RUGBY_EURONICSIRE_10OFF_750x880_9bbe247a-a1d3-40db-af5a-d6c9b8102b5d.jpg",
               "show_overlay": false,
               "overlay_opacity": 30,
               "text_color": "#ffffff",
@@ -997,7 +996,7 @@
               "button_background": "#ffffff",
               "button_text_color": "#000000",
               "button_text": "",
-              "link": "https://euronics.ie/collections/smart-tech-sale"
+              "link": "https://euronics.ie/collections/lg-10-promotion?view=boost-pfs-original"
             }
           },
           "image_iJQhfF": {
