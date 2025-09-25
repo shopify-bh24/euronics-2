@@ -1447,6 +1447,11 @@
         "type": "shopify://apps/boost-ai-search-filter/blocks/boost-sd/7fc998ae-a150-4367-bab8-505d8a4503f7",
         "disabled": true,
         "settings": {}
+      },
+      "8660026769530893754": {
+        "type": "shopify://apps/synctrack-edd/blocks/omega-estimated-shipping-embed-app/054646a4-d5ab-4b85-b028-f3b169802e74",
+        "disabled": false,
+        "settings": {}
       }
     }
   },
