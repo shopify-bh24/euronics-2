@@ -848,23 +848,52 @@
       }
     });
 
-    document.addEventListener('DOMContentLoaded', function () {
-      document.querySelector('.add_cart').addEventListener('click', function (event) {
-        event.preventDefault(); // Prevent default action
-
-        let productId = this.getAttribute('data-id');
-
-        fetch('/cart/add.js', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ id: productId, quantity: 1 }),
-        })
-          .then((response) => response.json())
-          .then(() => {
-            location.reload(); // Reload the page to update the cart drawer
-          })
-          .catch((error) => console.error('Error adding to cart:', error));
-      });
-    });
   </script>
 </div>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const addToCartBtn = document.querySelector('.add_cart');
+
+    addToCartBtn.addEventListener('click', function (event) {
+      event.preventDefault(); // Prevent default form submission
+
+      let productId = this.getAttribute('data-id');
+      let quantityInput = document.querySelector('.quantity-selector__value');
+      let quantity = parseInt(quantityInput.value) || 1;
+
+      fetch('/cart/add.js', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id: productId, quantity: quantity }),
+      })
+        .then((response) => response.json())
+        .then(() => {
+          location.reload(); // Reload the page to update the cart drawer
+        })
+        .catch((error) => console.error('Error adding to cart:', error));
+    });
+
+    // Quantity selector logic
+    document.querySelectorAll('.quantity-selector').forEach(function (selector) {
+      const input = selector.querySelector('.quantity-selector__value');
+      const btnDecrease = selector.querySelector("[data-action='decrease-picker-quantity']");
+      const btnIncrease = selector.querySelector("[data-action='increase-picker-quantity']");
+
+      btnDecrease.addEventListener('click', function () {
+        let currentValue = parseInt(input.value) || 1;
+        if (currentValue > 1) {
+          input.value = currentValue - 1;
+          input.dispatchEvent(new Event('change'));
+        }
+      });
+
+      btnIncrease.addEventListener('click', function () {
+        let currentValue = parseInt(input.value) || 1;
+        input.value = currentValue + 1;
+        input.dispatchEvent(new Event('change'));
+      });
+    });
+  });
+</script>
