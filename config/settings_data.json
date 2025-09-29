@@ -1019,6 +1019,7 @@
           },
           "image_U3kMim": {
             "type": "image",
+            "disabled": true,
             "settings": {
               "image": "shopify://shop_images/Euronics_2160x500px_c66eb6a2-65d0-417e-8956-3fac18d9b3f6.jpg",
               "mobile_image": "shopify://shop_images/Euronics_750x880px.jpg",
