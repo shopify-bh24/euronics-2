@@ -1324,12 +1324,41 @@
           "button_text": "",
           "button_link": "https://euronics.ie/collections/cooling"
         }
+      },
+      "featured_collection_AxCdz6": {
+        "type": "featured-collection",
+        "name": "Featured collection",
+        "settings": {
+          "collection": "condenser-dryers",
+          "title": "Condenser Dryers - Buy them while Stocks Last",
+          "products_count": 6,
+          "layout": "horizontal",
+          "stack_products": false,
+          "show_quick_buy": false,
+          "link_title": "View all",
+          "link_url": ""
+        }
+      },
+      "featured_collection_AVdRUd": {
+        "type": "featured-collection",
+        "name": "Featured collection",
+        "settings": {
+          "collection": "heating",
+          "title": "Keep Warm This Winter with our Heating Range",
+          "products_count": 6,
+          "layout": "horizontal",
+          "stack_products": false,
+          "show_quick_buy": false,
+          "link_title": "View all",
+          "link_url": ""
+        }
       }
     },
     "content_for_index": [
       "slideshow",
       "shogun_custom_67d189261ae2a69c44a00334_pJGKpt",
       "shogun_custom_684b035ef11438d919eb0e71_y8YQWG",
+      "featured_collection_AxCdz6",
       "shogun_custom_6672f94bad4fce565dc38a6e_RVVUGC",
       "slideshow_N8RKfA",
       "collection_with_image_mggPEN",
@@ -1340,7 +1369,8 @@
       "shogun_custom_681c7be4b37ad2f06e923a11_xb9dX6",
       "feefo_review_carousel_kpAc8M",
       "shogun_custom_682b279a5ba7c048f4377e46_RKkndG",
-      "rich_text_PfKf9q"
+      "rich_text_PfKf9q",
+      "featured_collection_AVdRUd"
     ],
     "blocks": {
       "7079518687644006178": {
