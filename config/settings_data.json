@@ -1166,40 +1166,6 @@
           "button_link": "https://euronics.ie/collections/apple"
         }
       },
-      "slideshow_MDcC64": {
-        "type": "slideshow",
-        "blocks": {
-          "image_GpBBh7": {
-            "type": "image",
-            "disabled": true,
-            "settings": {
-              "image": "shopify://shop_images/homepage_2160x500px_2x_2.jpg",
-              "mobile_image": "shopify://shop_images/homepage_750x880px_2x_1.jpg",
-              "show_overlay": false,
-              "overlay_opacity": 30,
-              "text_color": "#ffffff",
-              "title": "",
-              "content": "",
-              "content_position": "middle_center",
-              "button_background": "#ffffff",
-              "button_text_color": "#000000",
-              "button_text": "",
-              "link": "https://euronics.ie/pages/blomberg-competition-entry"
-            }
-          }
-        },
-        "block_order": [
-          "image_GpBBh7"
-        ],
-        "disabled": true,
-        "settings": {
-          "edge_to_edge": false,
-          "section_size": "preserve_ratio",
-          "carousel_effect": "slide",
-          "autoplay": true,
-          "cycle_speed": 5
-        }
-      },
       "slideshow_iTaP94": {
         "type": "slideshow",
         "blocks": {
@@ -1352,6 +1318,20 @@
           "link_title": "View all",
           "link_url": ""
         }
+      },
+      "featured_collection_BAUptn": {
+        "type": "featured-collection",
+        "name": "Featured collection",
+        "settings": {
+          "collection": "dishwashers",
+          "title": "Dishwashers for Every Kitchen",
+          "products_count": 9,
+          "layout": "horizontal",
+          "stack_products": false,
+          "show_quick_buy": false,
+          "link_title": "View all",
+          "link_url": ""
+        }
       }
     },
     "content_for_index": [
@@ -1359,16 +1339,16 @@
       "shogun_custom_67d189261ae2a69c44a00334_pJGKpt",
       "shogun_custom_684b035ef11438d919eb0e71_y8YQWG",
       "featured_collection_AxCdz6",
+      "shogun_custom_681c7be4b37ad2f06e923a11_xb9dX6",
       "shogun_custom_6672f94bad4fce565dc38a6e_RVVUGC",
       "slideshow_N8RKfA",
       "featured_collection_AVdRUd",
+      "feefo_review_carousel_kpAc8M",
       "collection_with_image_mggPEN",
+      "featured_collection_BAUptn",
       "slideshow_iTaP94",
-      "slideshow_MDcC64",
       "collection_with_image_JJydkX",
       "collection_with_image_4L47nz",
-      "shogun_custom_681c7be4b37ad2f06e923a11_xb9dX6",
-      "feefo_review_carousel_kpAc8M",
       "shogun_custom_682b279a5ba7c048f4377e46_RKkndG",
       "rich_text_PfKf9q"
     ],
