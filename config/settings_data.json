@@ -982,6 +982,24 @@
       "slideshow": {
         "type": "slideshow",
         "blocks": {
+          "image_PLE6VK": {
+            "type": "image",
+            "disabled": true,
+            "settings": {
+              "image": "shopify://shop_images/Dryers.jpg",
+              "mobile_image": "shopify://shop_images/Dryers2.jpg",
+              "show_overlay": false,
+              "overlay_opacity": 30,
+              "text_color": "#ffffff",
+              "title": "",
+              "content": "",
+              "content_position": "middle_center",
+              "button_background": "#ffffff",
+              "button_text_color": "#000000",
+              "button_text": "",
+              "link": "https://euronics.ie/collections/dryers"
+            }
+          },
           "image_nh6PK3": {
             "type": "image",
             "settings": {
@@ -1050,24 +1068,6 @@
               "link": "https://euronics.ie/pages/humm-finance"
             }
           },
-          "image_PLE6VK": {
-            "type": "image",
-            "disabled": true,
-            "settings": {
-              "image": "shopify://shop_images/homepage_2160x500px_2x_2.jpg",
-              "mobile_image": "shopify://shop_images/homepage_750x880px_2x_1.jpg",
-              "show_overlay": false,
-              "overlay_opacity": 30,
-              "text_color": "#ffffff",
-              "title": "",
-              "content": "",
-              "content_position": "middle_center",
-              "button_background": "#ffffff",
-              "button_text_color": "#000000",
-              "button_text": "",
-              "link": "https://euronics.ie/pages/blomberg-competition-entry"
-            }
-          },
           "image_Epzp3J": {
             "type": "image",
             "disabled": true,
@@ -1087,11 +1087,11 @@
           }
         },
         "block_order": [
+          "image_PLE6VK",
           "image_nh6PK3",
           "image_iJQhfF",
           "image_U3kMim",
           "image_NDnLtE",
-          "image_PLE6VK",
           "image_Epzp3J"
         ],
         "settings": {
