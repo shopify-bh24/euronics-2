@@ -1018,10 +1018,9 @@
           },
           "image_U3kMim": {
             "type": "image",
-            "disabled": true,
             "settings": {
-              "image": "shopify://shop_images/Euronics_2160x500px_c66eb6a2-65d0-417e-8956-3fac18d9b3f6.jpg",
-              "mobile_image": "shopify://shop_images/Euronics_750x880px.jpg",
+              "image": "shopify://shop_images/2160x500_5bd1ec03-92e4-4875-9333-717f09db6f37.jpg",
+              "mobile_image": "shopify://shop_images/750x880_c1278b94-6efc-4970-8be3-a83e387c7895.jpg",
               "show_overlay": false,
               "overlay_opacity": 30,
               "text_color": "#ffffff",
@@ -1031,7 +1030,7 @@
               "button_background": "#ffffff",
               "button_text_color": "#000000",
               "button_text": "",
-              "link": "https://euronics.ie/collections/electrolux"
+              "link": "https://euronics.ie/collections/nebula"
             }
           },
           "image_NDnLtE": {
@@ -1331,6 +1330,74 @@
           "link_title": "View all",
           "link_url": ""
         }
+      },
+      "promotion_list_fCEtRM": {
+        "type": "promotion-list",
+        "blocks": {
+          "item_4fYYGw": {
+            "type": "item",
+            "settings": {
+              "image": "shopify://shop_images/Headphone_Sennheiser_700171_3.jpg",
+              "show_overlay": false,
+              "overlay_opacity": 50,
+              "stretch_image": false,
+              "background": "#6f42ef",
+              "text_color": "#1d428a",
+              "title": "Your heading",
+              "content": "Tell more about your product, collection...",
+              "content_position": "top_left",
+              "button_background": "#ffffff",
+              "button_text_color": "#6f42ef",
+              "button_text": "Learn more",
+              "button_link": ""
+            }
+          },
+          "item_ipcjVK": {
+            "type": "item",
+            "settings": {
+              "show_overlay": false,
+              "overlay_opacity": 50,
+              "stretch_image": false,
+              "background": "#fc2a68",
+              "text_color": "#ffffff",
+              "title": "Your heading",
+              "content": "Tell more about your product, collection...",
+              "content_position": "top_left",
+              "button_background": "#ffffff",
+              "button_text_color": "#fc2a68",
+              "button_text": "Learn more",
+              "button_link": ""
+            }
+          },
+          "item_MjTyyV": {
+            "type": "item",
+            "settings": {
+              "show_overlay": false,
+              "overlay_opacity": 50,
+              "stretch_image": false,
+              "background": "#26c1ce",
+              "text_color": "#ffffff",
+              "title": "Your heading",
+              "content": "Tell more about your product, collection...",
+              "content_position": "top_left",
+              "button_background": "#ffffff",
+              "button_text_color": "#26c1ce",
+              "button_text": "Learn more",
+              "button_link": ""
+            }
+          }
+        },
+        "block_order": [
+          "item_4fYYGw",
+          "item_ipcjVK",
+          "item_MjTyyV"
+        ],
+        "name": "Promotion blocks",
+        "settings": {
+          "expand_items": false,
+          "section_size": "small",
+          "stack_mobile": true
+        }
       }
     },
     "content_for_index": [
@@ -1338,6 +1405,7 @@
       "shogun_custom_67d189261ae2a69c44a00334_pJGKpt",
       "shogun_custom_684b035ef11438d919eb0e71_y8YQWG",
       "featured_collection_AxCdz6",
+      "promotion_list_fCEtRM",
       "shogun_custom_681c7be4b37ad2f06e923a11_xb9dX6",
       "shogun_custom_6672f94bad4fce565dc38a6e_RVVUGC",
       "slideshow_N8RKfA",
