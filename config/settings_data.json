@@ -1070,8 +1070,8 @@
           },
           "image_Epzp3J": {
             "type": "image",
+            "disabled": true,
             "settings": {
-              "image": "shopify://shop_images/Big_TV_Days.jpg",
               "mobile_image": "shopify://shop_images/Big_TV_Days2.jpg",
               "show_overlay": false,
               "overlay_opacity": 30,
