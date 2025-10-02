@@ -1392,6 +1392,7 @@
           "item_ipcjVK",
           "item_MjTyyV"
         ],
+        "disabled": true,
         "name": "Promotion blocks",
         "settings": {
           "expand_items": false,
