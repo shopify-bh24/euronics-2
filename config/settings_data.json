@@ -1455,6 +1455,7 @@
           "item_QKGh6k",
           "item_Ha6bDL"
         ],
+        "disabled": true,
         "name": "Mosaic",
         "settings": {
           "section_size": "medium"
