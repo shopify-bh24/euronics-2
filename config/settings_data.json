@@ -1348,6 +1348,117 @@
         "type": "shogun-custom-68df9d653f42a32836521a0f",
         "name": "Mid Pade Hero Tile",
         "settings": {}
+      },
+      "mosaic_GCaxzF": {
+        "type": "mosaic",
+        "blocks": {
+          "item_mH4LYf": {
+            "type": "item",
+            "settings": {
+              "image": "shopify://shop_images/Blocks_7.jpg",
+              "image_mobile": "shopify://shop_images/Blocks_7.jpg",
+              "image_width": 33,
+              "show_overlay": false,
+              "overlay_opacity": 50,
+              "background": "#f3f4f4",
+              "text_color": "#1d428a",
+              "title": "Shop Now",
+              "content": "Shop Our Full Range of LG TVs",
+              "content_position": "bottom_right",
+              "button_background": "#4f5558",
+              "button_text_color": "#f3f4f4",
+              "button_text": "",
+              "link": "https://euronics.ie/collections/lg-tv-audio"
+            }
+          },
+          "item_mPCgAr": {
+            "type": "item",
+            "settings": {
+              "image": "shopify://shop_images/Blocks3_4.jpg",
+              "image_mobile": "shopify://shop_images/Blocks3_4.jpg",
+              "image_width": 33,
+              "show_overlay": false,
+              "overlay_opacity": 50,
+              "background": "#f3f4f4",
+              "text_color": "#e7e7e7",
+              "title": "Shop Now",
+              "content": "Shop Our Full Range of Hisense TVs",
+              "content_position": "bottom_right",
+              "button_background": "#4f5558",
+              "button_text_color": "#f3f4f4",
+              "button_text": "",
+              "link": "https://euronics.ie/collections/hisense-tvs"
+            }
+          },
+          "item_y8XiU7": {
+            "type": "item",
+            "settings": {
+              "image": "shopify://shop_images/Blocks4_4.jpg",
+              "image_mobile": "shopify://shop_images/Blocks4_4.jpg",
+              "image_width": 33,
+              "show_overlay": false,
+              "overlay_opacity": 50,
+              "background": "#e7e7e7",
+              "text_color": "#1d428a",
+              "title": "Shop Now",
+              "content": "TV Brackets",
+              "content_position": "bottom_center",
+              "button_background": "#4f5558",
+              "button_text_color": "#f3f4f4",
+              "button_text": "",
+              "link": "https://euronics.ie/collections/tv-mounts-brackets-stands"
+            }
+          },
+          "item_QKGh6k": {
+            "type": "item",
+            "settings": {
+              "image": "shopify://shop_images/Blocks5_1.jpg",
+              "image_mobile": "shopify://shop_images/Blocks5_1.jpg",
+              "image_width": 33,
+              "show_overlay": false,
+              "overlay_opacity": 50,
+              "background": "#f3f4f4",
+              "text_color": "#1d428a",
+              "title": "Shop",
+              "content": "Soundbars",
+              "content_position": "top_center",
+              "button_background": "#4f5558",
+              "button_text_color": "#f3f4f4",
+              "button_text": "Learn more",
+              "link": ""
+            }
+          },
+          "item_Ha6bDL": {
+            "type": "item",
+            "settings": {
+              "image": "shopify://shop_images/Blocks2_8.jpg",
+              "image_mobile": "shopify://shop_images/Blocks2_8.jpg",
+              "image_width": 33,
+              "show_overlay": false,
+              "overlay_opacity": 50,
+              "background": "#f3f4f4",
+              "text_color": "#1d428a",
+              "title": "Shop Now",
+              "content": "Shop Full Range of Samsung TVs",
+              "content_position": "top_center",
+              "button_background": "#4f5558",
+              "button_text_color": "#f3f4f4",
+              "button_text": "",
+              "link": "https://euronics.ie/collections/samsung-tv-audio"
+            }
+          }
+        },
+        "block_order": [
+          "item_mH4LYf",
+          "item_mPCgAr",
+          "item_y8XiU7",
+          "item_QKGh6k",
+          "item_Ha6bDL"
+        ],
+        "name": "Mosaic",
+        "settings": {
+          "section_size": "medium"
+        }
       }
     },
     "content_for_index": [
@@ -1368,7 +1479,8 @@
       "collection_with_image_JJydkX",
       "collection_with_image_4L47nz",
       "shogun_custom_682b279a5ba7c048f4377e46_RKkndG",
-      "rich_text_PfKf9q"
+      "rich_text_PfKf9q",
+      "mosaic_GCaxzF"
     ],
     "blocks": {
       "7079518687644006178": {
