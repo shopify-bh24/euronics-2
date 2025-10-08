@@ -1018,6 +1018,7 @@
           },
           "image_iJQhfF": {
             "type": "image",
+            "disabled": true,
             "settings": {
               "image": "shopify://shop_images/EC9455.M.png",
               "mobile_image": "shopify://shop_images/EC9455.M_1.png",
