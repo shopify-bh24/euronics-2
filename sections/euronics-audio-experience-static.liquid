@@ -269,7 +269,7 @@
     </div>
   </div>
 
-  <!-- CUSTOMER FAVOURITES -->
+    <!-- CUSTOMER FAVOURITES -->
   <div class="section bg-white">
     <div class="container">
       <h3>Customer Favourites</h3>
@@ -279,26 +279,31 @@
 
       {% assign fav_collection = collections['audio-1'] %}
       {% if fav_collection and fav_collection.products.size > 0 %}
-        <div class="favourites-carousel">
-          <div class="carousel-track">
-            {% for product in fav_collection.products limit:6 %}
-              <div class="carousel-item card">
-                <a href="{{ product.url }}">
-                  <img
-                    src="{{ product.featured_image | img_url: '500x500' }}"
-                    alt="{{ product.title | escape }}"
-                  />
-                </a>
-                <h4>{{ product.title }}</h4>
-                {% if product.price %}
-                  <p style="font-weight:600;font-size:1.1rem;color:#1e40af;">
-                    {{ product.price | money }}
-                  </p>
-                {% endif %}
-                <a href="{{ product.url }}" class="btn">Shop Now</a>
-              </div>
-            {% endfor %}
+        <div class="carousel-wrapper">
+          <!-- Arrows -->
+          <button class="carousel-arrow left" aria-label="Scroll Left">&#10094;</button>
+          <div class="favourites-carousel">
+            <div class="carousel-track">
+              {% for product in fav_collection.products limit:12 %}
+                <div class="carousel-item card">
+                  <a href="{{ product.url }}">
+                    <img
+                      src="{{ product.featured_image | img_url: '500x500' }}"
+                      alt="{{ product.title | escape }}"
+                    />
+                  </a>
+                  <h4>{{ product.title }}</h4>
+                  {% if product.price %}
+                    <p style="font-weight:600;font-size:1.1rem;color:#1e40af;">
+                      {{ product.price | money }}
+                    </p>
+                  {% endif %}
+                  <a href="{{ product.url }}" class="btn">Shop Now</a>
+                </div>
+              {% endfor %}
+            </div>
           </div>
+          <button class="carousel-arrow right" aria-label="Scroll Right">&#10095;</button>
         </div>
 
         <div style="text-align:center;margin-top:3rem;">
@@ -320,17 +325,24 @@
   </div>
 
   <style>
-    /* Carousel container */
+    /* Container */
+    #euronics-audio-section .carousel-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    /* Carousel area */
     #euronics-audio-section .favourites-carousel {
       position: relative;
       overflow-x: auto;
       overflow-y: hidden;
       scroll-behavior: smooth;
       -webkit-overflow-scrolling: touch;
+      flex: 1;
       margin: 0 -1rem;
     }
 
-    /* Track */
     #euronics-audio-section .carousel-track {
       display: flex;
       gap: 1.5rem;
@@ -338,9 +350,8 @@
       scroll-snap-type: x mandatory;
     }
 
-    /* Items */
     #euronics-audio-section .carousel-item {
-      flex: 0 0 calc(25% - 1rem); /* Show 4 items per row on desktop */
+      flex: 0 0 calc(25% - 1rem);
       scroll-snap-align: start;
       background: #fff;
       border-radius: 1rem;
@@ -361,20 +372,56 @@
       margin-bottom: 0.75rem;
     }
 
-    /* Responsive adjustments */
+    /* Arrows */
+    #euronics-audio-section .carousel-arrow {
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid #d1d5db;
+      color: #1e40af;
+      font-size: 2rem;
+      cursor: pointer;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      z-index: 2;
+    }
+
+    #euronics-audio-section .carousel-arrow:hover {
+      background: #1e40af;
+      color: #fff;
+    }
+
+    #euronics-audio-section .carousel-arrow.left {
+      position: absolute;
+      left: -20px;
+    }
+
+    #euronics-audio-section .carousel-arrow.right {
+      position: absolute;
+      right: -20px;
+    }
+
+    /* Hide arrows on mobile */
+    @media (max-width: 768px) {
+      #euronics-audio-section .carousel-arrow {
+        display: none;
+      }
+      #euronics-audio-section .carousel-item {
+        flex: 0 0 calc(80% - 1rem);
+      }
+    }
+
+    /* Desktop responsiveness */
     @media (max-width: 1024px) {
       #euronics-audio-section .carousel-item {
         flex: 0 0 calc(33.333% - 1rem);
       }
     }
 
-    @media (max-width: 768px) {
-      #euronics-audio-section .carousel-item {
-        flex: 0 0 calc(80% - 1rem);
-      }
-    }
-
-    /* Edge fade for style */
+    /* Edge fade */
     #euronics-audio-section .favourites-carousel::before,
     #euronics-audio-section .favourites-carousel::after {
       content: "";
@@ -397,6 +444,19 @@
     }
   </style>
 
-</section>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const carousel = document.querySelector('#euronics-audio-section .favourites-carousel');
+      const leftArrow = document.querySelector('#euronics-audio-section .carousel-arrow.left');
+      const rightArrow = document.querySelector('#euronics-audio-section .carousel-arrow.right');
 
-
+      if (carousel && leftArrow && rightArrow) {
+        leftArrow.addEventListener('click', () => {
+          carousel.scrollBy({ left: -carousel.offsetWidth, behavior: 'smooth' });
+        });
+        rightArrow.addEventListener('click', () => {
+          carousel.scrollBy({ left: carousel.offsetWidth, behavior: 'smooth' });
+        });
+      }
+    });
+  </script>
