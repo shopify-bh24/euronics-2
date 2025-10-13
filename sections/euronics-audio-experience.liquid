@@ -1,84 +1,79 @@
-<section id="euronics-audio-section" class="euronics-audio font-sans text-gray-900 bg-gray-50" style="all:unset;display:block;width:100%;margin:0;padding:0;">
+<section id="euronics-audio-section" class="euronics-audio font-sans text-gray-900 bg-gray-50">
   <style>
-#euronics-audio-section * {
-  all: unset;
-  box-sizing: border-box;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-#euronics-audio-section {
-  display: block;
-  color: #111827;
-  background: #f9fafb;
-  font-size: 16px;
-  line-height: 1.5;
-}
-#euronics-audio-section h2, 
-#euronics-audio-section h3, 
-#euronics-audio-section h4 {
-  font-weight: 700;
-  color: #111827;
-  text-align: center;
-}
-#euronics-audio-section .hero {
-  position: relative;
-  height: 70vh;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-}
-#euronics-audio-section .overlay {
-  background: rgba(0,0,0,0.4);
-  padding: 2rem;
-  border-radius: 1rem;
-  text-align: center;
-  max-width: 700px;
-}
-#euronics-audio-section .btn {
-  display: inline-block;
-  background: #1e40af;
-  color: #fff !important;
-  padding: 0.75rem 1.5rem;
-  border-radius: 0.5rem;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: 1.25rem;
-  text-align: center;
-  min-width: 160px;
-  cursor: pointer;
-}
-#euronics-audio-section .btn:hover {
-  background: #1d4ed8;
-}
-#euronics-audio-section .grid {
-  display: grid;
-  gap: 2rem;
-  width: 100%;
-}
-@media(min-width:768px){#euronics-audio-section .grid-4{grid-template-columns:repeat(4,1fr)}}
-@media(min-width:768px){#euronics-audio-section .grid-2{grid-template-columns:repeat(2,1fr)}}
-@media(min-width:768px){#euronics-audio-section .grid-5{grid-template-columns:repeat(5,1fr)}}
-#euronics-audio-section .card {
-  background: #fff;
-  border-radius: 1rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  transition: box-shadow 0.3s ease;
-  padding: 1.5rem;
-}
-#euronics-audio-section .card:hover {
-  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-}
-#euronics-audio-section img {
-  width: 100%;
-  height: auto;
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
-}
-</style>
-
+    #euronics-audio-section {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background: #f9fafb;
+      color: #111827;
+      padding: 0;
+      margin: 0;
+    }
+    #euronics-audio-section h2, 
+    #euronics-audio-section h3, 
+    #euronics-audio-section h4 {
+      font-weight: 700;
+      color: #111827;
+      text-align: center;
+    }
+    #euronics-audio-section .hero {
+      position: relative;
+      height: 70vh;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+    }
+    #euronics-audio-section .overlay {
+      background: rgba(0,0,0,0.4);
+      padding: 2rem;
+      border-radius: 1rem;
+      text-align: center;
+      max-width: 700px;
+    }
+    #euronics-audio-section .btn {
+      display: inline-block;
+      background: #1e40af;
+      color: #fff !important;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      line-height: 1.25rem;
+      text-align: center;
+      min-width: 160px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    #euronics-audio-section .btn:hover {
+      background: #1d4ed8;
+    }
+    #euronics-audio-section .grid {
+      display: grid;
+      gap: 2rem;
+      width: 100%;
+    }
+    @media(min-width:768px){#euronics-audio-section .grid-4{grid-template-columns:repeat(4,1fr)}}
+    @media(min-width:768px){#euronics-audio-section .grid-2{grid-template-columns:repeat(2,1fr)}}
+    @media(min-width:768px){#euronics-audio-section .grid-5{grid-template-columns:repeat(5,1fr)}}
+    #euronics-audio-section .card {
+      background: #fff;
+      border-radius: 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      transition: box-shadow 0.3s ease;
+      padding: 1.5rem;
+    }
+    #euronics-audio-section .card:hover {
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    }
+    #euronics-audio-section img {
+      width: 100%;
+      height: auto;
+      border-top-left-radius: 1rem;
+      border-top-right-radius: 1rem;
+    }
+  </style>
 
   <!-- Hero -->
   <div class="hero" style="background-image:url('https://cdn.shopify.com/s/files/1/0550/5807/1748/files/Hero_section_banner_sound_guide.png?v=1760348913');">
@@ -99,7 +94,7 @@
       {% assign boxes = "Soundbars|https://euronics.ie/collections/soundbars,Headphones|https://euronics.ie/collections/headphones,Bluetooth Speakers|https://euronics.ie/collections/wireless-speakers,Party Speakers|https://euronics.ie/collections/wireless-speakers" | split: ',' %}
       {% for item in boxes %}
         {% assign parts = item | split: '|' %}
-        <div class="card p-8 text-center">
+        <div class="card text-center">
           <h4 style="font-size:1.5rem;margin-bottom:1rem;">{{ parts[0] }}</h4>
           <p style="color:#6b7280;margin-bottom:1.5rem;">Explore our full range of {{ parts[0] | downcase }} for every lifestyle and space.</p>
           <a href="{{ parts[1] }}" class="btn">Shop {{ parts[0] }}</a>
@@ -152,6 +147,7 @@
     </div>
   </div>
 </section>
+
 {% schema %}
 {
   "name": "Euronics Audio Experience",
