@@ -1,13 +1,32 @@
-<section style="padding:2rem;background:#eef6ff;border:1px solid #cfe3ff;">
-  <h2 style="margin:0;text-align:center;">Hello from a section ✅</h2>
+<section id="euronics-audio-section" class="euronics-audio" style="padding:2rem 0;background:#f9fafb;">
+  <div class="container" style="max-width:1200px;margin:0 auto;padding:0 1.5rem;">
+    <!-- Hero -->
+    <div style="position:relative;height:50vh;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;background-size:cover;background-position:center;
+                background-image:url('{{ section.settings.hero_image | image_url: width: 2000 }}');">
+      <div style="background:rgba(0,0,0,.45);padding:2rem;border-radius:1rem;max-width:700px;">
+        <h2 style="margin:0 0 .5rem 0;">{{ section.settings.hero_heading }}</h2>
+        <p style="margin:0 0 1rem 0;">{{ section.settings.hero_subheading }}</p>
+        <a href="{{ section.settings.hero_button_link }}" style="display:inline-block;background:#1e40af;color:#fff;text-decoration:none;padding:.75rem 1.5rem;border-radius:.5rem;font-weight:600;">
+          {{ section.settings.hero_button_label }}
+        </a>
+      </div>
+    </div>
+  </div>
 </section>
 
 {% schema %}
 {
-  "name": "Test Hello Section",
-  "settings": [],
+  "name": "Euronics Audio Experience",
+  "settings": [
+    { "type": "image_picker", "id": "hero_image", "label": "Hero image" },
+    { "type": "text", "id": "hero_heading", "label": "Hero heading", "default": "Hear the Difference" },
+    { "type": "text", "id": "hero_subheading", "label": "Hero subheading", "default": "Better Sound Starts Here" },
+    { "type": "text", "id": "hero_button_label", "label": "Hero button text", "default": "Explore Audio" },
+    { "type": "url", "id": "hero_button_link", "label": "Hero button link" }
+  ],
   "presets": [
-    { "name": "Test Hello Section" }
+    { "name": "Euronics Audio Experience" }
   ]
 }
 {% endschema %}
+
