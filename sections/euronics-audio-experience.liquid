@@ -1,40 +1,28 @@
-<section id="euronics-audio-section" class="euronics-audio font-sans text-gray-900 bg-gray-50">
+<section id="euronics-audio-section" class="euronics-audio">
   <style>
-    /* --- Base Layout --- */
     #euronics-audio-section {
-      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
       background: #f9fafb;
-      color: #111827;
+      color: var(--color-foreground, #111827);
       padding: 0;
       margin: 0;
+      font-size: 1rem;
+      line-height: 1.6;
     }
     #euronics-audio-section .container {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 0 1rem;
+      padding: 0 1.5rem;
     }
-
-    /* --- Headings --- */
-    #euronics-audio-section h2, 
-    #euronics-audio-section h3, 
-    #euronics-audio-section h4 {
-      font-weight: 700;
-      color: #111827;
-      text-align: center;
-      line-height: 1.2;
-    }
-
-    /* --- Hero Section --- */
     #euronics-audio-section .hero {
       position: relative;
-      height: 65vh;
+      height: 60vh;
       background-size: cover;
       background-position: center;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #fff;
       text-align: center;
+      color: #fff;
     }
     #euronics-audio-section .overlay {
       background: rgba(0,0,0,0.45);
@@ -43,8 +31,6 @@
       max-width: 700px;
       margin: 0 1rem;
     }
-
-    /* --- Buttons --- */
     #euronics-audio-section .btn {
       display: inline-block;
       background: #1e40af;
@@ -60,32 +46,16 @@
       cursor: pointer;
       transition: background 0.3s ease;
     }
-    #euronics-audio-section .btn:hover {
-      background: #1d4ed8;
-    }
-
-    /* --- Grid Cards --- */
+    #euronics-audio-section .btn:hover { background: #1d4ed8; }
+    #euronics-audio-section .section { padding: 4rem 0; }
     #euronics-audio-section .grid {
       display: grid;
       gap: 2rem;
       width: 100%;
     }
-    #euronics-audio-section .grid-4 {
-      grid-template-columns: 1fr 1fr;
-    }
-    #euronics-audio-section .grid-2 {
-      grid-template-columns: 1fr;
-    }
-    #euronics-audio-section .grid-5 {
-      grid-template-columns: 2fr 2fr;
-    }
-    @media (min-width: 768px) {
-      #euronics-audio-section .grid-4 { grid-template-columns: repeat(4, 1fr); }
-      #euronics-audio-section .grid-2 { grid-template-columns: repeat(2, 1fr); }
-      #euronics-audio-section .grid-5 { grid-template-columns: repeat(5, 1fr); }
-    }
-
-    /* --- Cards --- */
+    @media(min-width:768px){#euronics-audio-section .grid-2{grid-template-columns:repeat(2,1fr)}}
+    @media(min-width:768px){#euronics-audio-section .grid-4{grid-template-columns:repeat(4,1fr)}}
+    @media(min-width:768px){#euronics-audio-section .grid-5{grid-template-columns:repeat(5,1fr)}}
     #euronics-audio-section .card {
       background: #fff;
       border-radius: 1rem;
@@ -94,67 +64,41 @@
       padding: 1.5rem;
       text-align: center;
     }
-    #euronics-audio-section .card:hover {
-      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-    }
+    #euronics-audio-section .card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
     #euronics-audio-section img {
       width: 100%;
       height: auto;
       border-top-left-radius: 1rem;
       border-top-right-radius: 1rem;
     }
-
-    /* --- Text adjustments --- */
-    #euronics-audio-section p {
-      color: #4b5563;
-      font-size: 1rem;
-      line-height: 1.6;
-    }
-
-    /* --- Section spacing --- */
-    #euronics-audio-section .section {
-      padding: 4rem 0;
-    }
-
-    /* --- Mobile Responsiveness --- */
     @media (max-width: 768px) {
-      #euronics-audio-section h2 { font-size: 2rem; }
-      #euronics-audio-section h3 { font-size: 1.5rem; }
-      #euronics-audio-section h4 { font-size: 1.25rem; }
-      #euronics-audio-section .section {
-        padding: 2.5rem 0;
-      }
-      #euronics-audio-section .overlay {
-        padding: 1.5rem;
-      }
+      #euronics-audio-section .section { padding: 2rem 0; }
     }
   </style>
 
   <!-- Hero -->
-  <div class="hero" style="background-image:url('https://cdn.shopify.com/s/files/1/0550/5807/1748/files/Hero_section_banner_sound_guide.png?v=1760348913');">
+  <div class="hero" style="background-image:url('{{ section.settings.hero_image | image_url: width: 2000 }}');">
     <div class="overlay">
-      <h2>Hear the Difference</h2>
-      <p style="margin-bottom:1.5rem;">Better Sound Starts Here</p>
-      <a href="https://euronics.ie/collections/audio-1" class="btn">Explore Audio</a>
+      <h2>{{ section.settings.hero_heading }}</h2>
+      <p style="margin-bottom:1.5rem;">{{ section.settings.hero_subheading }}</p>
+      <a href="{{ section.settings.hero_button_link }}" class="btn">{{ section.settings.hero_button_label }}</a>
     </div>
   </div>
 
   <!-- Why Choose Euronics -->
   <div class="section bg-white">
     <div class="container text-center">
-      <h3>Why Choose Euronics for Audio</h3>
-      <p style="max-width:600px;margin:1.5rem auto 2rem;">
-        We believe great sound transforms everyday experiences. From movies to music, Euronics helps you find the perfect system for your home, powered by trusted local expertise and world-leading brands.
-      </p>
+      <h3>{{ section.settings.why_heading }}</h3>
+      <p style="max-width:600px;margin:1.5rem auto 2rem;">{{ section.settings.why_text }}</p>
       <div class="grid grid-4">
-        {% assign boxes = "Soundbars|https://euronics.ie/collections/soundbars,Headphones|https://euronics.ie/collections/headphones,Bluetooth Speakers|https://euronics.ie/collections/wireless-speakers,Party Speakers|https://euronics.ie/collections/wireless-speakers" | split: ',' %}
-        {% for item in boxes %}
-          {% assign parts = item | split: '|' %}
-          <div class="card">
-            <h4>{{ parts[0] }}</h4>
-            <p>Explore our full range of {{ parts[0] | downcase }} for every lifestyle and space.</p>
-            <a href="{{ parts[1] }}" class="btn">Shop {{ parts[0] }}</a>
-          </div>
+        {% for block in section.blocks %}
+          {% if block.type == 'why_box' %}
+            <div class="card">
+              <h4>{{ block.settings.title }}</h4>
+              <p>{{ block.settings.text }}</p>
+              <a href="{{ block.settings.link }}" class="btn">{{ block.settings.button_text }}</a>
+            </div>
+          {% endif %}
         {% endfor %}
       </div>
     </div>
@@ -163,45 +107,41 @@
   <!-- Top Soundbars -->
   <div class="section bg-white">
     <div class="container text-center">
-      <h3>Top Soundbars</h3>
+      <h3>{{ section.settings.soundbar_heading }}</h3>
       <div class="grid grid-2">
-        <div class="card">
-          <img src="https://cdn.shopify.com/s/files/1/0550/5807/1748/files/Samsung_Sound_guide.png?v=1760349759" alt="Samsung Soundbar">
-          <div style="padding:1rem;">
-            <h4>Samsung Q-Series Soundbar</h4>
-            <p>Immerse yourself in cinematic Dolby Atmos sound with Q-Symphony technology, perfectly tuned for Samsung TVs.</p>
-            <a href="https://euronics.ie/collections/soundbars?pf_v_brand=Samsung" class="btn">Shop Samsung Soundbars</a>
-          </div>
-        </div>
-        <div class="card">
-          <img src="https://cdn.shopify.com/s/files/1/0550/5807/1748/files/LG_Sound_guide.png?v=1760350087" alt="LG Soundbar">
-          <div style="padding:1rem;">
-            <h4>LG Soundbar Series</h4>
-            <p>Bring your entertainment to life with Dolby Atmos and Meridian Audio technology in LG’s premium soundbars.</p>
-            <a href="https://euronics.ie/collections/soundbars?pf_v_brand=LG" class="btn">Shop LG Soundbars</a>
-          </div>
-        </div>
+        {% for block in section.blocks %}
+          {% if block.type == 'soundbar' %}
+            <div class="card">
+              <img src="{{ block.settings.image | image_url: width: 800 }}" alt="{{ block.settings.title }}">
+              <div style="padding:1rem;">
+                <h4>{{ block.settings.title }}</h4>
+                <p>{{ block.settings.text }}</p>
+                <a href="{{ block.settings.link }}" class="btn">{{ block.settings.button_text }}</a>
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
       </div>
     </div>
   </div>
 
-  <!-- Headphones & Personal Audio -->
+  <!-- Headphones -->
   <div class="section bg-gray-100">
     <div class="container text-center">
-      <h3>Headphones & Personal Audio</h3>
-      <p style="max-width:700px;margin:1.5rem auto 2rem;">Explore our premium headphone range featuring top brands that combine comfort, clarity, and innovation for every listener.</p>
+      <h3>{{ section.settings.headphones_heading }}</h3>
+      <p style="max-width:700px;margin:1.5rem auto 2rem;">{{ section.settings.headphones_text }}</p>
       <div class="grid grid-5">
-        {% assign headphones = "Sennheiser|https://cdn.shopify.com/s/files/1/0550/5807/1748/files/sennheizer_product_guide.png?v=1760350596|https://euronics.ie/collections/sennheiser,Sony|https://cdn.shopify.com/s/files/1/0550/5807/1748/files/sony_product_guide.png?v=1760350965|https://euronics.ie/collections/sony-headphones,JBL|https://cdn.shopify.com/s/files/1/0550/5807/1748/files/jbl_product_guide.png?v=1760351447|https://euronics.ie/collections/jbl,Soundcore|https://cdn.shopify.com/s/files/1/0550/5807/1748/files/Soundcore_product_guide.png?v=1760352885|https://euronics.ie/collections/soundcore,Apple|https://cdn.shopify.com/s/files/1/0550/5807/1748/files/apple_product_guide.png?v=1760353176|https://euronics.ie/collections/headphones?pf_v_brand=Apple" | split: ',' %}
-        {% for brand in headphones %}
-          {% assign info = brand | split: '|' %}
-          <div class="card">
-            <img src="{{ info[1] }}" alt="{{ info[0] }} Headphones">
-            <div style="padding:1rem;">
-              <h4>{{ info[0] }}</h4>
-              <p>Premium sound and design from {{ info[0] }}.</p>
-              <a href="{{ info[2] }}" class="btn">Shop {{ info[0] }}</a>
+        {% for block in section.blocks %}
+          {% if block.type == 'headphone' %}
+            <div class="card">
+              <img src="{{ block.settings.image | image_url: width: 600 }}" alt="{{ block.settings.title }}">
+              <div style="padding:1rem;">
+                <h4>{{ block.settings.title }}</h4>
+                <p>{{ block.settings.text }}</p>
+                <a href="{{ block.settings.link }}" class="btn">{{ block.settings.button_text }}</a>
+              </div>
             </div>
-          </div>
+          {% endif %}
         {% endfor %}
       </div>
     </div>
@@ -211,11 +151,110 @@
 {% schema %}
 {
   "name": "Euronics Audio Experience",
-  "settings": [],
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Hero Background Image"
+    },
+    {
+      "type": "text",
+      "id": "hero_heading",
+      "label": "Hero Heading",
+      "default": "Hear the Difference"
+    },
+    {
+      "type": "text",
+      "id": "hero_subheading",
+      "label": "Hero Subheading",
+      "default": "Better Sound Starts Here"
+    },
+    {
+      "type": "text",
+      "id": "hero_button_label",
+      "label": "Hero Button Text",
+      "default": "Explore Audio"
+    },
+    {
+      "type": "url",
+      "id": "hero_button_link",
+      "label": "Hero Button Link"
+    },
+    {
+      "type": "text",
+      "id": "why_heading",
+      "label": "Why Choose Section Heading",
+      "default": "Why Choose Euronics for Audio"
+    },
+    {
+      "type": "text",
+      "id": "why_text",
+      "label": "Why Choose Section Text",
+      "default": "We believe great sound transforms everyday experiences. From movies to music, Euronics helps you find the perfect system for your home, powered by trusted local expertise and world-leading brands."
+    },
+    {
+      "type": "text",
+      "id": "soundbar_heading",
+      "label": "Soundbars Heading",
+      "default": "Top Soundbars"
+    },
+    {
+      "type": "text",
+      "id": "headphones_heading",
+      "label": "Headphones Heading",
+      "default": "Headphones & Personal Audio"
+    },
+    {
+      "type": "text",
+      "id": "headphones_text",
+      "label": "Headphones Intro Text",
+      "default": "Explore our premium headphone range featuring top brands that combine comfort, clarity, and innovation for every listener."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "why_box",
+      "name": "Why Choose Box",
+      "settings": [
+        { "type": "text", "id": "title", "label": "Title" },
+        { "type": "text", "id": "text", "label": "Text" },
+        { "type": "url", "id": "link", "label": "Button Link" },
+        { "type": "text", "id": "button_text", "label": "Button Text", "default": "Shop Now" }
+      ]
+    },
+    {
+      "type": "soundbar",
+      "name": "Soundbar Card",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Image" },
+        { "type": "text", "id": "title", "label": "Title" },
+        { "type": "text", "id": "text", "label": "Text" },
+        { "type": "url", "id": "link", "label": "Button Link" },
+        { "type": "text", "id": "button_text", "label": "Button Text", "default": "Shop Now" }
+      ]
+    },
+    {
+      "type": "headphone",
+      "name": "Headphone Brand",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Image" },
+        { "type": "text", "id": "title", "label": "Title" },
+        { "type": "text", "id": "text", "label": "Text" },
+        { "type": "url", "id": "link", "label": "Button Link" },
+        { "type": "text", "id": "button_text", "label": "Button Text", "default": "Shop Now" }
+      ]
+    }
+  ],
   "presets": [
     {
-      "name": "Euronics Audio Experience"
+      "name": "Euronics Audio Experience",
+      "blocks": [
+        { "type": "why_box" },
+        { "type": "soundbar" },
+        { "type": "headphone" }
+      ]
     }
   ]
 }
 {% endschema %}
+
