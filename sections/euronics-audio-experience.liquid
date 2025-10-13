@@ -1,0 +1,131 @@
+<section class="euronics-audio font-sans text-gray-900 bg-gray-50">
+  <style>
+    .euronics-audio {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+    .euronics-audio h2, .euronics-audio h3, .euronics-audio h4 {
+      font-weight: 700;
+    }
+    .euronics-audio .hero {
+      position: relative;
+      height: 70vh;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+    }
+    .euronics-audio .overlay {
+      background: rgba(0,0,0,0.4);
+      padding: 2rem;
+      border-radius: 1rem;
+      text-align: center;
+      max-width: 700px;
+    }
+    .euronics-audio .btn {
+      display: inline-block;
+      background: #1e40af;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .euronics-audio .btn:hover {
+      background: #1d4ed8;
+    }
+    .euronics-audio .grid {
+      display: grid;
+      gap: 2rem;
+    }
+    @media(min-width:768px){.euronics-audio .grid-4{grid-template-columns:repeat(4,1fr)}}
+    @media(min-width:768px){.euronics-audio .grid-2{grid-template-columns:repeat(2,1fr)}}
+    @media(min-width:768px){.euronics-audio .grid-5{grid-template-columns:repeat(5,1fr)}}
+    .euronics-audio .card {
+      background: #fff;
+      border-radius: 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      transition: box-shadow 0.3s ease;
+    }
+    .euronics-audio .card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
+    .euronics-audio img {
+      width: 100%;
+      height: auto;
+      border-top-left-radius: 1rem;
+      border-top-right-radius: 1rem;
+    }
+  </style>
+
+  <!-- Hero -->
+  <div class="hero" style="background-image:url('https://cdn.shopify.com/s/files/1/0550/5807/1748/files/Hero_section_banner_sound_guide.png?v=1760348913');">
+    <div class="overlay">
+      <h2 style="font-size:3rem;margin-bottom:1rem;">Hear the Difference</h2>
+      <p style="font-size:1.25rem;margin-bottom:1.5rem;">Better Sound Starts Here</p>
+      <a href="https://euronics.ie/collections/audio-1" class="btn">Explore Audio</a>
+    </div>
+  </div>
+
+  <!-- Why Choose Euronics -->
+  <div class="py-16 px-8 text-center bg-white">
+    <h3 style="font-size:2rem;margin-bottom:2rem;">Why Choose Euronics for Audio</h3>
+    <p style="max-width:600px;margin:0 auto 2rem;color:#4b5563;">
+      We believe great sound transforms everyday experiences. From movies to music, Euronics helps you find the perfect system for your home, powered by trusted local expertise and world-leading brands.
+    </p>
+    <div class="grid grid-4">
+      {% assign boxes = "Soundbars|https://euronics.ie/collections/soundbars,Headphones|https://euronics.ie/collections/headphones,Bluetooth Speakers|https://euronics.ie/collections/wireless-speakers,Party Speakers|https://euronics.ie/collections/wireless-speakers" | split: ',' %}
+      {% for item in boxes %}
+        {% assign parts = item | split: '|' %}
+        <div class="card p-8 text-center">
+          <h4 style="font-size:1.5rem;margin-bottom:1rem;">{{ parts[0] }}</h4>
+          <p style="color:#6b7280;margin-bottom:1.5rem;">Explore our full range of {{ parts[0] | downcase }} for every lifestyle and space.</p>
+          <a href="{{ parts[1] }}" class="btn">Shop {{ parts[0] }}</a>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- Top Soundbars -->
+  <div class="py-16 px-8 bg-white text-center">
+    <h3 style="font-size:2rem;margin-bottom:2rem;">Top Soundbars</h3>
+    <div class="grid grid-2">
+      <div class="card">
+        <img src="https://cdn.shopify.com/s/files/1/0550/5807/1748/files/Samsung_Sound_guide.png?v=1760349759" alt="Samsung Soundbar">
+        <div class="p-6">
+          <h4 style="font-size:1.25rem;margin-bottom:0.5rem;">Samsung Q-Series Soundbar</h4>
+          <p style="color:#6b7280;margin-bottom:1.25rem;">Immerse yourself in cinematic Dolby Atmos sound with Q-Symphony technology, perfectly tuned for Samsung TVs.</p>
+          <a href="https://euronics.ie/collections/soundbars?pf_v_brand=Samsung" class="btn">Shop Samsung Soundbars</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://cdn.shopify.com/s/files/1/0550/5807/1748/files/LG_Sound_guide.png?v=1760350087" alt="LG Soundbar">
+        <div class="p-6">
+          <h4 style="font-size:1.25rem;margin-bottom:0.5rem;">LG Soundbar Series</h4>
+          <p style="color:#6b7280;margin-bottom:1.25rem;">Bring your entertainment to life with Dolby Atmos and Meridian Audio technology in LG’s premium soundbars.</p>
+          <a href="https://euronics.ie/collections/soundbars?pf_v_brand=LG" class="btn">Shop LG Soundbars</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Headphones & Personal Audio -->
+  <div class="py-20 px-8 bg-gray-100 text-center">
+    <h3 style="font-size:2rem;margin-bottom:1rem;">Headphones & Personal Audio</h3>
+    <p style="max-width:700px;margin:0 auto 2rem;color:#4b5563;">Explore our premium headphone range featuring top brands that combine comfort, clarity, and innovation for every listener.</p>
+    <div class="grid grid-5">
+      {% assign headphones = "Sennheiser|https://cdn.shopify.com/s/files/1/0550/5807/1748/files/sennheizer_product_guide.png?v=1760350596|https://euronics.ie/collections/sennheiser,Sony|https://cdn.shopify.com/s/files/1/0550/5807/1748/files/sony_product_guide.png?v=1760350965|https://euronics.ie/collections/sony-headphones,JBL|https://cdn.shopify.com/s/files/1/0550/5807/1748/files/jbl_product_guide.png?v=1760351447|https://euronics.ie/collections/jbl,Soundcore|https://cdn.shopify.com/s/files/1/0550/5807/1748/files/Soundcore_product_guide.png?v=1760352885|https://euronics.ie/collections/soundcore,Apple|https://cdn.shopify.com/s/files/1/0550/5807/1748/files/apple_product_guide.png?v=1760353176|https://euronics.ie/collections/headphones?pf_v_brand=Apple" | split: ',' %}
+      {% for brand in headphones %}
+        {% assign info = brand | split: '|' %}
+        <div class="card text-center">
+          <img src="{{ info[1] }}" alt="{{ info[0] }} Headphones">
+          <div class="p-4">
+            <h4 style="font-size:1.25rem;margin-bottom:0.5rem;">{{ info[0] }}</h4>
+            <p style="color:#6b7280;margin-bottom:1.25rem;">Premium sound and design from {{ info[0] }}.</p>
+            <a href="{{ info[2] }}" class="btn">Shop {{ info[0] }}</a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
