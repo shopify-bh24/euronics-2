@@ -1,40 +1,153 @@
-<section id="euronics-audio-section" style="background:#f9fafb;">
+<section id="euronics-audio-section">
   <style>
-    #euronics-audio-section .container{max-width:1200px;margin:0 auto;padding:0 1.5rem;}
-    #euronics-audio-section h2,#euronics-audio-section h3,#euronics-audio-section h4{
-      text-align:center;font-weight:700;line-height:1.25;
+    /* Reset theme overrides just inside this section */
+    #euronics-audio-section * {
+      box-sizing: border-box;
+      font-family: inherit;
     }
-    #euronics-audio-section .hero{
-      position:relative;height:60vh;display:flex;align-items:center;justify-content:center;
-      text-align:center;color:#fff;background-size:cover;background-position:center;
+
+    #euronics-audio-section {
+      background: #f9fafb;
+      color: var(--color-foreground, #111827);
+      font-size: 1rem; /* match theme body size */
+      line-height: 1.6;
     }
-    #euronics-audio-section .overlay{
-      background:rgba(0,0,0,.45);padding:2rem;border-radius:1rem;max-width:700px;margin:0 1rem;
+
+    #euronics-audio-section .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
     }
-    #euronics-audio-section .btn{
-      display:inline-block;background:#1e40af;color:#fff !important;padding:.75rem 1.5rem;
-      border-radius:.5rem;text-decoration:none;font-weight:600;transition:background .3s;
+
+    /* Headings */
+    #euronics-audio-section h2,
+    #euronics-audio-section h3,
+    #euronics-audio-section h4 {
+      text-align: center;
+      font-weight: 700;
+      line-height: 1.25;
+      color: inherit;
     }
-    #euronics-audio-section .btn:hover{background:#1d4ed8}
-    #euronics-audio-section .section{padding:4rem 0;}
-    #euronics-audio-section .grid{display:grid;gap:2rem;}
-    @media(min-width:768px){
-      #euronics-audio-section .grid-2{grid-template-columns:repeat(2,1fr);}
-      #euronics-audio-section .grid-4{grid-template-columns:repeat(4,1fr);}
-      #euronics-audio-section .grid-5{grid-template-columns:repeat(5,1fr);}
+
+    #euronics-audio-section h2 { font-size: 2.25rem; margin-bottom: 1rem; }
+    #euronics-audio-section h3 { font-size: 1.75rem; margin-bottom: 1rem; }
+    #euronics-audio-section h4 { font-size: 1.25rem; margin-bottom: 0.75rem; }
+
+    /* HERO */
+    #euronics-audio-section .hero {
+      position: relative;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      background-size: cover;
+      background-position: center;
     }
-    #euronics-audio-section .card{
-      background:#fff;border-radius:1rem;box-shadow:0 2px 8px rgba(0,0,0,.05);
-      padding:1.5rem;text-align:center;
+
+    #euronics-audio-section .overlay {
+      background: rgba(0, 0, 0, 0.45);
+      padding: 2rem;
+      border-radius: 1rem;
+      max-width: 700px;
+      margin: 0 1rem;
     }
-    #euronics-audio-section img{width:100%;border-radius:1rem 1rem 0 0;height:auto;}
+
+    #euronics-audio-section p {
+      color: inherit;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Buttons */
+    #euronics-audio-section .btn {
+      display: inline-block;
+      background: #1e40af;
+      color: #fff !important;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      text-align: center;
+      cursor: pointer;
+      min-width: 160px;
+      transition: background 0.3s ease;
+    }
+
+    #euronics-audio-section .btn:hover {
+      background: #1d4ed8;
+    }
+
+    /* Layout */
+    #euronics-audio-section .section {
+      padding: 4rem 0;
+    }
+
+    #euronics-audio-section .grid {
+      display: grid;
+      gap: 2rem;
+    }
+
+    @media (min-width: 768px) {
+      #euronics-audio-section .grid-2 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      #euronics-audio-section .grid-4 {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      #euronics-audio-section .grid-5 {
+        grid-template-columns: repeat(5, 1fr);
+      }
+    }
+
+    /* Cards */
+    #euronics-audio-section .card {
+      background: #fff;
+      border-radius: 1rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    #euronics-audio-section img {
+      width: 100%;
+      border-radius: 1rem 1rem 0 0;
+      height: auto;
+      margin-bottom: 1rem;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 768px) {
+      #euronics-audio-section .section {
+        padding: 2.5rem 0;
+      }
+
+      #euronics-audio-section h2 {
+        font-size: 1.75rem;
+      }
+
+      #euronics-audio-section h3 {
+        font-size: 1.5rem;
+      }
+
+      #euronics-audio-section h4 {
+        font-size: 1.1rem;
+      }
+    }
   </style>
 
   <!-- HERO -->
-  <div class="hero" style="background-image:url('https://cdn.shopify.com/s/files/1/0550/5807/1748/files/Hero_section_banner_sound_guide.png?v=1760348913');">
+  <div
+    class="hero"
+    style="background-image:url('https://cdn.shopify.com/s/files/1/0550/5807/1748/files/Hero_section_banner_sound_guide.png?v=1760348913');"
+  >
     <div class="overlay">
       <h2>Hear the Difference</h2>
-      <p style="margin-bottom:1.5rem;">Better Sound Starts Here</p>
+      <p>Better Sound Starts Here</p>
       <a href="https://euronics.ie/collections/audio-1" class="btn">Explore Audio</a>
     </div>
   </div>
@@ -77,13 +190,19 @@
       <h3>Top Soundbars</h3>
       <div class="grid grid-2">
         <div class="card">
-          <img src="https://cdn.shopify.com/s/files/1/0550/5807/1748/files/Samsung_Sound_guide.png?v=1760349759" alt="Samsung Soundbar">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0550/5807/1748/files/Samsung_Sound_guide.png?v=1760349759"
+            alt="Samsung Soundbar"
+          />
           <h4>Samsung Q-Series Soundbar</h4>
           <p>Immerse yourself in cinematic Dolby Atmos sound with Q-Symphony technology, perfectly tuned for Samsung TVs.</p>
           <a href="https://euronics.ie/collections/soundbars?pf_v_brand=Samsung" class="btn">Shop Samsung Soundbars</a>
         </div>
         <div class="card">
-          <img src="https://cdn.shopify.com/s/files/1/0550/5807/1748/files/LG_Sound_guide.png?v=1760350087" alt="LG Soundbar">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0550/5807/1748/files/LG_Sound_guide.png?v=1760350087"
+            alt="LG Soundbar"
+          />
           <h4>LG Soundbar Series</h4>
           <p>Bring your entertainment to life with Dolby Atmos and Meridian Audio technology in LG’s premium soundbars.</p>
           <a href="https://euronics.ie/collections/soundbars?pf_v_brand=LG" class="btn">Shop LG Soundbars</a>
@@ -101,31 +220,46 @@
       </p>
       <div class="grid grid-5">
         <div class="card">
-          <img src="https://cdn.shopify.com/s/files/1/0550/5807/1748/files/sennheizer_product_guide.png?v=1760350596" alt="Sennheiser">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0550/5807/1748/files/sennheizer_product_guide.png?v=1760350596"
+            alt="Sennheiser"
+          />
           <h4>Sennheiser</h4>
           <p>Precision German engineering meets exceptional audio fidelity.</p>
           <a href="https://euronics.ie/collections/sennheiser" class="btn">Shop Sennheiser</a>
         </div>
         <div class="card">
-          <img src="https://cdn.shopify.com/s/files/1/0550/5807/1748/files/sony_product_guide.png?v=1760350965" alt="Sony">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0550/5807/1748/files/sony_product_guide.png?v=1760350965"
+            alt="Sony"
+          />
           <h4>Sony</h4>
           <p>Industry-leading noise cancellation and immersive audio design.</p>
           <a href="https://euronics.ie/collections/sony-headphones" class="btn">Shop Sony</a>
         </div>
         <div class="card">
-          <img src="https://cdn.shopify.com/s/files/1/0550/5807/1748/files/jbl_product_guide.png?v=1760351447" alt="JBL">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0550/5807/1748/files/jbl_product_guide.png?v=1760351447"
+            alt="JBL"
+          />
           <h4>JBL</h4>
           <p>Powerful sound and bold design for every lifestyle.</p>
           <a href="https://euronics.ie/collections/jbl" class="btn">Shop JBL</a>
         </div>
         <div class="card">
-          <img src="https://cdn.shopify.com/s/files/1/0550/5807/1748/files/Soundcore_product_guide.png?v=1760352885" alt="Soundcore">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0550/5807/1748/files/Soundcore_product_guide.png?v=1760352885"
+            alt="Soundcore"
+          />
           <h4>Soundcore</h4>
           <p>Innovative sound and all-day comfort at great value.</p>
           <a href="https://euronics.ie/collections/soundcore" class="btn">Shop Soundcore</a>
         </div>
         <div class="card">
-          <img src="https://cdn.shopify.com/s/files/1/0550/5807/1748/files/apple_product_guide.png?v=1760353176" alt="Apple">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0550/5807/1748/files/apple_product_guide.png?v=1760353176"
+            alt="Apple"
+          />
           <h4>Apple</h4>
           <p>Seamless wireless performance and signature Apple design.</p>
           <a href="https://euronics.ie/collections/headphones?pf_v_brand=Apple" class="btn">Shop Apple</a>
@@ -134,3 +268,4 @@
     </div>
   </div>
 </section>
+
