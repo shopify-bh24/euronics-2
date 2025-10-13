@@ -1332,6 +1332,7 @@
       },
       "featured_collection_iM9N7T": {
         "type": "featured-collection",
+        "disabled": true,
         "name": "Featured collection",
         "settings": {
           "collection": "backup-power-stations",
