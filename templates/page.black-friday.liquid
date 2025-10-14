@@ -24,19 +24,18 @@
   .bf-page * { box-sizing: border-box; }
   .bf-page {
     font-family: system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
-    background-color: var(--black);
-    background-image:
-      repeating-linear-gradient(
-        45deg,
-        rgba(255, 255, 255, 0.06) 0,
-        rgba(255, 255, 255, 0.06) 1px,
-        transparent 1px,
-        transparent 20px
-      );
-    background-attachment: fixed;
-    background-size: cover;
     color: var(--text);
     line-height: 1.5;
+
+    /* Background stack: pattern (top) + dark overlay + your image (bottom) */
+    background-image:
+      repeating-linear-gradient(45deg, rgba(255,255,255,0.06) 0, rgba(255,255,255,0.06) 1px, transparent 1px, transparent 20px),
+      linear-gradient(0deg, rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+      url('https://cdn.shopify.com/s/files/1/0550/5807/1748/files/Untitled_design_37.png?v=1760479194');
+    background-size: auto, cover, cover;
+    background-position: center, center, center;
+    background-attachment: fixed, fixed, fixed;
+    background-color: var(--black);
   }
 
   .bf-container { max-width: 1200px; margin: 0 auto; padding: 0 1.25rem; }
@@ -44,9 +43,9 @@
   h1 { font-size: clamp(2.5rem, 4vw, 4.25rem); color: var(--gold); text-align: center; }
   h2 { font-size: clamp(1.5rem, 2.2vw, 2rem); color: var(--gold); text-align:center; }
   .section { padding: 4rem 0; }
-  .tone-1 { background: var(--black); }
-  .tone-2 { background: var(--offblack); }
-  .tone-3 { background: var(--card); }
+  .tone-1 { background: rgba(10,10,10,0.6); }
+  .tone-2 { background: rgba(17,17,17,0.7); }
+  .tone-3 { background: rgba(26,26,26,0.75); }
 
   /* ===== Buttons ===== */
   .price-btn {
@@ -102,7 +101,13 @@
   @media(max-width:1024px){ .grid-3, .grid-4 { grid-template-columns: repeat(2, 1fr); } }
   @media(max-width:640px){ .grid-3, .grid-4 { grid-template-columns: 1fr; } }
 
-  .card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; transition: transform .2s; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform .2s;
+  }
   .card:hover { transform: translateY(-2px); }
 
   /* Image fix */
@@ -113,8 +118,8 @@
   .ptitle { font-weight: 700; margin: .6rem 0 .2rem; text-align: center; }
   .vendor { color: var(--muted); font-size: .9rem; margin-bottom: .35rem; text-align: center; }
   .price { display: flex; justify-content: center; gap: .6rem; flex-wrap: wrap; align-items: baseline; margin-top: .5rem; }
-  .price-was { color: #64748b; text-decoration: line-through; font-size: .95rem; }
-  .price-save { color: #cbd5e1; font-size: .95rem; }
+  .price-was { color: #96a3b8; text-decoration: line-through; font-size: .95rem; }
+  .price-save { color: #dbe5f0; font-size: .95rem; }
 
   /* Carousel */
   .carousel { display: flex; gap: 1rem; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: .5rem; }
@@ -144,7 +149,7 @@
     transition: all 0.3s ease;
   }
   .circle:hover { transform: translateY(-5px); box-shadow: 0 0 25px rgba(254,207,47,0.4); }
-  .circle-img { width: 60px; height: 60px; object-fit: contain; margin-bottom: 0.5rem; filter: brightness(0.9) contrast(1.2); transition: transform 0.3s ease; }
+  .circle-img { width: 60px; height: 60px; object-fit: contain; margin-bottom: 0.5rem; filter: brightness(0.95) contrast(1.15); transition: transform 0.3s ease; }
   .circle:hover .circle-img { transform: scale(1.08); }
   .circle-label { color: var(--gold); font-weight: 700; font-size: 0.9rem; text-align: center; line-height: 1.2; max-width: 90%; }
 
@@ -159,11 +164,15 @@
   .trust { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; color: #cbd5e1; list-style: none; }
   .urgency { text-align: center; color: var(--gold); font-size: 1.25rem; font-weight: 700; }
   .mailer-frame { width: 100%; height: 600px; border: 1px solid #333; border-radius: 14px; box-shadow: 0 10px 30px rgba(0,0,0,.35); }
+
+  /* ===== Scroll reveal animation ===== */
+  .reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
 </style>
 
 <div class="bf-page">
   <!-- HERO -->
-  <section class="section tone-1 hero">
+  <section class="section tone-1 hero reveal">
     <div class="bf-container">
       <h1>Black Friday Deals 2025</h1>
       <div style="text-align:center;margin-top:1.5rem;">
@@ -173,7 +182,7 @@
   </section>
 
   <!-- CATEGORY CIRCLES -->
-  <section class="section tone-1">
+  <section class="section tone-1 reveal">
     <div class="bf-container">
       <h2>Black Friday Offers On</h2>
       <div class="category-circles">
@@ -188,7 +197,7 @@
            Dishwashers & Refrigeration|/collections/black-friday-dishwashers-refrigeration|https://via.placeholder.com/60x60?text=Fridge" | split: "," %}
         {% for item in categories %}
           {% assign parts = item | split: "|" %}
-          <a href="{{ parts[1] | strip }}" class="circle">
+          <a href="{{ parts[1] | strip }}" class="circle reveal">
             <img src="{{ parts[2] | strip }}" alt="{{ parts[0] | strip }}" class="circle-img" loading="lazy">
             <div class="circle-label">{{ parts[0] | strip }}</div>
           </a>
@@ -198,7 +207,7 @@
   </section>
 
   <!-- HOT OFFERS -->
-  <section class="section tone-1">
+  <section class="section tone-1 reveal">
     <div class="bf-container">
       <h2>🔥 Hot Offers</h2>
       <div class="grid grid-3">
@@ -212,7 +221,7 @@
               {% assign save_amt = diff %}
             {% endif %}
           {% endif %}
-          <article class="card">
+          <article class="card reveal">
             <div class="pimg-wrap">
               {% if product.featured_image %}
                 <img class="pimg" src="{{ product.featured_image | img_url: '800x' }}" alt="{{ product.featured_image.alt | escape }}">
@@ -239,7 +248,7 @@
   </section>
 
   <!-- TOP PICKS -->
-  <section class="section tone-2">
+  <section class="section tone-2 reveal">
     <div class="bf-container">
       <h2>Top Black Friday Picks</h2>
       <div class="carousel">
@@ -253,7 +262,7 @@
               {% assign save_amt = diff %}
             {% endif %}
           {% endif %}
-          <article class="card">
+          <article class="card reveal">
             <div class="pimg-wrap">
               {% if product.featured_image %}
                 <img class="pimg" src="{{ product.featured_image | img_url: '800x' }}" alt="{{ product.featured_image.alt | escape }}">
@@ -280,7 +289,7 @@
   </section>
 
   <!-- SUPER LOW DEALS -->
-  <section class="section tone-1">
+  <section class="section tone-1 reveal">
     <div class="bf-container">
       <h2>Super Low Deals</h2>
       <div class="grid grid-4">
@@ -294,7 +303,7 @@
               {% assign save_amt = diff %}
             {% endif %}
           {% endif %}
-          <article class="card">
+          <article class="card reveal">
             <div class="pimg-wrap">
               {% if product.featured_image %}
                 <img class="pimg" src="{{ product.featured_image | img_url: '800x' }}" alt="{{ product.featured_image.alt | escape }}">
@@ -321,7 +330,7 @@
   </section>
 
   <!-- MAILER -->
-  <section class="section tone-3" style="text-align:center;">
+  <section class="section tone-3 reveal" style="text-align:center;">
     <div class="bf-container">
       <h2>✉️ See Our Black Friday Mailer</h2>
       <p>Browse our official Black Friday leaflet digitally — packed with this year’s biggest savings, before it lands in your letterbox.</p>
@@ -335,7 +344,7 @@
   </section>
 
   <!-- TRUST + URGENCY -->
-  <section class="section tone-3" style="padding-top:2rem;padding-bottom:2rem;">
+  <section class="section tone-3 reveal" style="padding-top:2rem;padding-bottom:2rem;">
     <div class="bf-container">
       <ul class="trust">
         <li>🚚 Free Delivery over €50</li>
@@ -345,20 +354,20 @@
       </ul>
     </div>
   </section>
-  <section class="section tone-1" style="padding-top:1rem;padding-bottom:3rem;">
+  <section class="section tone-1 reveal" style="padding-top:1rem;padding-bottom:3rem;">
     <div class="bf-container">
       <p class="urgency">⚡ Deals are going fast — grab yours before they’re gone!</p>
     </div>
   </section>
 
   <!-- BUYING GUIDES -->
-  <section class="section tone-2">
+  <section class="section tone-2 reveal">
     <div class="bf-container">
       <h2>Black Friday Buying Guides</h2>
       <div class="guides-grid">
         {% for item in guides %}
           {% assign g = item | split: "|" %}
-          <div class="guide-card">
+          <div class="guide-card reveal">
             <img class="guide-img" src="{{ g[2] | strip }}" alt="{{ g[0] | strip }}">
             <div class="guide-title">{{ g[0] | strip }}</div>
             <a href="{{ g[1] | strip }}" class="price-btn">
@@ -370,6 +379,28 @@
     </div>
   </section>
 </div>
+
+<script>
+/* IntersectionObserver to reveal elements on scroll */
+(function(){
+  var els = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window) || !els.length) {
+    // Fallback: make all visible
+    els.forEach(function(el){ el.classList.add('visible'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { rootMargin: '0px 0px -10% 0px', threshold: 0.1 });
+  els.forEach(function(el){ io.observe(el); });
+})();
+</script>
+
 
 
 
