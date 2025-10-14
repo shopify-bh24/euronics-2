@@ -15,6 +15,7 @@
     --text:#F5F5F5;
     --muted:#9CA3AF;
   }
+
   .bf-page *{box-sizing:border-box}
   .bf-page{
     font-family:system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;
@@ -35,8 +36,6 @@
   .bf-page a.btn,
   .bf-page button.btn{
     display:inline-block!important;
-    background-color:var(--blue)!important;
-    color:#fff!important;
     border:none!important;
     border-radius:16px!important;
     padding:1rem 1.8rem!important;
@@ -48,17 +47,12 @@
     cursor:pointer!important;
     transition:all .25s ease-in-out!important;
     text-align:center!important;
-    box-shadow:0 4px 12px rgba(0,0,0,.3)!important;
     position:relative;overflow:hidden
   }
-  .bf-page a.btn:hover,
-  .bf-page button.btn:hover{
-    background-color:var(--blue-dk)!important;
-    box-shadow:0 8px 20px rgba(0,0,0,.4)!important;
-    transform:translateY(-2px)!important
-  }
+
+  /* Hero CTA */
   .bf-page .btn.hero-cta{
-    background-color:var(--gold)!important;
+    background:linear-gradient(90deg,var(--gold),#ffd84f)!important;
     color:var(--black)!important;
     font-size:1.4rem!important;
     padding:1.3rem 3rem!important;
@@ -66,20 +60,42 @@
     box-shadow:0 0 20px rgba(254,207,47,.4),0 0 60px rgba(254,207,47,.2)!important
   }
   .bf-page .btn.hero-cta:hover{
-    background-color:#ffd84f!important;
+    background:#ffd84f!important;
     box-shadow:0 0 30px rgba(254,207,47,.6),0 0 80px rgba(254,207,47,.3)!important;
     transform:translateY(-2px)!important
   }
-  .bf-page .btn.secondary{
-    background-color:transparent!important;
-    color:var(--gold)!important;
-    border:2px solid var(--gold)!important;
-    box-shadow:none!important
-  }
-  .bf-page .btn.secondary:hover{
-    background-color:var(--gold)!important;
+
+  /* Price button */
+  .price-btn{
+    display:flex!important;
+    align-items:center;
+    justify-content:center;
+    gap:.6rem;
+    background:linear-gradient(90deg,var(--gold),var(--blue));
     color:var(--black)!important;
-    box-shadow:0 0 20px rgba(254,207,47,.3)!important
+    font-weight:800!important;
+    font-size:1.05rem!important;
+    padding:1rem 1.5rem!important;
+    border-radius:14px!important;
+    box-shadow:0 0 16px rgba(254,207,47,.3);
+    transition:all .3s ease-in-out;
+  }
+  .price-btn:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 25px rgba(254,207,47,.6);
+  }
+  .price-btn .price-now{
+    background:var(--black);
+    color:var(--gold);
+    border-radius:8px;
+    padding:.25rem .5rem;
+    font-weight:700;
+  }
+  .price-btn .label{
+    color:#fff;
+    text-transform:uppercase;
+    letter-spacing:.5px;
+    font-weight:700;
   }
 
   /* ===== Grid & Cards ===== */
@@ -88,10 +104,10 @@
   .grid-4{grid-template-columns:repeat(4,1fr)}
   @media(max-width:1024px){.grid-3,.grid-4{grid-template-columns:repeat(2,1fr)}}
   @media(max-width:640px){.grid-3,.grid-4{grid-template-columns:1fr}}
+
   .card{background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:transform .2s}
   .card:hover{transform:translateY(-2px)}
 
-  /* Product images */
   .pimg-wrap{width:100%;aspect-ratio:4/3;background:#0f0f0f;display:flex;align-items:center;justify-content:center;overflow:hidden}
   .pimg{max-width:100%;max-height:100%;object-fit:contain;width:auto;height:auto;display:block}
   @media(max-width:480px){.pimg-wrap{aspect-ratio:1/1}}
@@ -99,15 +115,10 @@
   .ptitle{font-weight:700;margin:.6rem 0 .1rem}
   .vendor{color:var(--muted);font-size:.9rem;margin-bottom:.35rem}
   .price{display:flex;gap:.6rem;align-items:baseline;flex-wrap:wrap}
-  .price-now{color:var(--gold);font-weight:800;font-size:1.2rem}
-  .price-was{color:#64748b;text-decoration:line-through;font-size:.95rem}
-  .price-save{color:#cbd5e1;font-size:.95rem}
-  .badge{display:inline-flex;align-items:center;gap:.35rem;font-size:.75rem;padding:.35rem .6rem;border-radius:999px;background:rgba(0,94,184,.2);border:1px solid rgba(254,207,47,.4);color:var(--gold);animation:pulse 1.5s infinite;position:absolute;left:.75rem;top:.75rem}
-  @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.7;transform:scale(1.08)}}
-  .carousel{display:flex;gap:1rem;overflow:auto;scroll-snap-type:x mandatory;padding-bottom:.5rem}
-  .carousel>*{scroll-snap-align:start;flex:0 0 280px}
+  .price-was{color:#64748b;text-decoration:line-through;font-size:.9rem}
+  .price-save{color:#cbd5e1;font-size:.9rem}
+
   .trust{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;color:#cbd5e1;list-style:none}
-  .trust li{display:flex;gap:.5rem;align-items:center}
   .urgency{text-align:center;color:var(--gold);font-size:1.125rem}
   .mailer-frame{width:100%;height:600px;border:1px solid #333;border-radius:14px;box-shadow:0 10px 30px rgba(0,0,0,.35)}
   .countdown{text-align:center;margin-top:1rem}
@@ -135,8 +146,7 @@
   </section>
 
   {% comment %} === PRODUCT SECTIONS === {% endcomment %}
-  {% for section in 
-     (1..3) %}
+  {% for section in (1..3) %}
     {% case section %}
       {% when 1 %}
         {% assign collection = hot_collection %}
@@ -176,16 +186,18 @@
             <div style="padding:1rem">
               <div class="ptitle">{{ product.title }}</div>
               <div class="vendor">by {{ product.vendor }}</div>
-              <div class="price">
-                <span class="price-now">{{ product.price | money }}</span>
-                {% if has_compare %}
+
+              {% if has_compare %}
+                <div class="price">
                   <span class="price-was">{{ product.compare_at_price | money }}</span>
-                  {% if save_amt > 0 %}
-                    <span class="price-save">Save {{ save_amt | money }}</span>
-                  {% endif %}
-                {% endif %}
-              </div>
-              <a class="btn secondary" href="{{ product.url }}">View Deal</a>
+                  <span class="price-save">Save {{ save_amt | money }}</span>
+                </div>
+              {% endif %}
+
+              <a class="btn price-btn" href="{{ product.url }}">
+                <span class="price-now">{{ product.price | money }}</span>
+                <span class="label">Shop Now</span>
+              </a>
             </div>
           </article>
         {% endfor %}
@@ -201,7 +213,9 @@
       <p>Browse our official Black Friday leaflet digitally — packed with this year’s biggest savings, before it lands in your letterbox.</p>
       <iframe class="mailer-frame" src="{{ mailer_url }}" title="Black Friday Mailer"></iframe>
       <div style="margin-top:1.5rem;">
-        <a class="btn secondary" href="{{ mailer_url }}" target="_blank" rel="noopener">Open Full Mailer</a>
+        <a class="btn price-btn" href="{{ mailer_url }}" target="_blank" rel="noopener">
+          <span class="price-now">View</span><span class="label">Full Mailer</span>
+        </a>
       </div>
     </div>
   </section>
@@ -210,7 +224,7 @@
   <section class="section tone-3" style="padding-top:2rem;padding-bottom:2rem;">
     <div class="bf-container">
       <ul class="trust">
-        <li>🚚 Fast Local Delivery</li>
+        <li>🚚 Free Delivery over €50</li>
         <li>🏬 Click & Collect</li>
         <li>🇮🇪 Irish-Owned</li>
         <li>💫 Price Match Promise</li>
@@ -242,6 +256,7 @@
   tick();setInterval(tick,1000);
 })();
 </script>
+
 
 
 
