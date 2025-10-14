@@ -1,1 +1,315 @@
-{% section 'black-friday-landing' %}
+{% comment %}
+  File: templates/page.black-friday.liquid
+  Purpose: Complete Black Friday landing page as a single Shopify template file.
+  Notes:
+   - Update collection handles below if yours differ.
+   - Mailer URL: uses page metafield `custom.mailer_url` (URL). Falls back to a placeholder.
+     Add metafield in Admin → Content → Metafields → Pages: namespace "custom", key "mailer_url".
+   - Buying guide links: replace `href="#"` with your real guide URLs.
+{% endcomment %}
+
+{% assign hot_collection = collections['black-friday-hot-offers'] %}  {# EDIT HANDLE #}
+{% assign picks_collection = collections['black-friday-picks'] %}       {# EDIT HANDLE #}
+{% assign low_collection = collections['black-friday-super-low'] %}     {# EDIT HANDLE #}
+{% assign mailer_url = page.metafields.custom.mailer_url.value | default: 'https://euronics.ie/mailer/black-friday-2025.pdf#toolbar=0' %}
+
+<style>
+  :root{
+    --black:#0A0A0A;
+    --offblack:#111111;
+    --card:#1A1A1A;
+    --border:#222222;
+    --gold:#FECF2F;
+    --blue:#005EB8;
+    --blue-dk:#004b91;
+    --text:#F5F5F5;
+    --muted:#9CA3AF;
+  }
+  .bflp *{box-sizing:border-box}
+  .bflp{
+    color:var(--text);
+    background: var(--black);
+    background-image: repeating-linear-gradient(
+      45deg,
+      rgba(255,255,255,0.03) 0,
+      rgba(255,255,255,0.03) 1px,
+      transparent 1px,
+      transparent 20px
+    );
+    font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.5;
+  }
+  .bflp .container{max-width:1200px;margin:0 auto;padding:0 1.25rem}
+  .bflp h1,.bflp h2{margin:0 0 .5rem}
+  .bflp h1{font-size:clamp(2.5rem,4vw,4.25rem);font-weight:800;letter-spacing:-.02em;color:var(--gold)}
+  .bflp h2{font-size:clamp(1.5rem,2.2vw,2rem);font-weight:800}
+  .bflp p{color:#cbd5e1;margin:.5rem 0 0}
+  .bflp .section{padding:4rem 0}
+  .bflp .card{
+    background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden;
+    box-shadow:0 1px 2px rgba(0,0,0,.25)
+  }
+  .bflp .btn{
+    display:inline-block;padding:.9rem 1.2rem;border-radius:16px;font-weight:600;text-decoration:none;
+    background:var(--blue);color:#fff;transition:.2s box-shadow,.2s background
+  }
+  .bflp .btn:hover{background:var(--blue-dk);box-shadow:0 4px 16px rgba(0,0,0,.3)}
+  .bflp .badge{
+    display:inline-flex;align-items:center;gap:.35rem;font-size:.75rem;padding:.35rem .6rem;border-radius:999px;
+    background: color-mix(in srgb, var(--blue) 20%, transparent);
+    border:1px solid color-mix(in srgb, var(--gold) 40%, transparent);
+    color:var(--gold)
+  }
+  /* Pulsing badge */
+  @keyframes pulse{0%{transform:scale(1);opacity:1}50%{transform:scale(1.08);opacity:.7}100%{transform:scale(1);opacity:1}}
+  .bflp .badge--pulse{animation:pulse 1.5s infinite}
+
+  /* Hero */
+  .bflp .hero{text-align:center}
+  .bflp .countdown{display:inline-block;background:var(--card);border:1px solid var(--border);
+    border-radius:14px;padding:1rem 1.5rem;margin-top:1rem;box-shadow: inset 0 0 0 1px rgba(255,255,255,.02)}
+  .bflp .countdown__digits{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-weight:800;letter-spacing:.25ch;color:var(--gold);font-size:clamp(1.6rem,3vw,2.25rem)}
+  .bflp .countdown__sub{font-size:.9rem;color:#94a3b8}
+
+  /* Grids */
+  .bflp .grid{display:grid;gap:1.25rem}
+  .bflp .grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .bflp .grid-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+  @media (max-width: 1024px){.bflp .grid-3{grid-template-columns:repeat(2,1fr)}.bflp .grid-4{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width: 640px){.bflp .grid-3,.bflp .grid-4{grid-template-columns:1fr}}
+
+  /* Product card */
+  .bflp .pimg{width:100%;height:210px;object-fit:cover;display:block;opacity:.95}
+  .bflp .ptitle{font-weight:700;color:var(--text);margin:.6rem 0 .25rem}
+  .bflp .price{display:flex;align-items:baseline;gap:.5rem}
+  .bflp .price-now{color:var(--gold);font-weight:800;font-size:1.4rem}
+  .bflp .price-was{color:#64748b;text-decoration:line-through;font-size:.9rem}
+
+  /* Carousel */
+  .bflp .carousel{display:flex;gap:1rem;overflow:auto;scroll-snap-type:x mandatory;padding-bottom:.5rem}
+  .bflp .carousel > *{scroll-snap-align:start;flex:0 0 280px}
+
+  /* Section tones */
+  .bflp .tone-1{background: color-mix(in srgb, var(--black) 95%, black)}
+  .bflp .tone-2{background: color-mix(in srgb, var(--offblack) 95%, black)}
+  .bflp .tone-3{background: color-mix(in srgb, var(--card) 95%, black)}
+
+  /* Mailer iframe */
+  .bflp .mailer-frame{width:100%;height:600px;border:1px solid #333;border-radius:14px;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+
+  /* Trust strip */
+  .bflp .trust{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;color:#cbd5e1}
+  .bflp .trust li{list-style:none;display:flex;align-items:center;gap:.5rem}
+
+  /* Urgency banner */
+  .bflp .urgency{text-align:center;color:var(--gold);font-size:1.125rem}
+</style>
+
+<div class="bflp">
+  <!-- HERO -->
+  <section class="section hero">
+    <div class="container">
+      <h1>Black Friday Deals 2025</h1>
+      <p>Massive discounts across tech, appliances & more. Limited time only.</p>
+      <div class="countdown" aria-live="polite">
+        <div id="bf-countdown" class="countdown__digits">Loading…</div>
+        <div class="countdown__sub" id="bf-countdown-sub">until deals go live</div>
+      </div>
+      <div style="margin-top:1.25rem">
+        <a class="btn" href="/collections/black-friday">Shop All Deals</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOT OFFERS (3 x 2) -->
+  <section class="section tone-1">
+    <div class="container">
+      <h2 style="color:var(--gold)">🔥 Hot Offers</h2>
+      <p>Six limited-time deals — premium tech, top appliances, and unbeatable prices.</p>
+      <div class="grid grid-3" role="list">
+        {% if hot_collection and hot_collection.products_count > 0 %}
+          {% for product in hot_collection.products limit:6 %}
+            <article class="card" role="listitem">
+              <div style="position:relative">
+                {% if product.featured_image %}
+                  <img class="pimg" src="{{ product.featured_image | img_url: '720x' }}" alt="{{ product.featured_image.alt | escape }}">
+                {% endif %}
+                <span class="badge badge--pulse" style="position:absolute;left:.75rem;top:.75rem">Hot Offer</span>
+                {% if product.compare_at_price > product.price %}
+                  {% assign pct = 100 | times: product.compare_at_price | minus: product.price | divided_by: product.compare_at_price %}
+                  <span class="badge badge--pulse" style="position:absolute;right:.75rem;top:.75rem">{{ pct | round }}% OFF</span>
+                {% endif %}
+              </div>
+              <div style="padding:1rem">
+                <div class="ptitle">{{ product.title }}</div>
+                <div class="price">
+                  <div class="price-now">{{ product.price | money }}</div>
+                  {% if product.compare_at_price > product.price %}
+                    <div class="price-was">{{ product.compare_at_price | money }}</div>
+                  {% endif %}
+                </div>
+                <a class="btn" href="{{ product.url }}">View Deal</a>
+              </div>
+            </article>
+          {% endfor %}
+        {% else %}
+          <p style="color:#9CA3AF">No products found in <code>black-friday-hot-offers</code> collection.</p>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+
+  <!-- TOP PICKS (carousel) -->
+  <section class="section tone-2">
+    <div class="container">
+      <h2 style="color:var(--gold)">Top Black Friday Picks</h2>
+      <div class="carousel" role="list">
+        {% if picks_collection and picks_collection.products_count > 0 %}
+          {% for product in picks_collection.products limit:12 %}
+            <article class="card" role="listitem">
+              {% if product.featured_image %}
+                <img class="pimg" src="{{ product.featured_image | img_url: '720x' }}" alt="{{ product.featured_image.alt | escape }}">
+              {% endif %}
+              <div style="padding:1rem">
+                <div class="ptitle">{{ product.title }}</div>
+                <div class="price">
+                  <div class="price-now">{{ product.price | money }}</div>
+                  {% if product.compare_at_price > product.price %}
+                    <div class="price-was">{{ product.compare_at_price | money }}</div>
+                  {% endif %}
+                </div>
+                <a class="btn" href="{{ product.url }}">View Deal</a>
+              </div>
+            </article>
+          {% endfor %}
+        {% else %}
+          <p style="color:#9CA3AF">No products found in <code>black-friday-picks</code> collection.</p>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+
+  <!-- SUPER LOW DEALS (grid 4) -->
+  <section class="section tone-1">
+    <div class="container">
+      <h2 style="color:var(--gold)">Super Low Deals</h2>
+      <div class="grid grid-4" role="list">
+        {% if low_collection and low_collection.products_count > 0 %}
+          {% for product in low_collection.products limit:8 %}
+            <article class="card" role="listitem">
+              {% if product.featured_image %}
+                <img class="pimg" src="{{ product.featured_image | img_url: '720x' }}" alt="{{ product.featured_image.alt | escape }}">
+              {% endif %}
+              <div style="padding:1rem">
+                <div class="ptitle">{{ product.title }}</div>
+                <div class="price">
+                  <div class="price-now">{{ product.price | money }}</div>
+                  {% if product.compare_at_price > product.price %}
+                    <div class="price-was">{{ product.compare_at_price | money }}</div>
+                  {% endif %}
+                </div>
+                <a class="btn" href="{{ product.url }}">Add to Basket</a>
+              </div>
+            </article>
+          {% endfor %}
+        {% else %}
+          <p style="color:#9CA3AF">No products found in <code>black-friday-super-low</code> collection.</p>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+
+  <!-- MAILER (interactive flipbook via iframe) -->
+  <section class="section tone-3" style="text-align:center">
+    <div class="container">
+      <h2 style="color:var(--gold)">✉️ See Our Black Friday Mailer</h2>
+      <p>Browse our official Black Friday leaflet digitally — packed with this year’s biggest savings, before it lands in your letterbox.</p>
+      <div style="margin:1.5rem 0">
+        <iframe class="mailer-frame" src="{{ mailer_url }}" title="Black Friday Mailer"></iframe>
+      </div>
+      <a class="btn" href="{{ mailer_url }}" target="_blank" rel="noopener">Open Full Mailer</a>
+    </div>
+  </section>
+
+  <!-- BUYING GUIDES (4-up) -->
+  <section class="section tone-2">
+    <div class="container">
+      <h2 style="color:var(--gold)">Expert Buying Guides</h2>
+      <p>Get expert advice from Euronics to help you make the best purchase this Black Friday.</p>
+      <div class="grid grid-4">
+        <article class="card">
+          <img class="pimg" src="//images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=1200&auto=format&fit=crop" alt="TV Buying Guide">
+          <div style="padding:1rem">
+            <div class="ptitle">TV Buying Guide</div>
+            <p class="muted">Find the perfect screen size and tech for your home.</p>
+            <a class="btn" href="/pages/tv-buying-guide">Read Guide</a>
+          </div>
+        </article>
+        <article class="card">
+          <img class="pimg" src="//images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=1200&auto=format&fit=crop" alt="Appliance Buying Guide">
+          <div style="padding:1rem">
+            <div class="ptitle">Appliance Buying Guide</div>
+            <p class="muted">Smart tips on energy efficiency and value for money.</p>
+            <a class="btn" href="/pages/appliance-buying-guide">Read Guide</a>
+          </div>
+        </article>
+        <article class="card">
+          <img class="pimg" src="//images.unsplash.com/photo-1484417894907-623942c8ee29?q=80&w=1200&auto=format&fit=crop" alt="Laptop & Tech Guide">
+          <div style="padding:1rem">
+            <div class="ptitle">Laptop & Tech Guide</div>
+            <p class="muted">Everything you need to know before upgrading your tech.</p>
+            <a class="btn" href="/pages/laptop-buying-guide">Read Guide</a>
+          </div>
+        </article>
+        <article class="card">
+          <img class="pimg" src="//images.unsplash.com/photo-1518441312393-cfd6100b42f8?q=80&w=1200&auto=format&fit=crop" alt="Audio & Headphones Guide">
+          <div style="padding:1rem">
+            <div class="ptitle">Audio & Headphones Guide</div>
+            <p class="muted">Get the best sound experience with expert advice.</p>
+            <a class="btn" href="/pages/audio-buying-guide">Read Guide</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST STRIP -->
+  <section class="section tone-3" style="padding-top:2rem;padding-bottom:2rem">
+    <div class="container">
+      <ul class="trust">
+        <li>🚚 Free Delivery over €50</li>
+        <li>🏬 Click & Collect</li>
+        <li>🇮🇪 Irish-Owned</li>
+        <li>💫 Price Match Promise</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- URGENCY BANNER -->
+  <section class="section tone-1" style="padding-top:1.25rem;padding-bottom:3rem">
+    <div class="container">
+      <p class="urgency">⚡ Deals are going fast — grab yours before they’re gone!</p>
+    </div>
+  </section>
+</div>
+
+<script>
+  // Countdown
+  (function(){
+    var el = document.getElementById('bf-countdown');
+    var sub = document.getElementById('bf-countdown-sub');
+    var target = new Date('2025-11-28T00:00:00Z').getTime(); // adjust timezone if needed
+    function tick(){
+      var diff = Math.max(0, target - Date.now());
+      var d = Math.floor(diff / 86400000);
+      var h = Math.floor((diff / 3600000) % 24);
+      var m = Math.floor((diff / 60000) % 60);
+      var s = Math.floor((diff / 1000) % 60);
+      if (diff <= 0){ el.textContent = 'LIVE NOW'; sub.textContent = 'Shop Black Friday Deals Now'; return; }
+      el.textContent = d + 'd ' + h + 'h ' + m + 'm ' + s + 's';
+    }
+    tick(); setInterval(tick,1000);
+  })();
+</script>
+
