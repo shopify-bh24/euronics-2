@@ -16,115 +16,126 @@
     --muted:#9CA3AF;
   }
 
-  .bf-page *{box-sizing:border-box}
-  .bf-page{
-    font-family:system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;
-    background:var(--black);
-    background-image:repeating-linear-gradient(45deg,rgba(255,255,255,0.03)0,rgba(255,255,255,0.03)1px,transparent1px,transparent20px);
-    color:var(--text);line-height:1.5
+  .bf-page * { box-sizing: border-box; }
+  .bf-page {
+    font-family: system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
+    background: var(--black);
+    background-image: repeating-linear-gradient(45deg, rgba(255,255,255,0.03) 0, rgba(255,255,255,0.03) 1px, transparent 1px, transparent 20px);
+    color: var(--text);
+    line-height: 1.5;
   }
-  .bf-container{max-width:1200px;margin:0 auto;padding:0 1.25rem}
-  h1,h2{margin-bottom:.5rem;font-weight:800;letter-spacing:-.02em}
-  h1{font-size:clamp(2.5rem,4vw,4.25rem);color:var(--gold);text-align:center}
-  h2{font-size:clamp(1.5rem,2.2vw,2rem);color:var(--gold)}
-  .section{padding:4rem 0}
-  .tone-1{background:var(--black)}
-  .tone-2{background:var(--offblack)}
-  .tone-3{background:var(--card)}
+
+  .bf-container { max-width: 1200px; margin: 0 auto; padding: 0 1.25rem; }
+  h1, h2 { margin-bottom: .5rem; font-weight: 800; letter-spacing: -.02em; }
+  h1 { font-size: clamp(2.5rem, 4vw, 4.25rem); color: var(--gold); text-align: center; }
+  h2 { font-size: clamp(1.5rem, 2.2vw, 2rem); color: var(--gold); }
+  .section { padding: 4rem 0; }
+  .tone-1 { background: var(--black); }
+  .tone-2 { background: var(--offblack); }
+  .tone-3 { background: var(--card); }
 
   /* ===== Buttons ===== */
-  .bf-page a.btn,
-  .bf-page button.btn{
-    display:inline-block!important;
-    border:none!important;
-    border-radius:16px!important;
-    padding:1rem 1.8rem!important;
-    font-weight:700!important;
-    font-size:1rem!important;
-    text-transform:uppercase!important;
-    text-decoration:none!important;
-    letter-spacing:.5px!important;
-    cursor:pointer!important;
-    transition:all .25s ease-in-out!important;
-    text-align:center!important;
-    position:relative;overflow:hidden
+  .price-btn {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+    background: linear-gradient(90deg, var(--gold), var(--blue));
+    color: var(--black) !important;
+    font-weight: 900 !important;
+    font-size: 1.2rem !important;
+    text-transform: uppercase;
+    padding: 1.1rem 2.5rem !important;
+    border-radius: 16px !important;
+    box-shadow: 0 0 20px rgba(254,207,47,0.4);
+    transition: all 0.3s ease-in-out;
+    margin: 1rem auto 0 auto;
+    text-align: center;
+    width: fit-content;
+  }
+  .price-btn:hover {
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 0 30px rgba(254,207,47,0.6);
+  }
+  .price-btn .price-now {
+    background: var(--black);
+    color: var(--gold);
+    border-radius: 10px;
+    padding: 0.3rem 0.7rem;
+    font-weight: 800;
+    font-size: 1.25rem;
+  }
+  .price-btn .label {
+    color: #fff;
+    font-weight: 800;
+    letter-spacing: .5px;
   }
 
   /* Hero CTA */
-  .bf-page .btn.hero-cta{
-    background:linear-gradient(90deg,var(--gold),#ffd84f)!important;
-    color:var(--black)!important;
-    font-size:1.4rem!important;
-    padding:1.3rem 3rem!important;
-    border-radius:20px!important;
-    box-shadow:0 0 20px rgba(254,207,47,.4),0 0 60px rgba(254,207,47,.2)!important
-  }
-  .bf-page .btn.hero-cta:hover{
-    background:#ffd84f!important;
-    box-shadow:0 0 30px rgba(254,207,47,.6),0 0 80px rgba(254,207,47,.3)!important;
-    transform:translateY(-2px)!important
-  }
-
-  /* Price button */
-  .price-btn{
-    display:flex!important;
-    align-items:center;
-    justify-content:center;
-    gap:.6rem;
-    background:linear-gradient(90deg,var(--gold),var(--blue));
-    color:var(--black)!important;
-    font-weight:800!important;
-    font-size:1.05rem!important;
-    padding:1rem 1.5rem!important;
-    border-radius:14px!important;
-    box-shadow:0 0 16px rgba(254,207,47,.3);
-    transition:all .3s ease-in-out;
-  }
-  .price-btn:hover{
-    transform:scale(1.05);
-    box-shadow:0 0 25px rgba(254,207,47,.6);
-  }
-  .price-btn .price-now{
-    background:var(--black);
-    color:var(--gold);
-    border-radius:8px;
-    padding:.25rem .5rem;
-    font-weight:700;
-  }
-  .price-btn .label{
-    color:#fff;
-    text-transform:uppercase;
-    letter-spacing:.5px;
-    font-weight:700;
+  .bf-page .btn.hero-cta {
+    background: linear-gradient(90deg, var(--gold), #ffd84f) !important;
+    color: var(--black) !important;
+    font-size: 1.5rem !important;
+    padding: 1.3rem 3.5rem !important;
+    border-radius: 24px !important;
+    box-shadow: 0 0 20px rgba(254,207,47,.4), 0 0 60px rgba(254,207,47,.2) !important;
+    font-weight: 900 !important;
   }
 
   /* ===== Grid & Cards ===== */
-  .grid{display:grid;gap:1.25rem}
-  .grid-3{grid-template-columns:repeat(3,1fr)}
-  .grid-4{grid-template-columns:repeat(4,1fr)}
-  @media(max-width:1024px){.grid-3,.grid-4{grid-template-columns:repeat(2,1fr)}}
-  @media(max-width:640px){.grid-3,.grid-4{grid-template-columns:1fr}}
+  .grid { display: grid; gap: 1.25rem; }
+  .grid-3 { grid-template-columns: repeat(3, 1fr); }
+  .grid-4 { grid-template-columns: repeat(4, 1fr); }
+  @media(max-width:1024px){ .grid-3, .grid-4 { grid-template-columns: repeat(2, 1fr); } }
+  @media(max-width:640px){ .grid-3, .grid-4 { grid-template-columns: 1fr; } }
 
-  .card{background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:transform .2s}
-  .card:hover{transform:translateY(-2px)}
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform .2s;
+  }
+  .card:hover { transform: translateY(-2px); }
 
-  .pimg-wrap{width:100%;aspect-ratio:4/3;background:#0f0f0f;display:flex;align-items:center;justify-content:center;overflow:hidden}
-  .pimg{max-width:100%;max-height:100%;object-fit:contain;width:auto;height:auto;display:block}
-  @media(max-width:480px){.pimg-wrap{aspect-ratio:1/1}}
+  /* Image fix */
+  .pimg-wrap {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background: #0f0f0f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .pimg {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+  @media(max-width:480px){
+    .pimg-wrap { aspect-ratio: 1 / 1; }
+  }
 
-  .ptitle{font-weight:700;margin:.6rem 0 .1rem}
-  .vendor{color:var(--muted);font-size:.9rem;margin-bottom:.35rem}
-  .price{display:flex;gap:.6rem;align-items:baseline;flex-wrap:wrap}
-  .price-was{color:#64748b;text-decoration:line-through;font-size:.9rem}
-  .price-save{color:#cbd5e1;font-size:.9rem}
+  .ptitle { font-weight: 700; margin: .6rem 0 .2rem; text-align: center; }
+  .vendor { color: var(--muted); font-size: .9rem; margin-bottom: .35rem; text-align: center; }
+  .price { display: flex; justify-content: center; gap: .6rem; flex-wrap: wrap; align-items: baseline; margin-top: .5rem; }
+  .price-was { color: #64748b; text-decoration: line-through; font-size: .95rem; }
+  .price-save { color: #cbd5e1; font-size: .95rem; }
 
-  .trust{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;color:#cbd5e1;list-style:none}
-  .urgency{text-align:center;color:var(--gold);font-size:1.125rem}
-  .mailer-frame{width:100%;height:600px;border:1px solid #333;border-radius:14px;box-shadow:0 10px 30px rgba(0,0,0,.35)}
-  .countdown{text-align:center;margin-top:1rem}
-  .countdown-box{display:inline-block;background:var(--card);border:1px solid var(--border);padding:1rem 1.5rem;border-radius:14px}
-  .countdown-time{font-family:ui-monospace;font-weight:800;color:var(--gold);font-size:clamp(1.6rem,3vw,2.25rem);letter-spacing:.25ch}
-  .countdown-sub{color:#94a3b8;font-size:.9rem}
+  /* Carousel fix */
+  .carousel { display: flex; gap: 1rem; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: .5rem; }
+  .carousel > * { scroll-snap-align: start; flex: 0 0 320px; }
+
+  /* Misc */
+  .trust { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; color: #cbd5e1; list-style: none; }
+  .urgency { text-align: center; color: var(--gold); font-size: 1.25rem; font-weight: 700; }
+  .mailer-frame { width: 100%; height: 600px; border: 1px solid #333; border-radius: 14px; box-shadow: 0 10px 30px rgba(0,0,0,.35); }
+  .countdown { text-align: center; margin-top: 1rem; }
+  .countdown-box { display: inline-block; background: var(--card); border: 1px solid var(--border); padding: 1rem 1.5rem; border-radius: 14px; }
+  .countdown-time { font-family: ui-monospace; font-weight: 800; color: var(--gold); font-size: clamp(1.6rem,3vw,2.25rem); letter-spacing: .25ch; }
+  .countdown-sub { color: #94a3b8; font-size: .9rem; }
 </style>
 
 <div class="bf-page">
@@ -186,15 +197,13 @@
             <div style="padding:1rem">
               <div class="ptitle">{{ product.title }}</div>
               <div class="vendor">by {{ product.vendor }}</div>
-
               {% if has_compare %}
                 <div class="price">
                   <span class="price-was">{{ product.compare_at_price | money }}</span>
                   <span class="price-save">Save {{ save_amt | money }}</span>
                 </div>
               {% endif %}
-
-              <a class="btn price-btn" href="{{ product.url }}">
+              <a class="price-btn" href="{{ product.url }}">
                 <span class="price-now">{{ product.price | money }}</span>
                 <span class="label">Shop Now</span>
               </a>
@@ -213,7 +222,7 @@
       <p>Browse our official Black Friday leaflet digitally — packed with this year’s biggest savings, before it lands in your letterbox.</p>
       <iframe class="mailer-frame" src="{{ mailer_url }}" title="Black Friday Mailer"></iframe>
       <div style="margin-top:1.5rem;">
-        <a class="btn price-btn" href="{{ mailer_url }}" target="_blank" rel="noopener">
+        <a class="price-btn" href="{{ mailer_url }}" target="_blank" rel="noopener">
           <span class="price-now">View</span><span class="label">Full Mailer</span>
         </a>
       </div>
@@ -256,6 +265,7 @@
   tick();setInterval(tick,1000);
 })();
 </script>
+
 
 
 
