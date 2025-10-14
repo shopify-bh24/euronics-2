@@ -1131,6 +1131,7 @@
       },
       "collection_with_image_mggPEN": {
         "type": "collection-with-image",
+        "disabled": true,
         "settings": {
           "collection": "robot-vacuum-cleaners",
           "products_count": 20,
@@ -1452,11 +1453,11 @@
     },
     "content_for_index": [
       "slideshow",
-      "shogun_custom_67d189261ae2a69c44a00334_pJGKpt",
+      "shogun_custom_68df9d653f42a32836521a0f_y8qLwg",
       "featured_collection_iM9N7T",
       "shogun_custom_6672f94bad4fce565dc38a6e_RVVUGC",
+      "shogun_custom_67d189261ae2a69c44a00334_pJGKpt",
       "shogun_custom_681c7be4b37ad2f06e923a11_xb9dX6",
-      "shogun_custom_68df9d653f42a32836521a0f_y8qLwg",
       "shogun_custom_684b035ef11438d919eb0e71_y8YQWG",
       "slideshow_N8RKfA",
       "featured_collection_AVdRUd",
