@@ -2,6 +2,11 @@
 {% assign picks_collection = collections['black-friday-picks'] %}
 {% assign low_collection = collections['black-friday-super-low'] %}
 {% assign mailer_url = page.metafields.custom.mailer_url.value | default: 'https://euronics.ie/mailer/black-friday-2025.pdf#toolbar=0' %}
+{% assign guides = 
+  "TV Buying Guide|/pages/tv-buying-guide|https://via.placeholder.com/400x250?text=TV+Guide,
+   Coffee Machine Buying Guide|/pages/coffee-machine-buying-guide|https://via.placeholder.com/400x250?text=Coffee+Guide,
+   Laptop Buying Guide|/pages/laptop-buying-guide|https://via.placeholder.com/400x250?text=Laptop+Guide,
+   Washing Machine Buying Guide|/pages/washing-machine-buying-guide|https://via.placeholder.com/400x250?text=Laundry+Guide" | split: "," %}
 
 <style>
   :root {
@@ -80,7 +85,6 @@
     letter-spacing: .5px;
   }
 
-  /* Hero CTA */
   .bf-page .btn.hero-cta {
     background: linear-gradient(90deg, var(--gold), #ffd84f) !important;
     color: var(--black) !important;
@@ -143,13 +147,15 @@
   .circle-img { width: 60px; height: 60px; object-fit: contain; margin-bottom: 0.5rem; filter: brightness(0.9) contrast(1.2); transition: transform 0.3s ease; }
   .circle:hover .circle-img { transform: scale(1.08); }
   .circle-label { color: var(--gold); font-weight: 700; font-size: 0.9rem; text-align: center; line-height: 1.2; max-width: 90%; }
-  @media(max-width:480px){
-    .circle { width: 100px; height: 100px; }
-    .circle-img { width: 45px; height: 45px; }
-    .circle-label { font-size: 0.75rem; }
-  }
 
-  /* Misc */
+  /* Buying Guides */
+  .guides-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
+  .guide-card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; text-align: center; transition: transform .2s; }
+  .guide-card:hover { transform: translateY(-2px); }
+  .guide-img { width: 100%; height: 180px; object-fit: cover; }
+  .guide-title { color: var(--gold); font-weight: 700; margin: 1rem 0 0.5rem; }
+  .guide-card a.btn { margin-bottom: 1rem; display:inline-block; }
+
   .trust { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; color: #cbd5e1; list-style: none; }
   .urgency { text-align: center; color: var(--gold); font-size: 1.25rem; font-weight: 700; }
   .mailer-frame { width: 100%; height: 600px; border: 1px solid #333; border-radius: 14px; box-shadow: 0 10px 30px rgba(0,0,0,.35); }
@@ -160,7 +166,6 @@
   <section class="section tone-1 hero">
     <div class="bf-container">
       <h1>Black Friday Deals 2025</h1>
-      <p style="text-align:center;color:#cbd5e1;">Massive discounts across tech, appliances & more. Limited time only.</p>
       <div style="text-align:center;margin-top:1.5rem;">
         <a href="/collections/black-friday" class="btn hero-cta">Shop All Deals</a>
       </div>
@@ -168,7 +173,7 @@
   </section>
 
   <!-- CATEGORY CIRCLES -->
-  <section class="section tone-1" style="padding-top:2rem;">
+  <section class="section tone-1">
     <div class="bf-container">
       <h2>Black Friday Offers On</h2>
       <div class="category-circles">
@@ -193,12 +198,11 @@
   </section>
 
   <!-- HOT OFFERS -->
-  {% assign collection = hot_collection %}
   <section class="section tone-1">
     <div class="bf-container">
       <h2>🔥 Hot Offers</h2>
       <div class="grid grid-3">
-        {% for product in collection.products limit:6 %}
+        {% for product in hot_collection.products limit:6 %}
           {% assign has_compare = false %}
           {% assign save_amt = 0 %}
           {% if product.compare_at_price and product.compare_at_price > product.price %}
@@ -208,7 +212,6 @@
               {% assign save_amt = diff %}
             {% endif %}
           {% endif %}
-
           <article class="card">
             <div class="pimg-wrap">
               {% if product.featured_image %}
@@ -250,7 +253,6 @@
               {% assign save_amt = diff %}
             {% endif %}
           {% endif %}
-
           <article class="card">
             <div class="pimg-wrap">
               {% if product.featured_image %}
@@ -292,7 +294,6 @@
               {% assign save_amt = diff %}
             {% endif %}
           {% endif %}
-
           <article class="card">
             <div class="pimg-wrap">
               {% if product.featured_image %}
@@ -349,7 +350,27 @@
       <p class="urgency">⚡ Deals are going fast — grab yours before they’re gone!</p>
     </div>
   </section>
+
+  <!-- BUYING GUIDES -->
+  <section class="section tone-2">
+    <div class="bf-container">
+      <h2>Black Friday Buying Guides</h2>
+      <div class="guides-grid">
+        {% for item in guides %}
+          {% assign g = item | split: "|" %}
+          <div class="guide-card">
+            <img class="guide-img" src="{{ g[2] | strip }}" alt="{{ g[0] | strip }}">
+            <div class="guide-title">{{ g[0] | strip }}</div>
+            <a href="{{ g[1] | strip }}" class="price-btn">
+              <span class="label">Read Guide</span>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
 </div>
+
 
 
 
