@@ -22,96 +22,172 @@
 
   .bf-page * { box-sizing: border-box; }
   .bf-page {
-    font-family: system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;
+    font-family: system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
     color: var(--text);
     line-height: 1.5;
+    /* Background: pattern + dark overlay + your image */
     background-image:
-      repeating-linear-gradient(45deg,rgba(255,255,255,0.06)0,rgba(255,255,255,0.06)1px,transparent 1px,transparent 20px),
-      linear-gradient(0deg,rgba(0,0,0,0.55),rgba(0,0,0,0.55)),
+      repeating-linear-gradient(45deg, rgba(255,255,255,0.06) 0, rgba(255,255,255,0.06) 1px, transparent 1px, transparent 20px),
+      linear-gradient(0deg, rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
       url('https://cdn.shopify.com/s/files/1/0550/5807/1748/files/Untitled_design_37.png?v=1760479194');
-    background-size: auto,cover,cover;
-    background-position:center;
-    background-attachment:fixed;
+    background-size: auto, cover, cover;
+    background-position: center center;
+    background-attachment: fixed;
   }
 
-  .bf-container{max-width:1200px;margin:0 auto;padding:0 1.25rem;}
-  h1,h2{font-weight:800;letter-spacing:-.02em;margin-bottom:.5rem;}
-  h1{font-size:clamp(2.5rem,4vw,4.25rem);color:var(--gold);text-align:center;}
-  h2{font-size:clamp(1.5rem,2.2vw,2rem);color:var(--gold);text-align:center;}
-  .section{padding:4rem 0;}
+  .bf-container { max-width: 1200px; margin: 0 auto; padding: 0 1.25rem; }
+  h1, h2 { font-weight: 800; letter-spacing: -.02em; margin-bottom: .5rem; }
+  h1 { font-size: clamp(2.5rem, 4vw, 4.25rem); color: var(--gold); text-align: center; }
+  h2 { font-size: clamp(1.5rem, 2.2vw, 2rem); color: var(--gold); text-align: center; }
+  .section { padding: 4rem 0; }
+  .tone-1 { background: rgba(10,10,10,0.62); }
+  .tone-2 { background: rgba(17,17,17,0.68); }
+  .tone-3 { background: rgba(26,26,26,0.72); }
 
-  /* HERO CTA */
-  .bf-page a.hero-cta{
-    display:inline-flex!important;align-items:center!important;justify-content:center!important;
-    background:linear-gradient(90deg,var(--gold),#ffd84f)!important;
-    color:var(--black)!important;font-size:1.5rem!important;
-    padding:1.3rem 3rem!important;border-radius:24px!important;
-    box-shadow:0 0 25px rgba(254,207,47,.5),0 0 60px rgba(254,207,47,.2)!important;
-    font-weight:900!important;text-decoration:none!important;
+  /* ===== HERO CTA (avoid theme .btn conflicts) ===== */
+  .bf-page .hero-cta {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: linear-gradient(90deg, var(--gold), #ffd84f) !important;
+    color: var(--black) !important;
+    font-size: 1.45rem !important;
+    padding: 1.2rem 3rem !important;
+    border-radius: 24px !important;
+    font-weight: 900 !important;
+    text-decoration: none !important;
+    border: none !important;
+    box-shadow: 0 0 25px rgba(254,207,47,.45), 0 0 60px rgba(254,207,47,.2) !important;
+  }
+  .bf-page .hero-cta:hover { transform: scale(1.03); box-shadow: 0 0 40px rgba(254,207,47,.6) !important; }
+
+  /* ===== PRODUCT CTA (resists theme overrides) ===== */
+  .bf-page .price-btn {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: .6rem !important;
+    background: linear-gradient(90deg, var(--gold), var(--blue)) !important;
+    color: var(--black) !important;
+    font-weight: 900 !important;
+    font-size: 1.12rem !important;
+    line-height: 1.2 !important;
+    text-transform: uppercase !important;
+    padding: 1.05rem 2.2rem !important;
+    border-radius: 14px !important;
+    border: none !important;
+    text-decoration: none !important;
+    margin: 1rem auto 0 auto !important;
+    width: max-content !important;
+    min-width: 210px !important;
+    box-shadow: 0 0 18px rgba(254,207,47,0.45) !important;
+    cursor: pointer !important;
+  }
+  .bf-page .price-btn:hover { transform: translateY(-2px) scale(1.04); box-shadow: 0 0 30px rgba(254,207,47,.6) !important; }
+  .bf-page .price-btn .price-now {
+    background: var(--black);
+    color: var(--gold);
+    border-radius: 8px;
+    padding: .3rem .7rem;
+    font-weight: 800;
+    font-size: 1.15rem;
+  }
+  .bf-page .price-btn .label { color: #fff; font-weight: 800; letter-spacing: .4px; }
+  /* Mobile: full-width CTAs for easy tapping */
+  @media (max-width: 640px) {
+    .bf-page .price-btn { width: 100% !important; min-width: auto !important; }
   }
 
-  /* PRODUCT BUTTON */
-  .bf-page a.price-btn, .bf-page a.price-btn *{all:unset!important;}
-  .bf-page a.price-btn{
-    display:flex!important;align-items:center!important;justify-content:center!important;
-    gap:.6rem!important;background:linear-gradient(90deg,var(--gold),var(--blue))!important;
-    color:var(--black)!important;font:900 1.15rem/1.2 system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif!important;
-    text-transform:uppercase!important;padding:1.1rem 2.4rem!important;border-radius:14px!important;
-    margin:1.1rem auto 0 auto!important;min-width:220px!important;width:fit-content!important;
-    box-shadow:0 0 18px rgba(254,207,47,.45)!important;cursor:pointer!important;text-decoration:none!important;
-    transition:transform .25s ease,box-shadow .25s ease!important;
+  /* ===== GRIDS ===== */
+  .grid { display: grid; gap: 1.25rem; }
+  .grid-3 { grid-template-columns: repeat(3, 1fr); } /* Hot Offers */
+  .grid-4 { grid-template-columns: repeat(4, 1fr); } /* Super Low Deals */
+  /* Tablet */
+  @media (max-width: 1024px) {
+    .grid-3 { grid-template-columns: repeat(3, 1fr); }
+    .grid-4 { grid-template-columns: repeat(2, 1fr); }
   }
-  .bf-page a.price-btn:hover{transform:translateY(-3px)scale(1.04);box-shadow:0 0 30px rgba(254,207,47,0.6)!important;}
-  .bf-page a.price-btn .price-now{background:var(--black);color:var(--gold);border-radius:8px;padding:.3rem .7rem;font-weight:800;font-size:1.2rem;}
-  .bf-page a.price-btn .label{color:#fff;font-weight:800;letter-spacing:.4px;}
-
-  /* FULL-WIDTH BUTTONS ON MOBILE */
-  @media(max-width:640px){
-    .bf-page a.price-btn{width:100%!important;min-width:auto!important;}
+  /* Mobile */
+  @media (max-width: 640px) {
+    .grid-3 { grid-template-columns: repeat(3, 1fr); } /* 3 across for Hot Offers */
+    .grid-4 { grid-template-columns: repeat(2, 1fr); } /* 2 across for Super Low */
   }
 
-  /* GRID & CARDS */
-  .grid{display:grid;gap:1.25rem;}
-  .grid-3{grid-template-columns:repeat(3,1fr);}
-  .grid-4{grid-template-columns:repeat(4,1fr);}
-  @media(max-width:1024px){.grid-3{grid-template-columns:repeat(3,1fr);} .grid-4{grid-template-columns:repeat(2,1fr);} }
-  @media(max-width:640px){.grid-3{grid-template-columns:repeat(3,1fr);} .grid-4{grid-template-columns:repeat(2,1fr);} }
+  /* TOP PICKS grid (no long single row) */
+  .top-grid { display: grid; gap: 1.25rem; grid-template-columns: repeat(3, 1fr); }
+  @media (max-width: 1024px) { .top-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 640px) { .top-grid { grid-template-columns: 1fr; } }
 
-  .card{background:rgba(26,26,26,0.88);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:transform .2s;}
-  .card:hover{transform:translateY(-3px);}
-  .pimg-wrap{width:100%;aspect-ratio:1/1;background:#0f0f0f;display:flex;align-items:center;justify-content:center;overflow:hidden;}
-  .pimg{width:100%;height:100%;object-fit:contain!important;display:block;}
+  /* ===== Product cards & images ===== */
+  .card {
+    background: rgba(26,26,26,0.88);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform .2s;
+  }
+  .card:hover { transform: translateY(-3px); }
+  .pimg-wrap {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* square to keep rows neat */
+    background: #0f0f0f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .pimg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain !important; /* never crop the product */
+    display: block;
+  }
 
-  .ptitle{font-weight:700;margin:.6rem 0 .2rem;text-align:center;}
-  .vendor{color:var(--muted);font-size:.9rem;margin-bottom:.35rem;text-align:center;}
-  .price{display:flex;justify-content:center;gap:.6rem;align-items:baseline;margin-top:.5rem;}
-  .price-was{color:#96a3b8;text-decoration:line-through;font-size:.95rem;}
-  .price-save{color:#dbe5f0;font-size:.95rem;}
+  .ptitle { font-weight: 700; margin: .6rem 0 .2rem; text-align: center; }
+  .vendor { color: var(--muted); font-size: .9rem; margin-bottom: .35rem; text-align: center; }
+  .price { display: flex; justify-content: center; gap: .6rem; align-items: baseline; margin-top: .5rem; }
+  .price-was { color: #96a3b8; text-decoration: line-through; font-size: .95rem; }
+  .price-save { color: #dbe5f0; font-size: .95rem; }
 
-  /* CIRCLES */
-  .category-circles{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:2rem;justify-items:center;text-align:center;margin-top:2rem;}
-  .circle{display:flex;flex-direction:column;align-items:center;justify-content:center;background:radial-gradient(circle at top,var(--offblack),var(--black));border:2px solid var(--gold);border-radius:50%;width:130px;height:130px;text-decoration:none;box-shadow:0 0 15px rgba(254,207,47,0.15);transition:.3s;}
-  .circle:hover{transform:translateY(-5px);box-shadow:0 0 25px rgba(254,207,47,0.4);}
-  .circle-img{width:60px;height:60px;object-fit:contain;margin-bottom:.5rem;}
-  .circle-label{color:var(--gold);font-weight:700;font-size:.9rem;text-align:center;}
+  /* ===== Category Circles ===== */
+  .category-circles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+    text-align: center;
+    margin-top: 2rem;
+  }
+  .circle {
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    background: radial-gradient(circle at top, var(--offblack), var(--black));
+    border: 2px solid var(--gold); border-radius: 50%;
+    width: 130px; height: 130px; text-decoration: none;
+    box-shadow: 0 0 15px rgba(254,207,47,0.15);
+    transition: transform .3s, box-shadow .3s;
+  }
+  .circle:hover { transform: translateY(-5px); box-shadow: 0 0 25px rgba(254,207,47,0.4); }
+  .circle-img { width: 60px; height: 60px; object-fit: contain; margin-bottom: .5rem; }
+  .circle-label { color: var(--gold); font-weight: 700; font-size: .9rem; }
 
-  /* GUIDES */
-  .guides-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;}
-  .guide-card{background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden;text-align:center;transition:transform .2s;}
-  .guide-card:hover{transform:translateY(-2px);}
-  .guide-img{width:100%;height:180px;object-fit:cover!important;}
-  .guide-title{color:var(--gold);font-weight:700;margin:1rem 0 .5rem;}
+  /* ===== Guides ===== */
+  .guides-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
+  .guide-card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; text-align: center; transition: transform .2s; }
+  .guide-card:hover { transform: translateY(-2px); }
+  .guide-img { width: 100%; height: 180px; object-fit: cover !important; }
+  .guide-title { color: var(--gold); font-weight: 700; margin: 1rem 0 .5rem; }
 
-  .trust{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;color:#cbd5e1;list-style:none;}
-  .urgency{text-align:center;color:var(--gold);font-size:1.25rem;font-weight:700;}
-  .mailer-frame{width:100%;height:600px;border:1px solid #333;border-radius:14px;box-shadow:0 10px 30px rgba(0,0,0,.35);}
+  /* Trust & Mailer */
+  .trust { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; color: #cbd5e1; list-style: none; }
+  .urgency { text-align: center; color: var(--gold); font-size: 1.25rem; font-weight: 700; }
+  .mailer-frame { width: 100%; height: 600px; border: 1px solid #333; border-radius: 14px; box-shadow: 0 10px 30px rgba(0,0,0,.35); }
 
-  .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease;}
-  .reveal.visible{opacity:1;transform:translateY(0);}
+  /* Reveal animation */
+  .reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
 </style>
 
 <div class="bf-page">
-
   <!-- HERO -->
   <section class="section tone-1 reveal">
     <div class="bf-container">
@@ -139,7 +215,7 @@
         {% for item in categories %}
           {% assign parts = item | split: "|" %}
           <a href="{{ parts[1] | strip }}" class="circle reveal">
-            <img src="{{ parts[2] | strip }}" alt="{{ parts[0] | strip }}" class="circle-img">
+            <img src="{{ parts[2] | strip }}" alt="{{ parts[0] | strip }}" class="circle-img" loading="lazy">
             <div class="circle-label">{{ parts[0] | strip }}</div>
           </a>
         {% endfor %}
@@ -157,17 +233,30 @@
           {% assign save_amt = 0 %}
           {% if product.compare_at_price and product.compare_at_price > product.price %}
             {% assign diff = product.compare_at_price | minus: product.price %}
-            {% if diff > 0 %}{% assign has_compare = true %}{% assign save_amt = diff %}{% endif %}
+            {% if diff > 0 %}
+              {% assign has_compare = true %}
+              {% assign save_amt = diff %}
+            {% endif %}
           {% endif %}
           <article class="card reveal">
-            <div class="pimg-wrap">{% if product.featured_image %}<img class="pimg" src="{{ product.featured_image | img_url: '800x' }}" alt="{{ product.featured_image.alt | escape }}">{% endif %}</div>
+            <div class="pimg-wrap">
+              {% if product.featured_image %}
+                <img class="pimg" src="{{ product.featured_image | img_url: '800x' }}" alt="{{ product.title | escape }}">
+              {% endif %}
+            </div>
             <div style="padding:1rem">
               <div class="ptitle">{{ product.title }}</div>
               <div class="vendor">by {{ product.vendor }}</div>
               {% if has_compare %}
-                <div class="price"><span class="price-was">{{ product.compare_at_price | money }}</span><span class="price-save">Save {{ save_amt | money }}</span></div>
+                <div class="price">
+                  <span class="price-was">{{ product.compare_at_price | money }}</span>
+                  <span class="price-save">Save {{ save_amt | money }}</span>
+                </div>
               {% endif %}
-              <a href="{{ product.url }}" class="price-btn"><span class="price-now">{{ product.price | money }}</span><span class="label">Shop Now</span></a>
+              <a href="{{ product.url }}" class="price-btn">
+                <span class="price-now">{{ product.price | money }}</span>
+                <span class="label">Shop Now</span>
+              </a>
             </div>
           </article>
         {% endfor %}
@@ -175,27 +264,40 @@
     </div>
   </section>
 
-  <!-- TOP PICKS -->
+  <!-- TOP BLACK FRIDAY PICKS (GRID, not one long line) -->
   <section class="section tone-2 reveal">
     <div class="bf-container">
       <h2>Top Black Friday Picks</h2>
-      <div class="carousel">
+      <div class="top-grid">
         {% for product in picks_collection.products limit:6 %}
           {% assign has_compare = false %}
           {% assign save_amt = 0 %}
           {% if product.compare_at_price and product.compare_at_price > product.price %}
             {% assign diff = product.compare_at_price | minus: product.price %}
-            {% if diff > 0 %}{% assign has_compare = true %}{% assign save_amt = diff %}{% endif %}
+            {% if diff > 0 %}
+              {% assign has_compare = true %}
+              {% assign save_amt = diff %}
+            {% endif %}
           {% endif %}
           <article class="card reveal">
-            <div class="pimg-wrap">{% if product.featured_image %}<img class="pimg" src="{{ product.featured_image | img_url: '800x' }}" alt="{{ product.featured_image.alt | escape }}">{% endif %}</div>
+            <div class="pimg-wrap">
+              {% if product.featured_image %}
+                <img class="pimg" src="{{ product.featured_image | img_url: '800x' }}" alt="{{ product.title | escape }}">
+              {% endif %}
+            </div>
             <div style="padding:1rem">
               <div class="ptitle">{{ product.title }}</div>
               <div class="vendor">by {{ product.vendor }}</div>
               {% if has_compare %}
-                <div class="price"><span class="price-was">{{ product.compare_at_price | money }}</span><span class="price-save">Save {{ save_amt | money }}</span></div>
+                <div class="price">
+                  <span class="price-was">{{ product.compare_at_price | money }}</span>
+                  <span class="price-save">Save {{ save_amt | money }}</span>
+                </div>
               {% endif %}
-              <a href="{{ product.url }}" class="price-btn"><span class="price-now">{{ product.price | money }}</span><span class="label">Shop Now</span></a>
+              <a href="{{ product.url }}" class="price-btn">
+                <span class="price-now">{{ product.price | money }}</span>
+                <span class="label">Shop Now</span>
+              </a>
             </div>
           </article>
         {% endfor %}
@@ -213,17 +315,30 @@
           {% assign save_amt = 0 %}
           {% if product.compare_at_price and product.compare_at_price > product.price %}
             {% assign diff = product.compare_at_price | minus: product.price %}
-            {% if diff > 0 %}{% assign has_compare = true %}{% assign save_amt = diff %}{% endif %}
+            {% if diff > 0 %}
+              {% assign has_compare = true %}
+              {% assign save_amt = diff %}
+            {% endif %}
           {% endif %}
           <article class="card reveal">
-            <div class="pimg-wrap">{% if product.featured_image %}<img class="pimg" src="{{ product.featured_image | img_url: '800x' }}" alt="{{ product.featured_image.alt | escape }}">{% endif %}</div>
+            <div class="pimg-wrap">
+              {% if product.featured_image %}
+                <img class="pimg" src="{{ product.featured_image | img_url: '800x' }}" alt="{{ product.title | escape }}">
+              {% endif %}
+            </div>
             <div style="padding:1rem">
               <div class="ptitle">{{ product.title }}</div>
               <div class="vendor">by {{ product.vendor }}</div>
               {% if has_compare %}
-                <div class="price"><span class="price-was">{{ product.compare_at_price | money }}</span><span class="price-save">Save {{ save_amt | money }}</span></div>
+                <div class="price">
+                  <span class="price-was">{{ product.compare_at_price | money }}</span>
+                  <span class="price-save">Save {{ save_amt | money }}</span>
+                </div>
               {% endif %}
-              <a href="{{ product.url }}" class="price-btn"><span class="price-now">{{ product.price | money }}</span><span class="label">Shop Now</span></a>
+              <a href="{{ product.url }}" class="price-btn">
+                <span class="price-now">{{ product.price | money }}</span>
+                <span class="label">Shop Now</span>
+              </a>
             </div>
           </article>
         {% endfor %}
@@ -231,40 +346,75 @@
     </div>
   </section>
 
-  <!-- MAILER -->
+  <!-- MAILER / FLIPBOOK -->
   <section class="section tone-3 reveal" style="text-align:center;">
     <div class="bf-container">
       <h2>✉️ See Our Black Friday Mailer</h2>
+      <p>Browse our official Black Friday leaflet digitally — packed with this year’s biggest savings.</p>
       <iframe class="mailer-frame" src="{{ mailer_url }}" title="Black Friday Mailer"></iframe>
-      <div style="margin-top:1.5rem;"><a class="price-btn" href="{{ mailer_url }}" target="_blank" rel="noopener"><span class="price-now">View</span><span class="label">Full Mailer</span></a></div>
+      <div style="margin-top:1.5rem;">
+        <a class="price-btn" href="{{ mailer_url }}" target="_blank" rel="noopener">
+          <span class="price-now">View</span><span class="label">Full Mailer</span>
+        </a>
+      </div>
     </div>
   </section>
 
-  <!-- TRUST & GUIDES -->
-  <section class="section tone-3 reveal"><div class="bf-container"><ul class="trust"><li>🚚 Free Delivery over €50</li><li>🏬 Click & Collect</li><li>🇮🇪 Irish-Owned</li><li>💫 Price Match Promise</li></ul></div></section>
-  <section class="section tone-1 reveal"><div class="bf-container"><p class="urgency">⚡ Deals are going fast — grab yours before they’re gone!</p></div></section>
-
-  <section class="section tone-2 reveal"><div class="bf-container"><h2>Black Friday Buying Guides</h2>
-    <div class="guides-grid">
-      {% for item in guides %}
-        {% assign g = item | split: "|" %}
-        <div class="guide-card reveal"><img class="guide-img" src="{{ g[2] | strip }}" alt="{{ g[0] | strip }}"><div class="guide-title">{{ g[0] | strip }}</div><a href="{{ g[1] | strip }}" class="price-btn"><span class="label">Read Guide</span></a></div>
-      {% endfor %}
+  <!-- TRUST + URGENCY -->
+  <section class="section tone-3 reveal" style="padding-top:2rem;padding-bottom:2rem;">
+    <div class="bf-container">
+      <ul class="trust">
+        <li>🚚 Free Delivery over €50</li>
+        <li>🏬 Click & Collect</li>
+        <li>🇮🇪 Irish-Owned</li>
+        <li>💫 Price Match Promise</li>
+      </ul>
     </div>
-  </div></section>
+  </section>
+  <section class="section tone-1 reveal" style="padding-top:1rem;padding-bottom:3rem;">
+    <div class="bf-container">
+      <p class="urgency">⚡ Deals are going fast — grab yours before they’re gone!</p>
+    </div>
+  </section>
 
+  <!-- BUYING GUIDES -->
+  <section class="section tone-2 reveal">
+    <div class="bf-container">
+      <h2>Black Friday Buying Guides</h2>
+      <div class="guides-grid">
+        {% for item in guides %}
+          {% assign g = item | split: "|" %}
+          <div class="guide-card reveal">
+            <img class="guide-img" src="{{ g[2] | strip }}" alt="{{ g[0] | strip }}">
+            <div class="guide-title">{{ g[0] | strip }}</div>
+            <a href="{{ g[1] | strip }}" class="price-btn"><span class="label">Read Guide</span></a>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
 </div>
 
 <script>
+/* Fade-in on scroll */
 (function(){
-  var els=document.querySelectorAll('.reveal');
-  if(!('IntersectionObserver' in window)||!els.length){els.forEach(el=>el.classList.add('visible'));return;}
-  var io=new IntersectionObserver(entries=>{
-    entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}});
-  },{threshold:0.1});
-  els.forEach(el=>io.observe(el));
+  var els = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window) || !els.length) {
+    els.forEach(function(el){ el.classList.add('visible'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  els.forEach(function(el){ io.observe(el); });
 })();
 </script>
+
 
 
 
