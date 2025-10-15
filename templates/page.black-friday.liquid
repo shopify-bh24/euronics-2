@@ -1,3 +1,44 @@
+<style>
+.bf-banner {
+position: sticky;
+top: 0;
+width: 100%;
+background: linear-gradient(90deg, #FECF2F, #FFD84F);
+color: #000;
+text-align: center;
+font-weight: 900;
+font-size: 1.1rem;
+padding: 0.75rem 1rem;
+z-index: 1000;
+letter-spacing: 0.5px;
+box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+.bf-banner span {
+display: inline-block;
+animation: scrollText 12s linear infinite;
+white-space: nowrap;
+}
+@keyframes scrollText {
+0% { transform: translateX(100%); }
+100% { transform: translateX(-100%); }
+}
+</style>
+
+
+<div class="bf-banner">
+<span>⚡ Limited Black Friday Deals — While Stocks Last ⚡</span>
+</div>
+
+
+{% assign hot_collection = collections['black-friday-hot-offers'] %}
+{% assign picks_collection = collections['black-friday-picks'] %}
+{% assign low_collection = collections['black-friday-super-low'] %}
+{% assign mailer_url = page.metafields.custom.mailer_url.value | default: 'https://euronics.ie/mailer/black-friday-2025.pdf#toolbar=0' %}
+{% assign guides =
+"TV Buying Guide|/pages/tv-buying-guide|https://via.placeholder.com/400x250?text=TV+Guide,
+Coffee Machine Buying Guide|/pages/coffee-machine-buying-guide|https://via.placeholder.com/400x250?text=Coffee+Guide,
+Laptop Buying Guide|/pages/laptop-buying-guide|https://via.placeholder.com/400x250?text=Laptop+Guide,
+Washing Machine Buying Guide|/pages/washing-machine-buying-guide|https://via.placeholder.com/400x250?text=Laundry+Guide" | split: "," %}
 {% assign hot_collection = collections['black-friday-hot-offers'] %}
 {% assign picks_collection = collections['black-friday-picks'] %}
 {% assign low_collection = collections['black-friday-super-low'] %}
