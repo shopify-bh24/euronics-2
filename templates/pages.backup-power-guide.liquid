@@ -1,0 +1,328 @@
+{% comment %}
+  BACKUP POWER BUYING GUIDE - Euronics.ie
+  Full landing page section for Shopify Template integration.
+{% endcomment %}
+
+<section id="backup-power-guide">
+  <style>
+    #backup-power-guide { background:#f9fafb;color:#111827;font-size:1rem;line-height:1.6; }
+    #backup-power-guide .container { max-width:1200px;margin:0 auto;padding:0 1.5rem; }
+    #backup-power-guide h2,h3,h4 { text-align:center;font-weight:700;color:inherit; }
+    #backup-power-guide .hero {
+      position:relative;height:50vh;background-size:cover;background-position:center;
+      display:flex;align-items:center;justify-content:center;color:#fff;text-align:center;
+    }
+    #backup-power-guide .overlay {
+      background:rgba(0,0,0,0.55);padding:2rem;border-radius:1rem;max-width:700px;margin:0 1rem;
+    }
+    #backup-power-guide .btn {
+      display:inline-block;background:#1e40af;color:#fff !important;padding:.75rem 1.5rem;
+      border-radius:.5rem;text-decoration:none;font-weight:600;transition:background .3s;
+    }
+    #backup-power-guide .btn:hover { background:#1d4ed8; }
+    #backup-power-guide .section { padding:4rem 0; }
+    #backup-power-guide .grid { display:grid;gap:2rem; }
+    @media(min-width:768px){
+      #backup-power-guide .grid-2{grid-template-columns:repeat(2,1fr);}
+      #backup-power-guide .grid-3{grid-template-columns:repeat(3,1fr);}
+      #backup-power-guide .grid-4{grid-template-columns:repeat(4,1fr);}
+    }
+    #backup-power-guide .card{
+      background:#fff;border-radius:1rem;box-shadow:0 2px 8px rgba(0,0,0,.05);
+      padding:1.5rem;text-align:center;transition:transform .3s;
+    }
+    #backup-power-guide .card:hover{transform:translateY(-5px);}
+    #backup-power-guide img{width:100%;height:auto;border-radius:.75rem;margin-bottom:1rem;}
+  </style>
+
+  <!-- HERO SECTION -->
+  <div class="hero" style="background-image:url('https://cdn.shopify.com/s/files/1/0550/5807/1748/files/backup_power_hero.jpg?v=1760375001');">
+    <div class="overlay">
+      <h2>Backup Power Buying Guide</h2>
+      <p style="margin-bottom:1.5rem;">Stay powered — anywhere, anytime</p>
+      <a href="/collections/backup-power-stations" class="btn">Shop Backup Power</a>
+    </div>
+  </div>
+
+  <!-- WHY BACKUP POWER -->
+  <div class="section bg-white">
+    <div class="container">
+      <h3>Why Choose Backup Power?</h3>
+      <div class="grid grid-4">
+        <div class="card">
+          <img src="https://cdn.shopify.com/s/files/1/0550/5807/1748/files/outage_icon.png?v=1760375301" alt="Power Outages"/>
+          <h4>Power Outages</h4>
+          <p>Keep your essentials running — from lights and Wi-Fi to fridges — when the grid goes down.</p>
+        </div>
+        <div class="card">
+          <img src="https://cdn.shopify.com/s/files/1/0550/5807/1748/files/outdoor_icon.png?v=1760375401" alt="Outdoor & Camping"/>
+          <h4>Outdoor & Camping</h4>
+          <p>Stay powered off-grid with lightweight, silent portable stations ideal for camping or travel.</p>
+        </div>
+        <div class="card">
+          <img src="https://cdn.shopify.com/s/files/1/0550/5807/1748/files/work_icon.png?v=1760375501" alt="Work & Home Office"/>
+          <h4>Work & Home Office</h4>
+          <p>Prevent data loss or downtime — keep laptops and routers powered during outages.</p>
+        </div>
+        <div class="card">
+          <img src="https://cdn.shopify.com/s/files/1/0550/5807/1748/files/emergency_icon.png?v=1760375601" alt="Emergency Backup"/>
+          <h4>Emergency Backup</h4>
+          <p>Be ready for the unexpected — power communication devices and medical essentials anytime.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FEATURED PRODUCTS -->
+  <div class="section bg-white">
+    <div class="container">
+      <h3>Featured Backup Power Stations</h3>
+      {% assign bp = collections['backup-power-stations'] %}
+      {% if bp and bp.products.size > 0 %}
+        <div class="grid grid-3">
+          {% for product in bp.products limit:3 %}
+            <div class="card">
+              <a href="{{ product.url }}">
+                <img src="{{ product.featured_image | img_url: '500x500' }}" alt="{{ product.title | escape }}" />
+              </a>
+              <h4>{{ product.title }}</h4>
+              {% if product.price %}
+                <p style="font-weight:600;color:#1e40af;">{{ product.price | money }}</p>
+              {% endif %}
+              <a href="{{ product.url }}" class="btn">Shop Now</a>
+            </div>
+          {% endfor %}
+        </div>
+      {% else %}
+        <p style="text-align:center;color:#6b7280;">No backup power stations found in this collection.</p>
+      {% endif %}
+    </div>
+  </div>
+
+  <!-- BRAND CAROUSEL -->
+  <div class="section bg-gray-50">
+    <div class="container">
+      <h3>Trusted Backup Power Brands</h3>
+      <p style="max-width:700px;margin:1rem auto 2rem;text-align:center;color:#4b5563;">
+        Euronics partners with the world’s most reliable portable power brands — engineered for performance, safety, and durability.
+      </p>
+
+      <div class="brand-carousel">
+        <div class="brand-track">
+          <img src="https://cdn.shopify.com/s/files/1/0550/5807/1748/files/ecoflow_logo.png?v=1760380101" alt="EcoFlow" />
+          <img src="https://cdn.shopify.com/s/files/1/0550/5807/1748/files/anker_logo.png?v=1760380101" alt="Anker" />
+          <img src="https://cdn.shopify.com/s/files/1/0550/5807/1748/files/bluetti_logo.png?v=1760380101" alt="Bluetti" />
+          <img src="https://cdn.shopify.com/s/files/1/0550/5807/1748/files/poweroak_logo.png?v=1760380101" alt="PowerOak" />
+          <img src="https://cdn.shopify.com/s/files/1/0550/5807/1748/files/goalzero_logo.png?v=1760380101" alt="Goal Zero" />
+          <img src="https://cdn.shopify.com/s/files/1/0550/5807/1748/files/jackery_logo.png?v=1760380101" alt="Jackery" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    #backup-power-guide .brand-carousel { overflow:hidden;position:relative; }
+    #backup-power-guide .brand-track {
+      display:flex;gap:3rem;align-items:center;justify-content:space-between;
+      animation:scrollBrands 25s linear infinite;padding:1rem 0;
+    }
+    #backup-power-guide .brand-track img {
+      height:60px;width:auto;filter:grayscale(100%);opacity:0.9;transition:all 0.3s ease;
+    }
+    #backup-power-guide .brand-track img:hover { filter:none;opacity:1;transform:scale(1.05); }
+    @keyframes scrollBrands { 0% {transform:translateX(0);} 100% {transform:translateX(-50%);} }
+    @media (max-width:768px){ #backup-power-guide .brand-track{gap:2rem;animation:none;overflow-x:auto;scroll-behavior:smooth;} #backup-power-guide .brand-track img{height:50px;} }
+  </style>
+
+  <!-- BACKUP POWER TIPS -->
+  <div class="section bg-gray-50">
+    <div class="container">
+      <h3>Backup Power Tips & Buying Advice</h3>
+      <p style="max-width:700px;margin:1.5rem auto 3rem;text-align:center;color:#4b5563;">
+        Learn how to choose the right power station, understand battery capacity, and stay powered during outages or off-grid adventures.
+      </p>
+
+      <div class="grid grid-3">
+        <div class="card" style="text-align:left;">
+          <img src="https://cdn.shopify.com/s/files/1/0550/5807/1748/files/powerstation_tip_placeholder.jpg?v=1760382001" alt="How to Choose the Right Power Station" style="border-radius:1rem;margin-bottom:1rem;" />
+          <h4>How to Choose the Right Power Station</h4>
+          <p style="color:#4b5563;margin-bottom:1rem;">Discover what to look for when picking a backup power unit — from capacity and output to portability and recharge speed.</p>
+          <a href="#" class="btn" target="_blank" rel="noopener noreferrer">Read More</a>
+        </div>
+
+        <div class="card" style="text-align:left;">
+          <img src="https://cdn.shopify.com/s/files/1/0550/5807/1748/files/offgrid_tip_placeholder.jpg?v=1760382002" alt="Staying Powered Off-Grid" style="border-radius:1rem;margin-bottom:1rem;" />
+          <h4>Staying Powered Off-Grid</h4>
+          <p style="color:#4b5563;margin-bottom:1rem;">Learn how to plan your off-grid setup for camping or emergencies using solar panels and portable power banks.</p>
+          <a href="#" class="btn" target="_blank" rel="noopener noreferrer">Read More</a>
+        </div>
+
+        <div class="card" style="text-align:left;">
+          <img src="https://cdn.shopify.com/s/files/1/0550/5807/1748/files/battery_capacity_tip_placeholder.jpg?v=1760382003" alt="Understanding Battery Capacity" style="border-radius:1rem;margin-bottom:1rem;" />
+          <h4>Understanding Battery Capacity</h4>
+          <p style="color:#4b5563;margin-bottom:1rem;">Get to know watt-hours, output ports, and battery life — so you always pick the right power station for your needs.</p>
+          <a href="#" class="btn" target="_blank" rel="noopener noreferrer">Read More</a>
+        </div>
+      </div>
+
+      <div style="text-align:center;margin-top:3rem;">
+        <a href="/blogs/buying-guides" class="btn" style="min-width:200px;display:inline-block;">See All Buying Guides</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- UNDERSTANDING BACKUP POWER -->
+  <div class="section bg-white">
+    <div class="container">
+      <h3>Understanding Backup Power</h3>
+      <p style="max-width:750px;margin:1.5rem auto 3rem;text-align:center;color:#4b5563;">
+        Whether you're preparing for power cuts, working remotely, or heading outdoors — understanding how portable power stations work helps you choose confidently.
+      </p>
+
+      <div class="grid grid-4">
+        <div class="info-card">
+          <img src="https://cdn.shopify.com/s/files/1/0550/5807/1748/files/icon_power_useful.png?v=1760385001" alt="What It Does" class="info-icon" />
+          <h4>What It Does</h4>
+          <p>Keeps your essential devices — from phones and routers to fridges and TVs — powered when the grid fails.</p>
+        </div>
+        <div class="info-card">
+          <img src="https://cdn.shopify.com/s/files/1/0550/5807/1748/files/icon_benefits.png?v=1760385002" alt="Key Benefits" class="info-icon" />
+          <h4>Key Benefits</h4>
+          <p>Reliable backup power that’s portable, quiet, and eco-friendly — perfect for homes, holidays, and workspaces.</p>
+        </div>
+        <div class="info-card">
+          <img src="https://cdn.shopify.com/s/files/1/0550/5807/1748/files/icon_features.png?v=1760385003" alt="Features Explained" class="info-icon" />
+          <h4>Features Explained</h4>
+          <p>Understand watt-hours (Wh), inverter output, and USB/AC ports — to match power stations to your devices.</p>
+        </div>
+        <div class="info-card">
+          <img src="https://cdn.shopify.com/s/files/1/0550/5807/1748/files/icon_recharge.png?v=1760385004" alt="Recharge Options" class="info-icon" />
+          <h4>Recharge Options</h4>
+          <p>Recharge via solar panels, wall sockets, or your car — giving you flexibility wherever you are.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHY SHOP BACKUP POWER AT EURONICS -->
+  <div class="section bg-blue-50" style="background:#f0f4ff;">
+    <div class="container">
+      <h3 style="text-align:center;margin-bottom:2rem;">Why Shop Backup Power at Euronics</h3>
+      <div class="grid trust-grid">
+        <div class="trust-card">
+          <img src="https://cdn.shopify.com/s/files/1/0550/5807/1748/files/ireland_icon_06b9a0ba-1367-4b4b-bb86-913dc8cdbb46.png?v=1760369602" alt="Irish Owned" class="trust-icon" />
+          <h4>Irish Owned</h4>
+          <p>Proudly Irish owned, supporting local communities and independent retailers across Ireland.</p>
+        </div>
+        <div class="trust-card">
+          <img src="https://cdn.shopify.com/s/files/1/0550/5807/1748/files/support_icon_e579b36d-678a-4de9-97b8-46be5cf9a41d.png?v=1760369602" alt="Expert Local Support" class="trust-icon" />
+          <h4>Expert Local Support</h4>
+          <p>Our expert team helps you choose the right backup power solution — whether for home, business, or adventure.</p>
+        </div>
+        <div class="trust-card">
+          <img src="https://cdn.shopify.com/s/files/1/0550/5807/1748/files/trust_icon_90e70faa-583d-41e0-8eaa-4affe5f2a827.png?v=1760369602" alt="Trusted Retailer" class="trust-icon" />
+          <h4>Trusted Retailer</h4>
+          <p>Official retailer for leading global power brands — with full warranty and support from trusted Irish stores.</p>
+        </div>
+        <div class="trust-card">
+          <img src="https://cdn.shopify.com/s/files/1/0550/5807/1748/files/nationwide_icon_843c1043-55a4-488a-8ba1-b80049bc005c.png?v=1760369602" alt="Nationwide Network" class="trust-icon" />
+          <h4>Nationwide Network</h4>
+          <p>Over 25 Euronics stores across Ireland, offering expert advice, in-store pickup, and after-sales service.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FINAL CTA BANNER -->
+  <div class="cta-banner" style="background-image:url('https://cdn.shopify.com/s/files/1/0550/5807/1748/files/backup_power_cta_banner.jpg?v=1760386201');">
+    <div class="cta-overlay">
+      <div class="cta-content">
+        <h2>Stay Powered with Euronics</h2>
+        <p>Discover Ireland’s best range of backup power stations — designed to keep your home, work, and adventures running smoothly.</p>
+        <a href="/collections/backup-power-stations" class="btn">Shop Backup Power</a>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    /* CTA Banner */
+    #backup-power-guide .cta-banner {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+      height: 50vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+    }
+
+    #backup-power-guide .cta-overlay {
+      background: rgba(0, 0, 0, 0.5);
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #backup-power-guide .cta-content {
+      text-align: center;
+      max-width: 700px;
+      padding: 2rem;
+    }
+
+    #backup-power-guide .cta-content h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    #backup-power-guide .cta-content p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    #backup-power-guide .cta-content .btn {
+      background: #1e40af;
+      color: #fff !important;
+      padding: 0.75rem 1.75rem;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    #backup-power-guide .cta-content .btn:hover {
+      background: #1d4ed8;
+    }
+
+    @media (max-width: 768px) {
+      #backup-power-guide .cta-content h2 {
+        font-size: 1.75rem;
+      }
+      #backup-power-guide .cta-content p {
+        font-size: 1rem;
+      }
+      #backup-power-guide .cta-banner {
+        height: 60vh;
+      }
+    }
+
+    /* Shared utilities for info + trust cards (ensure present) */
+    #backup-power-guide .info-card { background: #f9fafb; border-radius: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.05); padding: 2rem 1.5rem; transition: transform .3s ease; text-align: center; }
+    #backup-power-guide .info-card:hover { transform: translateY(-5px); }
+    #backup-power-guide .info-icon { width: 60px; height: auto; margin-bottom: 1rem; }
+
+    #backup-power-guide .trust-grid { display: grid; gap: 2rem; text-align: center; }
+    @media (min-width: 768px) { #backup-power-guide .trust-grid { grid-template-columns: repeat(4, 1fr); } }
+    #backup-power-guide .trust-card { background: #ffffff; border-radius: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.05); padding: 2rem 1.5rem; transition: transform .3s ease, box-shadow .3s ease; }
+    #backup-power-guide .trust-card:hover { transform: translateY(-5px); box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+    #backup-power-guide .trust-card h4 { font-size: 1.2rem; font-weight: 600; color: #1e40af; margin-bottom: .5rem; }
+    #backup-power-guide .trust-card p { font-size: 1rem; color: #4b5563; line-height: 1.6; }
+    #backup-power-guide .trust-icon { width: 60px; height: auto; margin-bottom: 1rem; display: inline-block; }
+  </style>
+</section>
+
