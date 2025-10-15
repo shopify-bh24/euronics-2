@@ -26,15 +26,13 @@
     font-family: system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
     color: var(--text);
     line-height: 1.5;
-
-    /* Background stack: pattern (top) + dark overlay + your image (bottom) */
     background-image:
       repeating-linear-gradient(45deg, rgba(255,255,255,0.06) 0, rgba(255,255,255,0.06) 1px, transparent 1px, transparent 20px),
       linear-gradient(0deg, rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
       url('https://cdn.shopify.com/s/files/1/0550/5807/1748/files/Untitled_design_37.png?v=1760479194');
     background-size: auto, cover, cover;
-    background-position: center, center, center;
-    background-attachment: fixed, fixed, fixed;
+    background-position: center;
+    background-attachment: fixed;
     background-color: var(--black);
   }
 
@@ -98,8 +96,18 @@
   .grid { display: grid; gap: 1.25rem; }
   .grid-3 { grid-template-columns: repeat(3, 1fr); }
   .grid-4 { grid-template-columns: repeat(4, 1fr); }
-  @media(max-width:1024px){ .grid-3, .grid-4 { grid-template-columns: repeat(2, 1fr); } }
-  @media(max-width:640px){ .grid-3, .grid-4 { grid-template-columns: 1fr; } }
+
+  /* Tablet */
+  @media(max-width:1024px){
+    .grid-3 { grid-template-columns: repeat(3, 1fr); }
+    .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  /* Mobile */
+  @media(max-width:640px){
+    .grid-3 { grid-template-columns: repeat(3, 1fr); }
+    .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  }
 
   .card {
     background: var(--card);
@@ -110,10 +118,8 @@
   }
   .card:hover { transform: translateY(-2px); }
 
-  /* Image fix */
   .pimg-wrap { width: 100%; aspect-ratio: 4 / 3; background: #0f0f0f; display: flex; align-items: center; justify-content: center; overflow: hidden; }
   .pimg { max-width: 100%; max-height: 100%; object-fit: contain; display: block; }
-  @media(max-width:480px){ .pimg-wrap { aspect-ratio: 1 / 1; } }
 
   .ptitle { font-weight: 700; margin: .6rem 0 .2rem; text-align: center; }
   .vendor { color: var(--muted); font-size: .9rem; margin-bottom: .35rem; text-align: center; }
@@ -159,7 +165,6 @@
   .guide-card:hover { transform: translateY(-2px); }
   .guide-img { width: 100%; height: 180px; object-fit: cover; }
   .guide-title { color: var(--gold); font-weight: 700; margin: 1rem 0 0.5rem; }
-  .guide-card a.btn { margin-bottom: 1rem; display:inline-block; }
 
   .trust { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; color: #cbd5e1; list-style: none; }
   .urgency { text-align: center; color: var(--gold); font-size: 1.25rem; font-weight: 700; }
@@ -381,12 +386,11 @@
 </div>
 
 <script>
-/* IntersectionObserver to reveal elements on scroll */
+/* IntersectionObserver for fade-in scroll effect */
 (function(){
   var els = document.querySelectorAll('.reveal');
   if (!('IntersectionObserver' in window) || !els.length) {
-    // Fallback: make all visible
-    els.forEach(function(el){ el.classList.add('visible'); });
+    els.forEach(el => el.classList.add('visible'));
     return;
   }
   var io = new IntersectionObserver(function(entries){
@@ -397,9 +401,10 @@
       }
     });
   }, { rootMargin: '0px 0px -10% 0px', threshold: 0.1 });
-  els.forEach(function(el){ io.observe(el); });
+  els.forEach(el => io.observe(el));
 })();
 </script>
+
 
 
 
