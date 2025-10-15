@@ -22,15 +22,6 @@ white-space: nowrap;
 0% { transform: translateX(100%); }
 100% { transform: translateX(-100%); }
 }
-/* Remove top gap between menu and page */
-.template-page, .main-content, .page-width,
-header, .shopify-section-header-sticky {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
-.section.hero {
-  padding-top: 0 !important;
-}
 
 </style>
 
@@ -219,6 +210,16 @@ Washing Machine Buying Guide|/pages/washing-machine-buying-guide|https://via.pla
   /* ===== Scroll reveal animation ===== */
   .reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
   .reveal.visible { opacity: 1; transform: translateY(0); }
+  /* Remove top gap between menu and page */
+.template-page, .main-content, .page-width,
+header, .shopify-section-header-sticky {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+.section.hero {
+  padding-top: 0 !important;
+}
+
 </style>
 
 <div class="bf-page">
