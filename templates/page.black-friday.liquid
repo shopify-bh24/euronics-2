@@ -16,146 +16,139 @@
     --border:#222222;
     --gold:#FECF2F;
     --blue:#005EB8;
-    --blue-dk:#004b91;
     --text:#F5F5F5;
     --muted:#9CA3AF;
   }
 
   .bf-page * { box-sizing: border-box; }
   .bf-page {
-    font-family: system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
+    font-family: system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;
     color: var(--text);
+    line-height: 1.5;
     background-image:
-      repeating-linear-gradient(45deg, rgba(255,255,255,0.06) 0, rgba(255,255,255,0.06) 1px, transparent 1px, transparent 20px),
-      linear-gradient(0deg, rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+      repeating-linear-gradient(45deg,rgba(255,255,255,0.06)0,rgba(255,255,255,0.06)1px,transparent 1px,transparent 20px),
+      linear-gradient(0deg,rgba(0,0,0,0.55),rgba(0,0,0,0.55)),
       url('https://cdn.shopify.com/s/files/1/0550/5807/1748/files/Untitled_design_37.png?v=1760479194');
-    background-size: auto, cover, cover;
-    background-position: center;
-    background-attachment: fixed;
+    background-size: auto,cover,cover;
+    background-position:center;
+    background-attachment:fixed;
   }
 
-  .bf-container { max-width: 1200px; margin: 0 auto; padding: 0 1.25rem; }
-  h1,h2 { font-weight: 800; letter-spacing: -.02em; }
-  h1 { font-size: clamp(2.5rem, 4vw, 4.25rem); color: var(--gold); text-align: center; }
-  h2 { font-size: clamp(1.5rem, 2.2vw, 2rem); color: var(--gold); text-align:center; }
-  .section { padding: 4rem 0; }
+  .bf-container{max-width:1200px;margin:0 auto;padding:0 1.25rem;}
+  h1,h2{font-weight:800;letter-spacing:-.02em;margin-bottom:.5rem;}
+  h1{font-size:clamp(2.5rem,4vw,4.25rem);color:var(--gold);text-align:center;}
+  h2{font-size:clamp(1.5rem,2.2vw,2rem);color:var(--gold);text-align:center;}
+  .section{padding:4rem 0;}
 
-  /* ===== Buttons ===== */
-  .bf-page .price-btn {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 0.6rem !important;
-    background: linear-gradient(90deg, var(--gold), var(--blue)) !important;
-    color: var(--black) !important;
-    font-weight: 900 !important;
-    font-size: 1.15rem !important;
-    line-height: 1.2 !important;
-    text-transform: uppercase !important;
-    padding: 1.1rem 2.5rem !important;
-    border-radius: 14px !important;
-    box-shadow: 0 0 18px rgba(254,207,47,0.4) !important;
-    text-decoration: none !important;
-    width: fit-content !important;
-    margin: 1.2rem auto 0 auto !important;
-    border: none !important;
-    cursor: pointer !important;
-  }
-  .bf-page .price-btn:hover {
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 0 30px rgba(254,207,47,0.6) !important;
-  }
-  .bf-page .price-btn .price-now {
-    background: var(--black);
-    color: var(--gold);
-    border-radius: 8px;
-    padding: 0.3rem 0.7rem;
-    font-weight: 800;
-    font-size: 1.2rem;
-  }
-  .bf-page .price-btn .label {
-    color: #fff;
-    font-weight: 800;
-    letter-spacing: .4px;
+  /* HERO CTA */
+  .bf-page a.hero-cta{
+    display:inline-flex!important;align-items:center!important;justify-content:center!important;
+    background:linear-gradient(90deg,var(--gold),#ffd84f)!important;
+    color:var(--black)!important;font-size:1.5rem!important;
+    padding:1.3rem 3rem!important;border-radius:24px!important;
+    box-shadow:0 0 25px rgba(254,207,47,.5),0 0 60px rgba(254,207,47,.2)!important;
+    font-weight:900!important;text-decoration:none!important;
   }
 
-  .btn.hero-cta {
-    display: inline-flex !important;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(90deg, var(--gold), #ffd84f) !important;
-    color: var(--black) !important;
-    font-size: 1.5rem !important;
-    padding: 1.3rem 3rem !important;
-    border-radius: 24px !important;
-    box-shadow: 0 0 25px rgba(254,207,47,.5);
-    font-weight: 900 !important;
-    text-decoration: none !important;
+  /* PRODUCT BUTTON */
+  .bf-page a.price-btn, .bf-page a.price-btn *{all:unset!important;}
+  .bf-page a.price-btn{
+    display:flex!important;align-items:center!important;justify-content:center!important;
+    gap:.6rem!important;background:linear-gradient(90deg,var(--gold),var(--blue))!important;
+    color:var(--black)!important;font:900 1.15rem/1.2 system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif!important;
+    text-transform:uppercase!important;padding:1.1rem 2.4rem!important;border-radius:14px!important;
+    margin:1.1rem auto 0 auto!important;min-width:220px!important;width:fit-content!important;
+    box-shadow:0 0 18px rgba(254,207,47,.45)!important;cursor:pointer!important;text-decoration:none!important;
+    transition:transform .25s ease,box-shadow .25s ease!important;
   }
+  .bf-page a.price-btn:hover{transform:translateY(-3px)scale(1.04);box-shadow:0 0 30px rgba(254,207,47,0.6)!important;}
+  .bf-page a.price-btn .price-now{background:var(--black);color:var(--gold);border-radius:8px;padding:.3rem .7rem;font-weight:800;font-size:1.2rem;}
+  .bf-page a.price-btn .label{color:#fff;font-weight:800;letter-spacing:.4px;}
 
-  /* ===== Grid & Cards ===== */
-  .grid { display: grid; gap: 1.25rem; }
-  .grid-3 { grid-template-columns: repeat(3, 1fr); }
-  .grid-4 { grid-template-columns: repeat(4, 1fr); }
-  @media(max-width:1024px){
-    .grid-3 { grid-template-columns: repeat(3, 1fr); }
-    .grid-4 { grid-template-columns: repeat(2, 1fr); }
-  }
+  /* FULL-WIDTH BUTTONS ON MOBILE */
   @media(max-width:640px){
-    .grid-3 { grid-template-columns: repeat(3, 1fr); }
-    .grid-4 { grid-template-columns: repeat(2, 1fr); }
+    .bf-page a.price-btn{width:100%!important;min-width:auto!important;}
   }
 
-  .card {
-    background: rgba(26,26,26,0.85);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    overflow: hidden;
-    transition: transform .2s;
-  }
-  .card:hover { transform: translateY(-3px); }
+  /* GRID & CARDS */
+  .grid{display:grid;gap:1.25rem;}
+  .grid-3{grid-template-columns:repeat(3,1fr);}
+  .grid-4{grid-template-columns:repeat(4,1fr);}
+  @media(max-width:1024px){.grid-3{grid-template-columns:repeat(3,1fr);} .grid-4{grid-template-columns:repeat(2,1fr);} }
+  @media(max-width:640px){.grid-3{grid-template-columns:repeat(3,1fr);} .grid-4{grid-template-columns:repeat(2,1fr);} }
 
-  .pimg-wrap {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    background: #0f0f0f;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-  }
-  .pimg {
-    width: 100%;
-    height: 100%;
-    object-fit: contain !important;
-    display: block;
-  }
+  .card{background:rgba(26,26,26,0.88);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:transform .2s;}
+  .card:hover{transform:translateY(-3px);}
+  .pimg-wrap{width:100%;aspect-ratio:1/1;background:#0f0f0f;display:flex;align-items:center;justify-content:center;overflow:hidden;}
+  .pimg{width:100%;height:100%;object-fit:contain!important;display:block;}
 
-  .ptitle { font-weight: 700; margin: .6rem 0 .2rem; text-align: center; }
-  .vendor { color: var(--muted); font-size: .9rem; margin-bottom: .35rem; text-align: center; }
-  .price { display: flex; justify-content: center; gap: .6rem; margin-top: .5rem; }
-  .price-was { color: #96a3b8; text-decoration: line-through; font-size: .95rem; }
-  .price-save { color: #dbe5f0; font-size: .95rem; }
+  .ptitle{font-weight:700;margin:.6rem 0 .2rem;text-align:center;}
+  .vendor{color:var(--muted);font-size:.9rem;margin-bottom:.35rem;text-align:center;}
+  .price{display:flex;justify-content:center;gap:.6rem;align-items:baseline;margin-top:.5rem;}
+  .price-was{color:#96a3b8;text-decoration:line-through;font-size:.95rem;}
+  .price-save{color:#dbe5f0;font-size:.95rem;}
 
-  .trust { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; color: #cbd5e1; list-style: none; }
-  .urgency { text-align: center; color: var(--gold); font-size: 1.25rem; font-weight: 700; }
-  .mailer-frame { width: 100%; height: 600px; border: 1px solid #333; border-radius: 14px; }
+  /* CIRCLES */
+  .category-circles{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:2rem;justify-items:center;text-align:center;margin-top:2rem;}
+  .circle{display:flex;flex-direction:column;align-items:center;justify-content:center;background:radial-gradient(circle at top,var(--offblack),var(--black));border:2px solid var(--gold);border-radius:50%;width:130px;height:130px;text-decoration:none;box-shadow:0 0 15px rgba(254,207,47,0.15);transition:.3s;}
+  .circle:hover{transform:translateY(-5px);box-shadow:0 0 25px rgba(254,207,47,0.4);}
+  .circle-img{width:60px;height:60px;object-fit:contain;margin-bottom:.5rem;}
+  .circle-label{color:var(--gold);font-weight:700;font-size:.9rem;text-align:center;}
 
-  .reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
-  .reveal.visible { opacity: 1; transform: translateY(0); }
+  /* GUIDES */
+  .guides-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;}
+  .guide-card{background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden;text-align:center;transition:transform .2s;}
+  .guide-card:hover{transform:translateY(-2px);}
+  .guide-img{width:100%;height:180px;object-fit:cover!important;}
+  .guide-title{color:var(--gold);font-weight:700;margin:1rem 0 .5rem;}
+
+  .trust{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;color:#cbd5e1;list-style:none;}
+  .urgency{text-align:center;color:var(--gold);font-size:1.25rem;font-weight:700;}
+  .mailer-frame{width:100%;height:600px;border:1px solid #333;border-radius:14px;box-shadow:0 10px 30px rgba(0,0,0,.35);}
+
+  .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease;}
+  .reveal.visible{opacity:1;transform:translateY(0);}
 </style>
 
 <div class="bf-page">
-  <section class="section reveal">
+
+  <!-- HERO -->
+  <section class="section tone-1 reveal">
     <div class="bf-container">
       <h1>Black Friday Deals 2025</h1>
       <div style="text-align:center;margin-top:1.5rem;">
-        <a href="/collections/black-friday" class="btn hero-cta">Shop All Deals</a>
+        <a href="/collections/black-friday" class="hero-cta">Shop All Deals</a>
       </div>
     </div>
   </section>
 
-  <section class="section reveal">
+  <!-- CATEGORY CIRCLES -->
+  <section class="section tone-1 reveal">
+    <div class="bf-container">
+      <h2>Black Friday Offers On</h2>
+      <div class="category-circles">
+        {% assign categories = 
+          "TV & Audio|/collections/black-friday-tv-audio|https://via.placeholder.com/60x60?text=TV,
+           Tech|/collections/black-friday-tech|https://via.placeholder.com/60x60?text=Tech,
+           Coffee Machines|/collections/black-friday-coffee-machines|https://via.placeholder.com/60x60?text=Coffee,
+           Laundry|/collections/black-friday-laundry|https://via.placeholder.com/60x60?text=Laundry,
+           Cooking|/collections/black-friday-cooking|https://via.placeholder.com/60x60?text=Cook,
+           Kitchen Appliances|/collections/black-friday-kitchen-appliances|https://via.placeholder.com/60x60?text=Kitchen,
+           Floorcare|/collections/black-friday-floorcare|https://via.placeholder.com/60x60?text=Floor,
+           Dishwashers & Refrigeration|/collections/black-friday-dishwashers-refrigeration|https://via.placeholder.com/60x60?text=Fridge" | split: "," %}
+        {% for item in categories %}
+          {% assign parts = item | split: "|" %}
+          <a href="{{ parts[1] | strip }}" class="circle reveal">
+            <img src="{{ parts[2] | strip }}" alt="{{ parts[0] | strip }}" class="circle-img">
+            <div class="circle-label">{{ parts[0] | strip }}</div>
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- HOT OFFERS -->
+  <section class="section tone-1 reveal">
     <div class="bf-container">
       <h2>🔥 Hot Offers</h2>
       <div class="grid grid-3">
@@ -164,49 +157,110 @@
           {% assign save_amt = 0 %}
           {% if product.compare_at_price and product.compare_at_price > product.price %}
             {% assign diff = product.compare_at_price | minus: product.price %}
-            {% if diff > 0 %}
-              {% assign has_compare = true %}
-              {% assign save_amt = diff %}
-            {% endif %}
+            {% if diff > 0 %}{% assign has_compare = true %}{% assign save_amt = diff %}{% endif %}
           {% endif %}
           <article class="card reveal">
-            <div class="pimg-wrap">
-              {% if product.featured_image %}
-                <img class="pimg" src="{{ product.featured_image | img_url: '800x' }}" alt="{{ product.featured_image.alt | escape }}">
-              {% endif %}
-            </div>
+            <div class="pimg-wrap">{% if product.featured_image %}<img class="pimg" src="{{ product.featured_image | img_url: '800x' }}" alt="{{ product.featured_image.alt | escape }}">{% endif %}</div>
             <div style="padding:1rem">
               <div class="ptitle">{{ product.title }}</div>
               <div class="vendor">by {{ product.vendor }}</div>
               {% if has_compare %}
-                <div class="price">
-                  <span class="price-was">{{ product.compare_at_price | money }}</span>
-                  <span class="price-save">Save {{ save_amt | money }}</span>
-                </div>
+                <div class="price"><span class="price-was">{{ product.compare_at_price | money }}</span><span class="price-save">Save {{ save_amt | money }}</span></div>
               {% endif %}
-              <a href="{{ product.url }}" class="price-btn">
-                <span class="price-now">{{ product.price | money }}</span>
-                <span class="label">Shop Now</span>
-              </a>
+              <a href="{{ product.url }}" class="price-btn"><span class="price-now">{{ product.price | money }}</span><span class="label">Shop Now</span></a>
             </div>
           </article>
         {% endfor %}
       </div>
     </div>
   </section>
+
+  <!-- TOP PICKS -->
+  <section class="section tone-2 reveal">
+    <div class="bf-container">
+      <h2>Top Black Friday Picks</h2>
+      <div class="carousel">
+        {% for product in picks_collection.products limit:6 %}
+          {% assign has_compare = false %}
+          {% assign save_amt = 0 %}
+          {% if product.compare_at_price and product.compare_at_price > product.price %}
+            {% assign diff = product.compare_at_price | minus: product.price %}
+            {% if diff > 0 %}{% assign has_compare = true %}{% assign save_amt = diff %}{% endif %}
+          {% endif %}
+          <article class="card reveal">
+            <div class="pimg-wrap">{% if product.featured_image %}<img class="pimg" src="{{ product.featured_image | img_url: '800x' }}" alt="{{ product.featured_image.alt | escape }}">{% endif %}</div>
+            <div style="padding:1rem">
+              <div class="ptitle">{{ product.title }}</div>
+              <div class="vendor">by {{ product.vendor }}</div>
+              {% if has_compare %}
+                <div class="price"><span class="price-was">{{ product.compare_at_price | money }}</span><span class="price-save">Save {{ save_amt | money }}</span></div>
+              {% endif %}
+              <a href="{{ product.url }}" class="price-btn"><span class="price-now">{{ product.price | money }}</span><span class="label">Shop Now</span></a>
+            </div>
+          </article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- SUPER LOW DEALS -->
+  <section class="section tone-1 reveal">
+    <div class="bf-container">
+      <h2>Super Low Deals</h2>
+      <div class="grid grid-4">
+        {% for product in low_collection.products limit:8 %}
+          {% assign has_compare = false %}
+          {% assign save_amt = 0 %}
+          {% if product.compare_at_price and product.compare_at_price > product.price %}
+            {% assign diff = product.compare_at_price | minus: product.price %}
+            {% if diff > 0 %}{% assign has_compare = true %}{% assign save_amt = diff %}{% endif %}
+          {% endif %}
+          <article class="card reveal">
+            <div class="pimg-wrap">{% if product.featured_image %}<img class="pimg" src="{{ product.featured_image | img_url: '800x' }}" alt="{{ product.featured_image.alt | escape }}">{% endif %}</div>
+            <div style="padding:1rem">
+              <div class="ptitle">{{ product.title }}</div>
+              <div class="vendor">by {{ product.vendor }}</div>
+              {% if has_compare %}
+                <div class="price"><span class="price-was">{{ product.compare_at_price | money }}</span><span class="price-save">Save {{ save_amt | money }}</span></div>
+              {% endif %}
+              <a href="{{ product.url }}" class="price-btn"><span class="price-now">{{ product.price | money }}</span><span class="label">Shop Now</span></a>
+            </div>
+          </article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- MAILER -->
+  <section class="section tone-3 reveal" style="text-align:center;">
+    <div class="bf-container">
+      <h2>✉️ See Our Black Friday Mailer</h2>
+      <iframe class="mailer-frame" src="{{ mailer_url }}" title="Black Friday Mailer"></iframe>
+      <div style="margin-top:1.5rem;"><a class="price-btn" href="{{ mailer_url }}" target="_blank" rel="noopener"><span class="price-now">View</span><span class="label">Full Mailer</span></a></div>
+    </div>
+  </section>
+
+  <!-- TRUST & GUIDES -->
+  <section class="section tone-3 reveal"><div class="bf-container"><ul class="trust"><li>🚚 Free Delivery over €50</li><li>🏬 Click & Collect</li><li>🇮🇪 Irish-Owned</li><li>💫 Price Match Promise</li></ul></div></section>
+  <section class="section tone-1 reveal"><div class="bf-container"><p class="urgency">⚡ Deals are going fast — grab yours before they’re gone!</p></div></section>
+
+  <section class="section tone-2 reveal"><div class="bf-container"><h2>Black Friday Buying Guides</h2>
+    <div class="guides-grid">
+      {% for item in guides %}
+        {% assign g = item | split: "|" %}
+        <div class="guide-card reveal"><img class="guide-img" src="{{ g[2] | strip }}" alt="{{ g[0] | strip }}"><div class="guide-title">{{ g[0] | strip }}</div><a href="{{ g[1] | strip }}" class="price-btn"><span class="label">Read Guide</span></a></div>
+      {% endfor %}
+    </div>
+  </div></section>
+
 </div>
 
 <script>
 (function(){
   var els=document.querySelectorAll('.reveal');
-  if(!('IntersectionObserver' in window)||!els.length){
-    els.forEach(el=>el.classList.add('visible'));
-    return;
-  }
+  if(!('IntersectionObserver' in window)||!els.length){els.forEach(el=>el.classList.add('visible'));return;}
   var io=new IntersectionObserver(entries=>{
-    entries.forEach(e=>{
-      if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}
-    });
+    entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}});
   },{threshold:0.1});
   els.forEach(el=>io.observe(el));
 })();
