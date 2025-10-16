@@ -1449,6 +1449,20 @@
         "settings": {
           "section_size": "medium"
         }
+      },
+      "featured_collection_KGMnpp": {
+        "type": "featured-collection",
+        "name": "Featured collection",
+        "settings": {
+          "collection": "october-offers",
+          "title": "",
+          "products_count": 6,
+          "layout": "vertical",
+          "stack_products": true,
+          "show_quick_buy": false,
+          "link_title": "View all",
+          "link_url": ""
+        }
       }
     },
     "content_for_index": [
@@ -1469,7 +1483,8 @@
       "collection_with_image_4L47nz",
       "shogun_custom_682b279a5ba7c048f4377e46_RKkndG",
       "rich_text_PfKf9q",
-      "mosaic_GCaxzF"
+      "mosaic_GCaxzF",
+      "featured_collection_KGMnpp"
     ],
     "blocks": {
       "7079518687644006178": {
@@ -1551,13 +1566,6 @@
         "type": "shopify://apps/forms/blocks/forms/8744a304-fcb1-4347-b211-bb6b4759a76a",
         "disabled": true,
         "settings": {}
-      },
-      "18228966181090706294": {
-        "type": "shopify://apps/selleasy/blocks/app-embed/790c1a03-a71f-4bc1-9869-00dad526d3c2",
-        "disabled": true,
-        "settings": {
-          "storefrontAccessToken": ""
-        }
       },
       "7147999719060634790": {
         "type": "shopify://apps/gsc-countdown-timer/blocks/countdown-bar/58dc5b1b-43d2-4209-b1f3-52aff31643ed",
